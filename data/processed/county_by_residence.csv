@@ -1,0 +1,1241 @@
+indicator,structure_type,residence,year,value
+arrivals,Total,all,2001,46410
+arrivals,Total,all,2002,37902
+arrivals,Total,all,2003,36370
+arrivals,Total,all,2004,38578
+arrivals,Total,all,2005,37625
+arrivals,Total,all,2006,51564
+arrivals,Total,all,2007,58058
+arrivals,Total,all,2008,63190
+arrivals,Total,all,2009,59062
+arrivals,Total,all,2010,54967
+arrivals,Total,all,2011,63832
+arrivals,Total,all,2012,74622
+arrivals,Total,all,2013,75125
+arrivals,Total,all,2014,77831
+arrivals,Total,all,2015,78418
+arrivals,Total,all,2016,84273
+arrivals,Total,all,2017,111308
+arrivals,Total,all,2018,112950
+arrivals,Total,all,2019,112308
+arrivals,Total,all,2020,80727
+arrivals,Total,all,2021,120582
+arrivals,Total,all,2022,123599
+arrivals,Total,all,2023,151109
+arrivals,Total,all,2024,140128
+arrivals,Total,all,2025,132223
+arrivals,Total,Romanian,2001,44443
+arrivals,Total,Romanian,2002,35566
+arrivals,Total,Romanian,2003,34740
+arrivals,Total,Romanian,2004,36834
+arrivals,Total,Romanian,2005,35391
+arrivals,Total,Romanian,2006,49371
+arrivals,Total,Romanian,2007,54589
+arrivals,Total,Romanian,2008,59564
+arrivals,Total,Romanian,2009,56159
+arrivals,Total,Romanian,2010,52422
+arrivals,Total,Romanian,2011,60975
+arrivals,Total,Romanian,2012,70870
+arrivals,Total,Romanian,2013,71125
+arrivals,Total,Romanian,2014,74529
+arrivals,Total,Romanian,2015,75251
+arrivals,Total,Romanian,2016,81153
+arrivals,Total,Romanian,2017,107309
+arrivals,Total,Romanian,2018,107535
+arrivals,Total,Romanian,2019,108167
+arrivals,Total,Romanian,2020,79699
+arrivals,Total,Romanian,2021,118161
+arrivals,Total,Romanian,2022,120372
+arrivals,Total,Romanian,2023,146048
+arrivals,Total,Romanian,2024,135452
+arrivals,Total,Romanian,2025,127468
+arrivals,Total,foreign,2006,2193
+arrivals,Total,foreign,2007,3469
+arrivals,Total,foreign,2008,3626
+arrivals,Total,foreign,2009,2903
+arrivals,Total,foreign,2010,2545
+arrivals,Total,foreign,2011,2857
+arrivals,Total,foreign,2012,3752
+arrivals,Total,foreign,2013,4000
+arrivals,Total,foreign,2014,3302
+arrivals,Total,foreign,2015,3167
+arrivals,Total,foreign,2016,3120
+arrivals,Total,foreign,2017,3999
+arrivals,Total,foreign,2018,5415
+arrivals,Total,foreign,2019,4141
+arrivals,Total,foreign,2020,1028
+arrivals,Total,foreign,2021,2421
+arrivals,Total,foreign,2022,3227
+arrivals,Total,foreign,2023,5061
+arrivals,Total,foreign,2024,4676
+arrivals,Total,foreign,2025,4755
+arrivals,Hotels,all,2001,34138
+arrivals,Hotels,all,2002,28162
+arrivals,Hotels,all,2003,28173
+arrivals,Hotels,all,2004,28699
+arrivals,Hotels,all,2005,28582
+arrivals,Hotels,all,2006,38160
+arrivals,Hotels,all,2007,42376
+arrivals,Hotels,all,2008,45187
+arrivals,Hotels,all,2009,42389
+arrivals,Hotels,all,2010,35458
+arrivals,Hotels,all,2011,38484
+arrivals,Hotels,all,2012,41921
+arrivals,Hotels,all,2013,40520
+arrivals,Hotels,all,2014,41147
+arrivals,Hotels,all,2015,36285
+arrivals,Hotels,all,2016,37103
+arrivals,Hotels,all,2017,35086
+arrivals,Hotels,all,2018,46899
+arrivals,Hotels,all,2019,45974
+arrivals,Hotels,all,2020,30825
+arrivals,Hotels,all,2021,42310
+arrivals,Hotels,all,2022,47652
+arrivals,Hotels,all,2023,62669
+arrivals,Hotels,all,2024,57148
+arrivals,Hotels,all,2025,44148
+arrivals,Hotels,Romanian,2001,32948
+arrivals,Hotels,Romanian,2002,26492
+arrivals,Hotels,Romanian,2003,27169
+arrivals,Hotels,Romanian,2004,27661
+arrivals,Hotels,Romanian,2005,26837
+arrivals,Hotels,Romanian,2006,36384
+arrivals,Hotels,Romanian,2007,39299
+arrivals,Hotels,Romanian,2008,41951
+arrivals,Hotels,Romanian,2009,39824
+arrivals,Hotels,Romanian,2010,33334
+arrivals,Hotels,Romanian,2011,36660
+arrivals,Hotels,Romanian,2012,39217
+arrivals,Hotels,Romanian,2013,37679
+arrivals,Hotels,Romanian,2014,38871
+arrivals,Hotels,Romanian,2015,34095
+arrivals,Hotels,Romanian,2016,35029
+arrivals,Hotels,Romanian,2017,33112
+arrivals,Hotels,Romanian,2018,43462
+arrivals,Hotels,Romanian,2019,43911
+arrivals,Hotels,Romanian,2020,30289
+arrivals,Hotels,Romanian,2021,41263
+arrivals,Hotels,Romanian,2022,46267
+arrivals,Hotels,Romanian,2023,60363
+arrivals,Hotels,Romanian,2024,55266
+arrivals,Hotels,Romanian,2025,42308
+arrivals,Hotels,foreign,2006,1776
+arrivals,Hotels,foreign,2007,3077
+arrivals,Hotels,foreign,2008,3236
+arrivals,Hotels,foreign,2009,2565
+arrivals,Hotels,foreign,2010,2124
+arrivals,Hotels,foreign,2011,1824
+arrivals,Hotels,foreign,2012,2704
+arrivals,Hotels,foreign,2013,2841
+arrivals,Hotels,foreign,2014,2276
+arrivals,Hotels,foreign,2015,2190
+arrivals,Hotels,foreign,2016,2074
+arrivals,Hotels,foreign,2017,1974
+arrivals,Hotels,foreign,2018,3437
+arrivals,Hotels,foreign,2019,2063
+arrivals,Hotels,foreign,2020,536
+arrivals,Hotels,foreign,2021,1047
+arrivals,Hotels,foreign,2022,1385
+arrivals,Hotels,foreign,2023,2306
+arrivals,Hotels,foreign,2024,1882
+arrivals,Hotels,foreign,2025,1840
+arrivals,Hostels,all,2001,4526
+arrivals,Hostels,all,2002,4015
+arrivals,Hostels,all,2003,3801
+arrivals,Hostels,all,2004,4159
+arrivals,Hostels,all,2005,3112
+arrivals,Hostels,all,2006,3037
+arrivals,Hostels,all,2007,4550
+arrivals,Hostels,all,2008,3882
+arrivals,Hostels,all,2009,2734
+arrivals,Hostels,all,2010,3251
+arrivals,Hostels,all,2011,3265
+arrivals,Hostels,all,2012,3389
+arrivals,Hostels,all,2013,3384
+arrivals,Hostels,all,2014,9785
+arrivals,Hostels,all,2015,10712
+arrivals,Hostels,all,2016,10034
+arrivals,Hostels,all,2017,9082
+arrivals,Hostels,all,2018,3538
+arrivals,Hostels,all,2019,3220
+arrivals,Hostels,all,2020,2041
+arrivals,Hostels,all,2021,1955
+arrivals,Hostels,all,2022,2011
+arrivals,Hostels,all,2023,1777
+arrivals,Hostels,all,2024,1511
+arrivals,Hostels,all,2025,1737
+arrivals,Hostels,Romanian,2001,4071
+arrivals,Hostels,Romanian,2002,3588
+arrivals,Hostels,Romanian,2003,3338
+arrivals,Hostels,Romanian,2004,3703
+arrivals,Hostels,Romanian,2005,2851
+arrivals,Hostels,Romanian,2006,2858
+arrivals,Hostels,Romanian,2007,4400
+arrivals,Hostels,Romanian,2008,3682
+arrivals,Hostels,Romanian,2009,2639
+arrivals,Hostels,Romanian,2010,3161
+arrivals,Hostels,Romanian,2011,3160
+arrivals,Hostels,Romanian,2012,3295
+arrivals,Hostels,Romanian,2013,3231
+arrivals,Hostels,Romanian,2014,9595
+arrivals,Hostels,Romanian,2015,10527
+arrivals,Hostels,Romanian,2016,9933
+arrivals,Hostels,Romanian,2017,8991
+arrivals,Hostels,Romanian,2018,3510
+arrivals,Hostels,Romanian,2019,3185
+arrivals,Hostels,Romanian,2020,2040
+arrivals,Hostels,Romanian,2021,1952
+arrivals,Hostels,Romanian,2022,2006
+arrivals,Hostels,Romanian,2023,1765
+arrivals,Hostels,Romanian,2024,1508
+arrivals,Hostels,Romanian,2025,1734
+arrivals,Hostels,foreign,2006,179
+arrivals,Hostels,foreign,2007,150
+arrivals,Hostels,foreign,2008,200
+arrivals,Hostels,foreign,2009,95
+arrivals,Hostels,foreign,2010,90
+arrivals,Hostels,foreign,2011,105
+arrivals,Hostels,foreign,2012,94
+arrivals,Hostels,foreign,2013,153
+arrivals,Hostels,foreign,2014,190
+arrivals,Hostels,foreign,2015,185
+arrivals,Hostels,foreign,2016,101
+arrivals,Hostels,foreign,2017,91
+arrivals,Hostels,foreign,2018,28
+arrivals,Hostels,foreign,2019,35
+arrivals,Hostels,foreign,2020,1
+arrivals,Hostels,foreign,2021,3
+arrivals,Hostels,foreign,2022,5
+arrivals,Hostels,foreign,2023,12
+arrivals,Hostels,foreign,2024,3
+arrivals,Hostels,foreign,2025,3
+arrivals,Apartments and rooms for rent,all,2021,13991
+arrivals,Apartments and rooms for rent,all,2022,15471
+arrivals,Apartments and rooms for rent,all,2023,20526
+arrivals,Apartments and rooms for rent,all,2024,22534
+arrivals,Apartments and rooms for rent,all,2025,23461
+arrivals,Apartments and rooms for rent,Romanian,2021,13817
+arrivals,Apartments and rooms for rent,Romanian,2022,14537
+arrivals,Apartments and rooms for rent,Romanian,2023,19588
+arrivals,Apartments and rooms for rent,Romanian,2024,21318
+arrivals,Apartments and rooms for rent,Romanian,2025,22240
+arrivals,Apartments and rooms for rent,foreign,2021,174
+arrivals,Apartments and rooms for rent,foreign,2022,934
+arrivals,Apartments and rooms for rent,foreign,2023,938
+arrivals,Apartments and rooms for rent,foreign,2024,1216
+arrivals,Apartments and rooms for rent,foreign,2025,1221
+arrivals,Apartment hotels,all,2017,9615
+arrivals,Apartment hotels,Romanian,2017,9087
+arrivals,Apartment hotels,foreign,2017,528
+arrivals,Hanuri si moteluri,all,2001,1490
+arrivals,Hanuri si moteluri,all,2002,458
+arrivals,Hanuri si moteluri,all,2003,2019
+arrivals,Hanuri si moteluri,Romanian,2001,1490
+arrivals,Hanuri si moteluri,Romanian,2002,455
+arrivals,Hanuri si moteluri,Romanian,2003,1886
+arrivals,Motels,all,2001,1490
+arrivals,Motels,all,2002,458
+arrivals,Motels,all,2003,2019
+arrivals,Motels,all,2004,3629
+arrivals,Motels,all,2005,2165
+arrivals,Motels,all,2006,4211
+arrivals,Motels,all,2007,3474
+arrivals,Motels,all,2008,5406
+arrivals,Motels,all,2009,4580
+arrivals,Motels,all,2010,6553
+arrivals,Motels,all,2011,7084
+arrivals,Motels,all,2012,7259
+arrivals,Motels,all,2013,7146
+arrivals,Motels,all,2014,5533
+arrivals,Motels,all,2015,5939
+arrivals,Motels,all,2016,5490
+arrivals,Motels,all,2017,8214
+arrivals,Motels,all,2018,6341
+arrivals,Motels,all,2019,7177
+arrivals,Motels,all,2020,3508
+arrivals,Motels,all,2021,4632
+arrivals,Motels,all,2022,4420
+arrivals,Motels,all,2023,4045
+arrivals,Motels,all,2024,3862
+arrivals,Motels,all,2025,3427
+arrivals,Motels,Romanian,2001,1490
+arrivals,Motels,Romanian,2002,455
+arrivals,Motels,Romanian,2003,1886
+arrivals,Motels,Romanian,2004,3417
+arrivals,Motels,Romanian,2005,2072
+arrivals,Motels,Romanian,2006,4104
+arrivals,Motels,Romanian,2007,3362
+arrivals,Motels,Romanian,2008,5301
+arrivals,Motels,Romanian,2009,4554
+arrivals,Motels,Romanian,2010,6482
+arrivals,Motels,Romanian,2011,6501
+arrivals,Motels,Romanian,2012,7035
+arrivals,Motels,Romanian,2013,7028
+arrivals,Motels,Romanian,2014,5403
+arrivals,Motels,Romanian,2015,5839
+arrivals,Motels,Romanian,2016,5391
+arrivals,Motels,Romanian,2017,8149
+arrivals,Motels,Romanian,2018,6231
+arrivals,Motels,Romanian,2019,7105
+arrivals,Motels,Romanian,2020,3505
+arrivals,Motels,Romanian,2021,4612
+arrivals,Motels,Romanian,2022,4358
+arrivals,Motels,Romanian,2023,3998
+arrivals,Motels,Romanian,2024,3807
+arrivals,Motels,Romanian,2025,3398
+arrivals,Motels,foreign,2006,107
+arrivals,Motels,foreign,2007,112
+arrivals,Motels,foreign,2008,105
+arrivals,Motels,foreign,2009,26
+arrivals,Motels,foreign,2010,71
+arrivals,Motels,foreign,2011,583
+arrivals,Motels,foreign,2012,224
+arrivals,Motels,foreign,2013,118
+arrivals,Motels,foreign,2014,130
+arrivals,Motels,foreign,2015,100
+arrivals,Motels,foreign,2016,99
+arrivals,Motels,foreign,2017,65
+arrivals,Motels,foreign,2018,110
+arrivals,Motels,foreign,2019,72
+arrivals,Motels,foreign,2020,3
+arrivals,Motels,foreign,2021,20
+arrivals,Motels,foreign,2022,62
+arrivals,Motels,foreign,2023,47
+arrivals,Motels,foreign,2024,55
+arrivals,Motels,foreign,2025,29
+arrivals,Tourist villas,all,2001,550
+arrivals,Tourist villas,all,2002,501
+arrivals,Tourist villas,all,2003,700
+arrivals,Tourist villas,all,2004,380
+arrivals,Tourist villas,all,2005,290
+arrivals,Tourist villas,all,2006,171
+arrivals,Tourist villas,all,2007,212
+arrivals,Tourist villas,all,2008,366
+arrivals,Tourist villas,all,2009,130
+arrivals,Tourist villas,all,2010,215
+arrivals,Tourist villas,all,2011,195
+arrivals,Tourist villas,all,2012,446
+arrivals,Tourist villas,all,2013,442
+arrivals,Tourist villas,all,2014,752
+arrivals,Tourist villas,all,2015,845
+arrivals,Tourist villas,all,2016,1744
+arrivals,Tourist villas,all,2017,2544
+arrivals,Tourist villas,all,2018,3557
+arrivals,Tourist villas,all,2019,3618
+arrivals,Tourist villas,all,2020,2510
+arrivals,Tourist villas,all,2021,3101
+arrivals,Tourist villas,all,2022,3325
+arrivals,Tourist villas,all,2023,3267
+arrivals,Tourist villas,all,2024,2862
+arrivals,Tourist villas,all,2025,4092
+arrivals,Tourist villas,Romanian,2001,550
+arrivals,Tourist villas,Romanian,2002,501
+arrivals,Tourist villas,Romanian,2003,700
+arrivals,Tourist villas,Romanian,2004,380
+arrivals,Tourist villas,Romanian,2005,290
+arrivals,Tourist villas,Romanian,2006,171
+arrivals,Tourist villas,Romanian,2007,212
+arrivals,Tourist villas,Romanian,2008,366
+arrivals,Tourist villas,Romanian,2009,130
+arrivals,Tourist villas,Romanian,2010,215
+arrivals,Tourist villas,Romanian,2011,175
+arrivals,Tourist villas,Romanian,2012,446
+arrivals,Tourist villas,Romanian,2013,422
+arrivals,Tourist villas,Romanian,2014,725
+arrivals,Tourist villas,Romanian,2015,818
+arrivals,Tourist villas,Romanian,2016,1673
+arrivals,Tourist villas,Romanian,2017,2478
+arrivals,Tourist villas,Romanian,2018,3454
+arrivals,Tourist villas,Romanian,2019,3574
+arrivals,Tourist villas,Romanian,2020,2510
+arrivals,Tourist villas,Romanian,2021,3085
+arrivals,Tourist villas,Romanian,2022,3317
+arrivals,Tourist villas,Romanian,2023,3267
+arrivals,Tourist villas,Romanian,2024,2854
+arrivals,Tourist villas,Romanian,2025,4028
+arrivals,Tourist villas,foreign,2011,20
+arrivals,Tourist villas,foreign,2013,20
+arrivals,Tourist villas,foreign,2014,27
+arrivals,Tourist villas,foreign,2015,27
+arrivals,Tourist villas,foreign,2016,71
+arrivals,Tourist villas,foreign,2017,66
+arrivals,Tourist villas,foreign,2018,103
+arrivals,Tourist villas,foreign,2019,44
+arrivals,Tourist villas,foreign,2021,16
+arrivals,Tourist villas,foreign,2022,8
+arrivals,Tourist villas,foreign,2024,8
+arrivals,Tourist villas,foreign,2025,64
+arrivals,Tourist chalets,all,2001,3445
+arrivals,Tourist chalets,all,2002,2881
+arrivals,Tourist chalets,all,2003,672
+arrivals,Tourist chalets,all,2004,466
+arrivals,Tourist chalets,all,2005,222
+arrivals,Tourist chalets,all,2006,216
+arrivals,Tourist chalets,all,2007,232
+arrivals,Tourist chalets,all,2008,100
+arrivals,Tourist chalets,all,2009,275
+arrivals,Tourist chalets,all,2010,442
+arrivals,Tourist chalets,all,2011,2325
+arrivals,Tourist chalets,all,2012,2746
+arrivals,Tourist chalets,all,2013,2823
+arrivals,Tourist chalets,all,2014,1096
+arrivals,Tourist chalets,all,2015,2468
+arrivals,Tourist chalets,all,2016,1952
+arrivals,Tourist chalets,all,2017,1695
+arrivals,Tourist chalets,all,2018,1795
+arrivals,Tourist chalets,all,2019,1520
+arrivals,Tourist chalets,all,2020,1300
+arrivals,Tourist chalets,all,2021,2340
+arrivals,Tourist chalets,all,2022,1296
+arrivals,Tourist chalets,all,2023,2205
+arrivals,Tourist chalets,all,2024,410
+arrivals,Tourist chalets,all,2025,418
+arrivals,Tourist chalets,Romanian,2001,3424
+arrivals,Tourist chalets,Romanian,2002,2870
+arrivals,Tourist chalets,Romanian,2003,672
+arrivals,Tourist chalets,Romanian,2004,466
+arrivals,Tourist chalets,Romanian,2005,222
+arrivals,Tourist chalets,Romanian,2006,216
+arrivals,Tourist chalets,Romanian,2007,232
+arrivals,Tourist chalets,Romanian,2008,100
+arrivals,Tourist chalets,Romanian,2009,274
+arrivals,Tourist chalets,Romanian,2010,442
+arrivals,Tourist chalets,Romanian,2011,2303
+arrivals,Tourist chalets,Romanian,2012,2746
+arrivals,Tourist chalets,Romanian,2013,2817
+arrivals,Tourist chalets,Romanian,2014,1090
+arrivals,Tourist chalets,Romanian,2015,2456
+arrivals,Tourist chalets,Romanian,2016,1926
+arrivals,Tourist chalets,Romanian,2017,1694
+arrivals,Tourist chalets,Romanian,2018,1794
+arrivals,Tourist chalets,Romanian,2019,1520
+arrivals,Tourist chalets,Romanian,2020,1300
+arrivals,Tourist chalets,Romanian,2021,2340
+arrivals,Tourist chalets,Romanian,2022,1277
+arrivals,Tourist chalets,Romanian,2023,1925
+arrivals,Tourist chalets,Romanian,2024,410
+arrivals,Tourist chalets,Romanian,2025,418
+arrivals,Tourist chalets,foreign,2009,1
+arrivals,Tourist chalets,foreign,2011,22
+arrivals,Tourist chalets,foreign,2013,6
+arrivals,Tourist chalets,foreign,2014,6
+arrivals,Tourist chalets,foreign,2015,12
+arrivals,Tourist chalets,foreign,2016,26
+arrivals,Tourist chalets,foreign,2017,1
+arrivals,Tourist chalets,foreign,2018,1
+arrivals,Tourist chalets,foreign,2022,19
+arrivals,Tourist chalets,foreign,2023,280
+arrivals,Campsites,all,2001,5
+arrivals,Campsites,Romanian,2001,5
+arrivals,Tourist stopovers,all,2004,27
+arrivals,Tourist stopovers,all,2005,108
+arrivals,Tourist stopovers,all,2006,40
+arrivals,Tourist stopovers,all,2007,88
+arrivals,Tourist stopovers,all,2008,41
+arrivals,Tourist stopovers,all,2009,124
+arrivals,Tourist stopovers,all,2010,47
+arrivals,Tourist stopovers,all,2016,632
+arrivals,Tourist stopovers,all,2017,708
+arrivals,Tourist stopovers,all,2018,1276
+arrivals,Tourist stopovers,all,2019,1146
+arrivals,Tourist stopovers,all,2021,805
+arrivals,Tourist stopovers,all,2022,1780
+arrivals,Tourist stopovers,all,2023,1432
+arrivals,Tourist stopovers,all,2024,1478
+arrivals,Tourist stopovers,all,2025,1508
+arrivals,Tourist stopovers,Romanian,2004,27
+arrivals,Tourist stopovers,Romanian,2005,108
+arrivals,Tourist stopovers,Romanian,2006,40
+arrivals,Tourist stopovers,Romanian,2007,88
+arrivals,Tourist stopovers,Romanian,2008,41
+arrivals,Tourist stopovers,Romanian,2009,124
+arrivals,Tourist stopovers,Romanian,2010,47
+arrivals,Tourist stopovers,Romanian,2016,632
+arrivals,Tourist stopovers,Romanian,2017,708
+arrivals,Tourist stopovers,Romanian,2018,1257
+arrivals,Tourist stopovers,Romanian,2019,1136
+arrivals,Tourist stopovers,Romanian,2021,805
+arrivals,Tourist stopovers,Romanian,2022,1780
+arrivals,Tourist stopovers,Romanian,2023,1432
+arrivals,Tourist stopovers,Romanian,2024,1478
+arrivals,Tourist stopovers,Romanian,2025,1508
+arrivals,Tourist stopovers,foreign,2018,19
+arrivals,Tourist stopovers,foreign,2019,10
+arrivals,Tourist cottages,all,2018,40
+arrivals,Tourist cottages,all,2019,56
+arrivals,Tourist cottages,all,2020,80
+arrivals,Tourist cottages,all,2021,40
+arrivals,Tourist cottages,all,2022,3
+arrivals,Tourist cottages,all,2023,91
+arrivals,Tourist cottages,all,2024,184
+arrivals,Tourist cottages,all,2025,362
+arrivals,Tourist cottages,Romanian,2018,40
+arrivals,Tourist cottages,Romanian,2019,56
+arrivals,Tourist cottages,Romanian,2020,80
+arrivals,Tourist cottages,Romanian,2021,40
+arrivals,Tourist cottages,Romanian,2022,3
+arrivals,Tourist cottages,Romanian,2023,37
+arrivals,Tourist cottages,Romanian,2024,64
+arrivals,Tourist cottages,Romanian,2025,362
+arrivals,Tourist cottages,foreign,2023,54
+arrivals,Tourist cottages,foreign,2024,120
+arrivals,Tourist guesthouses,all,2001,2211
+arrivals,Tourist guesthouses,all,2002,1853
+arrivals,Tourist guesthouses,all,2003,995
+arrivals,Tourist guesthouses,all,2004,892
+arrivals,Tourist guesthouses,all,2005,1051
+arrivals,Tourist guesthouses,all,2006,2326
+arrivals,Tourist guesthouses,all,2007,2338
+arrivals,Tourist guesthouses,all,2008,2096
+arrivals,Tourist guesthouses,all,2009,1586
+arrivals,Tourist guesthouses,all,2010,3791
+arrivals,Tourist guesthouses,all,2011,6595
+arrivals,Tourist guesthouses,all,2012,12842
+arrivals,Tourist guesthouses,all,2013,12879
+arrivals,Tourist guesthouses,all,2014,12928
+arrivals,Tourist guesthouses,all,2015,14780
+arrivals,Tourist guesthouses,all,2016,15645
+arrivals,Tourist guesthouses,all,2017,23356
+arrivals,Tourist guesthouses,all,2018,23954
+arrivals,Tourist guesthouses,all,2019,25125
+arrivals,Tourist guesthouses,all,2020,17512
+arrivals,Tourist guesthouses,all,2021,18539
+arrivals,Tourist guesthouses,all,2022,16641
+arrivals,Tourist guesthouses,all,2023,18821
+arrivals,Tourist guesthouses,all,2024,18441
+arrivals,Tourist guesthouses,all,2025,21997
+arrivals,Tourist guesthouses,Romanian,2001,1910
+arrivals,Tourist guesthouses,Romanian,2002,1628
+arrivals,Tourist guesthouses,Romanian,2003,965
+arrivals,Tourist guesthouses,Romanian,2004,854
+arrivals,Tourist guesthouses,Romanian,2005,1036
+arrivals,Tourist guesthouses,Romanian,2006,2297
+arrivals,Tourist guesthouses,Romanian,2007,2315
+arrivals,Tourist guesthouses,Romanian,2008,2042
+arrivals,Tourist guesthouses,Romanian,2009,1555
+arrivals,Tourist guesthouses,Romanian,2010,3595
+arrivals,Tourist guesthouses,Romanian,2011,6370
+arrivals,Tourist guesthouses,Romanian,2012,12209
+arrivals,Tourist guesthouses,Romanian,2013,12129
+arrivals,Tourist guesthouses,Romanian,2014,12316
+arrivals,Tourist guesthouses,Romanian,2015,14175
+arrivals,Tourist guesthouses,Romanian,2016,15090
+arrivals,Tourist guesthouses,Romanian,2017,22382
+arrivals,Tourist guesthouses,Romanian,2018,22876
+arrivals,Tourist guesthouses,Romanian,2019,24024
+arrivals,Tourist guesthouses,Romanian,2020,17186
+arrivals,Tourist guesthouses,Romanian,2021,18198
+arrivals,Tourist guesthouses,Romanian,2022,16323
+arrivals,Tourist guesthouses,Romanian,2023,18211
+arrivals,Tourist guesthouses,Romanian,2024,17779
+arrivals,Tourist guesthouses,Romanian,2025,20850
+arrivals,Tourist guesthouses,foreign,2006,29
+arrivals,Tourist guesthouses,foreign,2007,23
+arrivals,Tourist guesthouses,foreign,2008,54
+arrivals,Tourist guesthouses,foreign,2009,31
+arrivals,Tourist guesthouses,foreign,2010,196
+arrivals,Tourist guesthouses,foreign,2011,225
+arrivals,Tourist guesthouses,foreign,2012,633
+arrivals,Tourist guesthouses,foreign,2013,750
+arrivals,Tourist guesthouses,foreign,2014,612
+arrivals,Tourist guesthouses,foreign,2015,605
+arrivals,Tourist guesthouses,foreign,2016,555
+arrivals,Tourist guesthouses,foreign,2017,974
+arrivals,Tourist guesthouses,foreign,2018,1078
+arrivals,Tourist guesthouses,foreign,2019,1101
+arrivals,Tourist guesthouses,foreign,2020,326
+arrivals,Tourist guesthouses,foreign,2021,341
+arrivals,Tourist guesthouses,foreign,2022,318
+arrivals,Tourist guesthouses,foreign,2023,610
+arrivals,Tourist guesthouses,foreign,2024,662
+arrivals,Tourist guesthouses,foreign,2025,1147
+arrivals,Agritourism guesthouses,all,2001,45
+arrivals,Agritourism guesthouses,all,2002,32
+arrivals,Agritourism guesthouses,all,2003,10
+arrivals,Agritourism guesthouses,all,2004,326
+arrivals,Agritourism guesthouses,all,2005,2095
+arrivals,Agritourism guesthouses,all,2006,3403
+arrivals,Agritourism guesthouses,all,2007,4788
+arrivals,Agritourism guesthouses,all,2008,6112
+arrivals,Agritourism guesthouses,all,2009,7244
+arrivals,Agritourism guesthouses,all,2010,5210
+arrivals,Agritourism guesthouses,all,2011,5884
+arrivals,Agritourism guesthouses,all,2012,6019
+arrivals,Agritourism guesthouses,all,2013,7931
+arrivals,Agritourism guesthouses,all,2014,6590
+arrivals,Agritourism guesthouses,all,2015,7389
+arrivals,Agritourism guesthouses,all,2016,11673
+arrivals,Agritourism guesthouses,all,2017,21008
+arrivals,Agritourism guesthouses,all,2018,25550
+arrivals,Agritourism guesthouses,all,2019,24472
+arrivals,Agritourism guesthouses,all,2020,22951
+arrivals,Agritourism guesthouses,all,2021,32869
+arrivals,Agritourism guesthouses,all,2022,31000
+arrivals,Agritourism guesthouses,all,2023,36276
+arrivals,Agritourism guesthouses,all,2024,31698
+arrivals,Agritourism guesthouses,all,2025,31073
+arrivals,Agritourism guesthouses,Romanian,2001,45
+arrivals,Agritourism guesthouses,Romanian,2002,32
+arrivals,Agritourism guesthouses,Romanian,2003,10
+arrivals,Agritourism guesthouses,Romanian,2004,326
+arrivals,Agritourism guesthouses,Romanian,2005,1975
+arrivals,Agritourism guesthouses,Romanian,2006,3301
+arrivals,Agritourism guesthouses,Romanian,2007,4681
+arrivals,Agritourism guesthouses,Romanian,2008,6081
+arrivals,Agritourism guesthouses,Romanian,2009,7059
+arrivals,Agritourism guesthouses,Romanian,2010,5146
+arrivals,Agritourism guesthouses,Romanian,2011,5806
+arrivals,Agritourism guesthouses,Romanian,2012,5922
+arrivals,Agritourism guesthouses,Romanian,2013,7819
+arrivals,Agritourism guesthouses,Romanian,2014,6529
+arrivals,Agritourism guesthouses,Romanian,2015,7341
+arrivals,Agritourism guesthouses,Romanian,2016,11479
+arrivals,Agritourism guesthouses,Romanian,2017,20708
+arrivals,Agritourism guesthouses,Romanian,2018,24911
+arrivals,Agritourism guesthouses,Romanian,2019,23656
+arrivals,Agritourism guesthouses,Romanian,2020,22789
+arrivals,Agritourism guesthouses,Romanian,2021,32049
+arrivals,Agritourism guesthouses,Romanian,2022,30504
+arrivals,Agritourism guesthouses,Romanian,2023,35462
+arrivals,Agritourism guesthouses,Romanian,2024,30968
+arrivals,Agritourism guesthouses,Romanian,2025,30622
+arrivals,Agritourism guesthouses,foreign,2006,102
+arrivals,Agritourism guesthouses,foreign,2007,107
+arrivals,Agritourism guesthouses,foreign,2008,31
+arrivals,Agritourism guesthouses,foreign,2009,185
+arrivals,Agritourism guesthouses,foreign,2010,64
+arrivals,Agritourism guesthouses,foreign,2011,78
+arrivals,Agritourism guesthouses,foreign,2012,97
+arrivals,Agritourism guesthouses,foreign,2013,112
+arrivals,Agritourism guesthouses,foreign,2014,61
+arrivals,Agritourism guesthouses,foreign,2015,48
+arrivals,Agritourism guesthouses,foreign,2016,194
+arrivals,Agritourism guesthouses,foreign,2017,300
+arrivals,Agritourism guesthouses,foreign,2018,639
+arrivals,Agritourism guesthouses,foreign,2019,816
+arrivals,Agritourism guesthouses,foreign,2020,162
+arrivals,Agritourism guesthouses,foreign,2021,820
+arrivals,Agritourism guesthouses,foreign,2022,496
+arrivals,Agritourism guesthouses,foreign,2023,814
+arrivals,Agritourism guesthouses,foreign,2024,730
+arrivals,Agritourism guesthouses,foreign,2025,451
+overnight_stays,Total,all,2001,103277
+overnight_stays,Total,all,2002,104235
+overnight_stays,Total,all,2003,83648
+overnight_stays,Total,all,2004,90038
+overnight_stays,Total,all,2005,84584
+overnight_stays,Total,all,2006,98094
+overnight_stays,Total,all,2007,105492
+overnight_stays,Total,all,2008,119731
+overnight_stays,Total,all,2009,115970
+overnight_stays,Total,all,2010,105726
+overnight_stays,Total,all,2011,136721
+overnight_stays,Total,all,2012,173316
+overnight_stays,Total,all,2013,171171
+overnight_stays,Total,all,2014,168737
+overnight_stays,Total,all,2015,147156
+overnight_stays,Total,all,2016,149869
+overnight_stays,Total,all,2017,185057
+overnight_stays,Total,all,2018,203786
+overnight_stays,Total,all,2019,204872
+overnight_stays,Total,all,2020,143068
+overnight_stays,Total,all,2021,191060
+overnight_stays,Total,all,2022,189188
+overnight_stays,Total,all,2023,242569
+overnight_stays,Total,all,2024,233068
+overnight_stays,Total,all,2025,214072
+overnight_stays,Total,Romanian,2001,98843
+overnight_stays,Total,Romanian,2002,98122
+overnight_stays,Total,Romanian,2003,79225
+overnight_stays,Total,Romanian,2004,85549
+overnight_stays,Total,Romanian,2005,78028
+overnight_stays,Total,Romanian,2006,92541
+overnight_stays,Total,Romanian,2007,96076
+overnight_stays,Total,Romanian,2008,110152
+overnight_stays,Total,Romanian,2009,107478
+overnight_stays,Total,Romanian,2010,97600
+overnight_stays,Total,Romanian,2011,129725
+overnight_stays,Total,Romanian,2012,161655
+overnight_stays,Total,Romanian,2013,159554
+overnight_stays,Total,Romanian,2014,160943
+overnight_stays,Total,Romanian,2015,140192
+overnight_stays,Total,Romanian,2016,142994
+overnight_stays,Total,Romanian,2017,177946
+overnight_stays,Total,Romanian,2018,193881
+overnight_stays,Total,Romanian,2019,196028
+overnight_stays,Total,Romanian,2020,139446
+overnight_stays,Total,Romanian,2021,187220
+overnight_stays,Total,Romanian,2022,184069
+overnight_stays,Total,Romanian,2023,234818
+overnight_stays,Total,Romanian,2024,226601
+overnight_stays,Total,Romanian,2025,207798
+overnight_stays,Total,foreign,2006,5553
+overnight_stays,Total,foreign,2007,9416
+overnight_stays,Total,foreign,2008,9579
+overnight_stays,Total,foreign,2009,8492
+overnight_stays,Total,foreign,2010,8126
+overnight_stays,Total,foreign,2011,6996
+overnight_stays,Total,foreign,2012,11661
+overnight_stays,Total,foreign,2013,11617
+overnight_stays,Total,foreign,2014,7794
+overnight_stays,Total,foreign,2015,6964
+overnight_stays,Total,foreign,2016,6875
+overnight_stays,Total,foreign,2017,7111
+overnight_stays,Total,foreign,2018,9905
+overnight_stays,Total,foreign,2019,8844
+overnight_stays,Total,foreign,2020,3622
+overnight_stays,Total,foreign,2021,3840
+overnight_stays,Total,foreign,2022,5119
+overnight_stays,Total,foreign,2023,7751
+overnight_stays,Total,foreign,2024,6467
+overnight_stays,Total,foreign,2025,6274
+overnight_stays,Hotels,all,2001,78184
+overnight_stays,Hotels,all,2002,74647
+overnight_stays,Hotels,all,2003,62054
+overnight_stays,Hotels,all,2004,67400
+overnight_stays,Hotels,all,2005,62311
+overnight_stays,Hotels,all,2006,68203
+overnight_stays,Hotels,all,2007,78113
+overnight_stays,Hotels,all,2008,89694
+overnight_stays,Hotels,all,2009,83981
+overnight_stays,Hotels,all,2010,70266
+overnight_stays,Hotels,all,2011,86755
+overnight_stays,Hotels,all,2012,115260
+overnight_stays,Hotels,all,2013,110615
+overnight_stays,Hotels,all,2014,102034
+overnight_stays,Hotels,all,2015,75569
+overnight_stays,Hotels,all,2016,70253
+overnight_stays,Hotels,all,2017,56267
+overnight_stays,Hotels,all,2018,71228
+overnight_stays,Hotels,all,2019,74125
+overnight_stays,Hotels,all,2020,51070
+overnight_stays,Hotels,all,2021,61612
+overnight_stays,Hotels,all,2022,68959
+overnight_stays,Hotels,all,2023,88878
+overnight_stays,Hotels,all,2024,84629
+overnight_stays,Hotels,all,2025,66979
+overnight_stays,Hotels,Romanian,2001,75460
+overnight_stays,Hotels,Romanian,2002,69722
+overnight_stays,Hotels,Romanian,2003,58884
+overnight_stays,Hotels,Romanian,2004,64237
+overnight_stays,Hotels,Romanian,2005,57287
+overnight_stays,Hotels,Romanian,2006,63776
+overnight_stays,Hotels,Romanian,2007,69877
+overnight_stays,Hotels,Romanian,2008,81170
+overnight_stays,Hotels,Romanian,2009,76692
+overnight_stays,Hotels,Romanian,2010,63681
+overnight_stays,Hotels,Romanian,2011,82054
+overnight_stays,Hotels,Romanian,2012,106296
+overnight_stays,Hotels,Romanian,2013,102174
+overnight_stays,Hotels,Romanian,2014,97103
+overnight_stays,Hotels,Romanian,2015,70630
+overnight_stays,Hotels,Romanian,2016,65282
+overnight_stays,Hotels,Romanian,2017,52313
+overnight_stays,Hotels,Romanian,2018,65167
+overnight_stays,Hotels,Romanian,2019,69538
+overnight_stays,Hotels,Romanian,2020,49075
+overnight_stays,Hotels,Romanian,2021,59914
+overnight_stays,Hotels,Romanian,2022,66570
+overnight_stays,Hotels,Romanian,2023,85340
+overnight_stays,Hotels,Romanian,2024,82232
+overnight_stays,Hotels,Romanian,2025,64467
+overnight_stays,Hotels,foreign,2006,4427
+overnight_stays,Hotels,foreign,2007,8236
+overnight_stays,Hotels,foreign,2008,8524
+overnight_stays,Hotels,foreign,2009,7289
+overnight_stays,Hotels,foreign,2010,6585
+overnight_stays,Hotels,foreign,2011,4701
+overnight_stays,Hotels,foreign,2012,8964
+overnight_stays,Hotels,foreign,2013,8441
+overnight_stays,Hotels,foreign,2014,4931
+overnight_stays,Hotels,foreign,2015,4939
+overnight_stays,Hotels,foreign,2016,4971
+overnight_stays,Hotels,foreign,2017,3954
+overnight_stays,Hotels,foreign,2018,6061
+overnight_stays,Hotels,foreign,2019,4587
+overnight_stays,Hotels,foreign,2020,1995
+overnight_stays,Hotels,foreign,2021,1698
+overnight_stays,Hotels,foreign,2022,2389
+overnight_stays,Hotels,foreign,2023,3538
+overnight_stays,Hotels,foreign,2024,2397
+overnight_stays,Hotels,foreign,2025,2512
+overnight_stays,Hostels,all,2001,7789
+overnight_stays,Hostels,all,2002,6803
+overnight_stays,Hostels,all,2003,6835
+overnight_stays,Hostels,all,2004,7258
+overnight_stays,Hostels,all,2005,5935
+overnight_stays,Hostels,all,2006,5277
+overnight_stays,Hostels,all,2007,6085
+overnight_stays,Hostels,all,2008,6024
+overnight_stays,Hostels,all,2009,3881
+overnight_stays,Hostels,all,2010,4848
+overnight_stays,Hostels,all,2011,6068
+overnight_stays,Hostels,all,2012,4616
+overnight_stays,Hostels,all,2013,4499
+overnight_stays,Hostels,all,2014,12936
+overnight_stays,Hostels,all,2015,12935
+overnight_stays,Hostels,all,2016,11657
+overnight_stays,Hostels,all,2017,17807
+overnight_stays,Hostels,all,2018,7812
+overnight_stays,Hostels,all,2019,4298
+overnight_stays,Hostels,all,2020,2442
+overnight_stays,Hostels,all,2021,2480
+overnight_stays,Hostels,all,2022,2805
+overnight_stays,Hostels,all,2023,2376
+overnight_stays,Hostels,all,2024,1843
+overnight_stays,Hostels,all,2025,2129
+overnight_stays,Hostels,Romanian,2001,6760
+overnight_stays,Hostels,Romanian,2002,6087
+overnight_stays,Hostels,Romanian,2003,6008
+overnight_stays,Hostels,Romanian,2004,6370
+overnight_stays,Hostels,Romanian,2005,4970
+overnight_stays,Hostels,Romanian,2006,4743
+overnight_stays,Hostels,Romanian,2007,5494
+overnight_stays,Hostels,Romanian,2008,5394
+overnight_stays,Hostels,Romanian,2009,3579
+overnight_stays,Hostels,Romanian,2010,4603
+overnight_stays,Hostels,Romanian,2011,5819
+overnight_stays,Hostels,Romanian,2012,4391
+overnight_stays,Hostels,Romanian,2013,4152
+overnight_stays,Hostels,Romanian,2014,12543
+overnight_stays,Hostels,Romanian,2015,12594
+overnight_stays,Hostels,Romanian,2016,11478
+overnight_stays,Hostels,Romanian,2017,17650
+overnight_stays,Hostels,Romanian,2018,7742
+overnight_stays,Hostels,Romanian,2019,4225
+overnight_stays,Hostels,Romanian,2020,2441
+overnight_stays,Hostels,Romanian,2021,2472
+overnight_stays,Hostels,Romanian,2022,2799
+overnight_stays,Hostels,Romanian,2023,2350
+overnight_stays,Hostels,Romanian,2024,1834
+overnight_stays,Hostels,Romanian,2025,2126
+overnight_stays,Hostels,foreign,2006,534
+overnight_stays,Hostels,foreign,2007,591
+overnight_stays,Hostels,foreign,2008,630
+overnight_stays,Hostels,foreign,2009,302
+overnight_stays,Hostels,foreign,2010,245
+overnight_stays,Hostels,foreign,2011,249
+overnight_stays,Hostels,foreign,2012,225
+overnight_stays,Hostels,foreign,2013,347
+overnight_stays,Hostels,foreign,2014,393
+overnight_stays,Hostels,foreign,2015,341
+overnight_stays,Hostels,foreign,2016,179
+overnight_stays,Hostels,foreign,2017,157
+overnight_stays,Hostels,foreign,2018,70
+overnight_stays,Hostels,foreign,2019,73
+overnight_stays,Hostels,foreign,2020,1
+overnight_stays,Hostels,foreign,2021,8
+overnight_stays,Hostels,foreign,2022,6
+overnight_stays,Hostels,foreign,2023,26
+overnight_stays,Hostels,foreign,2024,9
+overnight_stays,Hostels,foreign,2025,3
+overnight_stays,Apartments and rooms for rent,all,2021,21665
+overnight_stays,Apartments and rooms for rent,all,2022,21657
+overnight_stays,Apartments and rooms for rent,all,2023,34514
+overnight_stays,Apartments and rooms for rent,all,2024,37181
+overnight_stays,Apartments and rooms for rent,all,2025,37767
+overnight_stays,Apartments and rooms for rent,Romanian,2021,21319
+overnight_stays,Apartments and rooms for rent,Romanian,2022,20451
+overnight_stays,Apartments and rooms for rent,Romanian,2023,33184
+overnight_stays,Apartments and rooms for rent,Romanian,2024,35423
+overnight_stays,Apartments and rooms for rent,Romanian,2025,36155
+overnight_stays,Apartments and rooms for rent,foreign,2021,346
+overnight_stays,Apartments and rooms for rent,foreign,2022,1206
+overnight_stays,Apartments and rooms for rent,foreign,2023,1330
+overnight_stays,Apartments and rooms for rent,foreign,2024,1758
+overnight_stays,Apartments and rooms for rent,foreign,2025,1612
+overnight_stays,Apartment hotels,all,2017,9626
+overnight_stays,Apartment hotels,Romanian,2017,9096
+overnight_stays,Apartment hotels,foreign,2017,530
+overnight_stays,Hanuri si moteluri,all,2001,2452
+overnight_stays,Hanuri si moteluri,all,2002,603
+overnight_stays,Hanuri si moteluri,all,2003,3803
+overnight_stays,Hanuri si moteluri,Romanian,2001,2452
+overnight_stays,Hanuri si moteluri,Romanian,2002,600
+overnight_stays,Hanuri si moteluri,Romanian,2003,3439
+overnight_stays,Motels,all,2001,2452
+overnight_stays,Motels,all,2002,603
+overnight_stays,Motels,all,2003,3803
+overnight_stays,Motels,all,2004,6466
+overnight_stays,Motels,all,2005,4070
+overnight_stays,Motels,all,2006,6277
+overnight_stays,Motels,all,2007,5427
+overnight_stays,Motels,all,2008,6874
+overnight_stays,Motels,all,2009,5542
+overnight_stays,Motels,all,2010,7028
+overnight_stays,Motels,all,2011,8160
+overnight_stays,Motels,all,2012,10976
+overnight_stays,Motels,all,2013,11624
+overnight_stays,Motels,all,2014,8985
+overnight_stays,Motels,all,2015,9182
+overnight_stays,Motels,all,2016,8219
+overnight_stays,Motels,all,2017,14038
+overnight_stays,Motels,all,2018,16686
+overnight_stays,Motels,all,2019,17100
+overnight_stays,Motels,all,2020,8972
+overnight_stays,Motels,all,2021,5991
+overnight_stays,Motels,all,2022,6618
+overnight_stays,Motels,all,2023,6080
+overnight_stays,Motels,all,2024,6808
+overnight_stays,Motels,all,2025,5060
+overnight_stays,Motels,Romanian,2001,2452
+overnight_stays,Motels,Romanian,2002,600
+overnight_stays,Motels,Romanian,2003,3439
+overnight_stays,Motels,Romanian,2004,6069
+overnight_stays,Motels,Romanian,2005,3774
+overnight_stays,Motels,Romanian,2006,5916
+overnight_stays,Motels,Romanian,2007,5053
+overnight_stays,Motels,Romanian,2008,6619
+overnight_stays,Motels,Romanian,2009,5493
+overnight_stays,Motels,Romanian,2010,6847
+overnight_stays,Motels,Romanian,2011,7465
+overnight_stays,Motels,Romanian,2012,10641
+overnight_stays,Motels,Romanian,2013,11482
+overnight_stays,Motels,Romanian,2014,8268
+overnight_stays,Motels,Romanian,2015,8939
+overnight_stays,Motels,Romanian,2016,7935
+overnight_stays,Motels,Romanian,2017,13928
+overnight_stays,Motels,Romanian,2018,16326
+overnight_stays,Motels,Romanian,2019,16986
+overnight_stays,Motels,Romanian,2020,8969
+overnight_stays,Motels,Romanian,2021,5934
+overnight_stays,Motels,Romanian,2022,6477
+overnight_stays,Motels,Romanian,2023,6013
+overnight_stays,Motels,Romanian,2024,6729
+overnight_stays,Motels,Romanian,2025,5018
+overnight_stays,Motels,foreign,2006,361
+overnight_stays,Motels,foreign,2007,374
+overnight_stays,Motels,foreign,2008,255
+overnight_stays,Motels,foreign,2009,49
+overnight_stays,Motels,foreign,2010,181
+overnight_stays,Motels,foreign,2011,695
+overnight_stays,Motels,foreign,2012,335
+overnight_stays,Motels,foreign,2013,142
+overnight_stays,Motels,foreign,2014,717
+overnight_stays,Motels,foreign,2015,243
+overnight_stays,Motels,foreign,2016,284
+overnight_stays,Motels,foreign,2017,110
+overnight_stays,Motels,foreign,2018,360
+overnight_stays,Motels,foreign,2019,114
+overnight_stays,Motels,foreign,2020,3
+overnight_stays,Motels,foreign,2021,57
+overnight_stays,Motels,foreign,2022,141
+overnight_stays,Motels,foreign,2023,67
+overnight_stays,Motels,foreign,2024,79
+overnight_stays,Motels,foreign,2025,42
+overnight_stays,Tourist villas,all,2001,5210
+overnight_stays,Tourist villas,all,2002,6720
+overnight_stays,Tourist villas,all,2003,7403
+overnight_stays,Tourist villas,all,2004,5068
+overnight_stays,Tourist villas,all,2005,3810
+overnight_stays,Tourist villas,all,2006,2582
+overnight_stays,Tourist villas,all,2007,308
+overnight_stays,Tourist villas,all,2008,783
+overnight_stays,Tourist villas,all,2009,222
+overnight_stays,Tourist villas,all,2010,446
+overnight_stays,Tourist villas,all,2011,553
+overnight_stays,Tourist villas,all,2012,735
+overnight_stays,Tourist villas,all,2013,976
+overnight_stays,Tourist villas,all,2014,1467
+overnight_stays,Tourist villas,all,2015,1415
+overnight_stays,Tourist villas,all,2016,2657
+overnight_stays,Tourist villas,all,2017,4178
+overnight_stays,Tourist villas,all,2018,6309
+overnight_stays,Tourist villas,all,2019,7024
+overnight_stays,Tourist villas,all,2020,4176
+overnight_stays,Tourist villas,all,2021,4964
+overnight_stays,Tourist villas,all,2022,4505
+overnight_stays,Tourist villas,all,2023,5015
+overnight_stays,Tourist villas,all,2024,4040
+overnight_stays,Tourist villas,all,2025,5554
+overnight_stays,Tourist villas,Romanian,2001,5210
+overnight_stays,Tourist villas,Romanian,2002,6720
+overnight_stays,Tourist villas,Romanian,2003,7403
+overnight_stays,Tourist villas,Romanian,2004,5068
+overnight_stays,Tourist villas,Romanian,2005,3810
+overnight_stays,Tourist villas,Romanian,2006,2582
+overnight_stays,Tourist villas,Romanian,2007,308
+overnight_stays,Tourist villas,Romanian,2008,783
+overnight_stays,Tourist villas,Romanian,2009,222
+overnight_stays,Tourist villas,Romanian,2010,446
+overnight_stays,Tourist villas,Romanian,2011,413
+overnight_stays,Tourist villas,Romanian,2012,735
+overnight_stays,Tourist villas,Romanian,2013,956
+overnight_stays,Tourist villas,Romanian,2014,1435
+overnight_stays,Tourist villas,Romanian,2015,1386
+overnight_stays,Tourist villas,Romanian,2016,2579
+overnight_stays,Tourist villas,Romanian,2017,4024
+overnight_stays,Tourist villas,Romanian,2018,6150
+overnight_stays,Tourist villas,Romanian,2019,6956
+overnight_stays,Tourist villas,Romanian,2020,4176
+overnight_stays,Tourist villas,Romanian,2021,4924
+overnight_stays,Tourist villas,Romanian,2022,4497
+overnight_stays,Tourist villas,Romanian,2023,5015
+overnight_stays,Tourist villas,Romanian,2024,4020
+overnight_stays,Tourist villas,Romanian,2025,5450
+overnight_stays,Tourist villas,foreign,2011,140
+overnight_stays,Tourist villas,foreign,2013,20
+overnight_stays,Tourist villas,foreign,2014,32
+overnight_stays,Tourist villas,foreign,2015,29
+overnight_stays,Tourist villas,foreign,2016,78
+overnight_stays,Tourist villas,foreign,2017,154
+overnight_stays,Tourist villas,foreign,2018,159
+overnight_stays,Tourist villas,foreign,2019,68
+overnight_stays,Tourist villas,foreign,2021,40
+overnight_stays,Tourist villas,foreign,2022,8
+overnight_stays,Tourist villas,foreign,2024,20
+overnight_stays,Tourist villas,foreign,2025,104
+overnight_stays,Tourist chalets,all,2001,6287
+overnight_stays,Tourist chalets,all,2002,9478
+overnight_stays,Tourist chalets,all,2003,2023
+overnight_stays,Tourist chalets,all,2004,927
+overnight_stays,Tourist chalets,all,2005,788
+overnight_stays,Tourist chalets,all,2006,1845
+overnight_stays,Tourist chalets,all,2007,637
+overnight_stays,Tourist chalets,all,2008,208
+overnight_stays,Tourist chalets,all,2009,606
+overnight_stays,Tourist chalets,all,2010,789
+overnight_stays,Tourist chalets,all,2011,3805
+overnight_stays,Tourist chalets,all,2012,4399
+overnight_stays,Tourist chalets,all,2013,4700
+overnight_stays,Tourist chalets,all,2014,2045
+overnight_stays,Tourist chalets,all,2015,5200
+overnight_stays,Tourist chalets,all,2016,3481
+overnight_stays,Tourist chalets,all,2017,2940
+overnight_stays,Tourist chalets,all,2018,3792
+overnight_stays,Tourist chalets,all,2019,3114
+overnight_stays,Tourist chalets,all,2020,2182
+overnight_stays,Tourist chalets,all,2021,4117
+overnight_stays,Tourist chalets,all,2022,2237
+overnight_stays,Tourist chalets,all,2023,3680
+overnight_stays,Tourist chalets,all,2024,876
+overnight_stays,Tourist chalets,all,2025,822
+overnight_stays,Tourist chalets,Romanian,2001,6265
+overnight_stays,Tourist chalets,Romanian,2002,9467
+overnight_stays,Tourist chalets,Romanian,2003,2023
+overnight_stays,Tourist chalets,Romanian,2004,927
+overnight_stays,Tourist chalets,Romanian,2005,788
+overnight_stays,Tourist chalets,Romanian,2006,1845
+overnight_stays,Tourist chalets,Romanian,2007,637
+overnight_stays,Tourist chalets,Romanian,2008,208
+overnight_stays,Tourist chalets,Romanian,2009,605
+overnight_stays,Tourist chalets,Romanian,2010,789
+overnight_stays,Tourist chalets,Romanian,2011,3778
+overnight_stays,Tourist chalets,Romanian,2012,4399
+overnight_stays,Tourist chalets,Romanian,2013,4690
+overnight_stays,Tourist chalets,Romanian,2014,2039
+overnight_stays,Tourist chalets,Romanian,2015,5179
+overnight_stays,Tourist chalets,Romanian,2016,3455
+overnight_stays,Tourist chalets,Romanian,2017,2938
+overnight_stays,Tourist chalets,Romanian,2018,3791
+overnight_stays,Tourist chalets,Romanian,2019,3114
+overnight_stays,Tourist chalets,Romanian,2020,2182
+overnight_stays,Tourist chalets,Romanian,2021,4117
+overnight_stays,Tourist chalets,Romanian,2022,2218
+overnight_stays,Tourist chalets,Romanian,2023,3391
+overnight_stays,Tourist chalets,Romanian,2024,876
+overnight_stays,Tourist chalets,Romanian,2025,822
+overnight_stays,Tourist chalets,foreign,2009,1
+overnight_stays,Tourist chalets,foreign,2011,27
+overnight_stays,Tourist chalets,foreign,2013,10
+overnight_stays,Tourist chalets,foreign,2014,6
+overnight_stays,Tourist chalets,foreign,2015,21
+overnight_stays,Tourist chalets,foreign,2016,26
+overnight_stays,Tourist chalets,foreign,2017,2
+overnight_stays,Tourist chalets,foreign,2018,1
+overnight_stays,Tourist chalets,foreign,2022,19
+overnight_stays,Tourist chalets,foreign,2023,289
+overnight_stays,Campsites,all,2001,5
+overnight_stays,Campsites,Romanian,2001,5
+overnight_stays,Tourist stopovers,all,2004,94
+overnight_stays,Tourist stopovers,all,2005,260
+overnight_stays,Tourist stopovers,all,2006,200
+overnight_stays,Tourist stopovers,all,2007,192
+overnight_stays,Tourist stopovers,all,2008,82
+overnight_stays,Tourist stopovers,all,2009,194
+overnight_stays,Tourist stopovers,all,2010,57
+overnight_stays,Tourist stopovers,all,2016,1163
+overnight_stays,Tourist stopovers,all,2017,1152
+overnight_stays,Tourist stopovers,all,2018,2768
+overnight_stays,Tourist stopovers,all,2019,1855
+overnight_stays,Tourist stopovers,all,2021,1880
+overnight_stays,Tourist stopovers,all,2022,1874
+overnight_stays,Tourist stopovers,all,2023,2831
+overnight_stays,Tourist stopovers,all,2024,2700
+overnight_stays,Tourist stopovers,all,2025,3006
+overnight_stays,Tourist stopovers,Romanian,2004,94
+overnight_stays,Tourist stopovers,Romanian,2005,260
+overnight_stays,Tourist stopovers,Romanian,2006,200
+overnight_stays,Tourist stopovers,Romanian,2007,192
+overnight_stays,Tourist stopovers,Romanian,2008,82
+overnight_stays,Tourist stopovers,Romanian,2009,194
+overnight_stays,Tourist stopovers,Romanian,2010,57
+overnight_stays,Tourist stopovers,Romanian,2016,1163
+overnight_stays,Tourist stopovers,Romanian,2017,1152
+overnight_stays,Tourist stopovers,Romanian,2018,2727
+overnight_stays,Tourist stopovers,Romanian,2019,1840
+overnight_stays,Tourist stopovers,Romanian,2021,1880
+overnight_stays,Tourist stopovers,Romanian,2022,1874
+overnight_stays,Tourist stopovers,Romanian,2023,2831
+overnight_stays,Tourist stopovers,Romanian,2024,2700
+overnight_stays,Tourist stopovers,Romanian,2025,3006
+overnight_stays,Tourist stopovers,foreign,2018,41
+overnight_stays,Tourist stopovers,foreign,2019,15
+overnight_stays,Tourist cottages,all,2018,72
+overnight_stays,Tourist cottages,all,2019,114
+overnight_stays,Tourist cottages,all,2020,172
+overnight_stays,Tourist cottages,all,2021,252
+overnight_stays,Tourist cottages,all,2022,6
+overnight_stays,Tourist cottages,all,2023,175
+overnight_stays,Tourist cottages,all,2024,248
+overnight_stays,Tourist cottages,all,2025,425
+overnight_stays,Tourist cottages,Romanian,2018,72
+overnight_stays,Tourist cottages,Romanian,2019,114
+overnight_stays,Tourist cottages,Romanian,2020,172
+overnight_stays,Tourist cottages,Romanian,2021,252
+overnight_stays,Tourist cottages,Romanian,2022,6
+overnight_stays,Tourist cottages,Romanian,2023,67
+overnight_stays,Tourist cottages,Romanian,2024,128
+overnight_stays,Tourist cottages,Romanian,2025,425
+overnight_stays,Tourist cottages,foreign,2023,108
+overnight_stays,Tourist cottages,foreign,2024,120
+overnight_stays,Tourist guesthouses,all,2001,3212
+overnight_stays,Tourist guesthouses,all,2002,5888
+overnight_stays,Tourist guesthouses,all,2003,1514
+overnight_stays,Tourist guesthouses,all,2004,1267
+overnight_stays,Tourist guesthouses,all,2005,2097
+overnight_stays,Tourist guesthouses,all,2006,6325
+overnight_stays,Tourist guesthouses,all,2007,4130
+overnight_stays,Tourist guesthouses,all,2008,3920
+overnight_stays,Tourist guesthouses,all,2009,3388
+overnight_stays,Tourist guesthouses,all,2010,7189
+overnight_stays,Tourist guesthouses,all,2011,13282
+overnight_stays,Tourist guesthouses,all,2012,21458
+overnight_stays,Tourist guesthouses,all,2013,22405
+overnight_stays,Tourist guesthouses,all,2014,21023
+overnight_stays,Tourist guesthouses,all,2015,23357
+overnight_stays,Tourist guesthouses,all,2016,27068
+overnight_stays,Tourist guesthouses,all,2017,38431
+overnight_stays,Tourist guesthouses,all,2018,41626
+overnight_stays,Tourist guesthouses,all,2019,46629
+overnight_stays,Tourist guesthouses,all,2020,29653
+overnight_stays,Tourist guesthouses,all,2021,29940
+overnight_stays,Tourist guesthouses,all,2022,24513
+overnight_stays,Tourist guesthouses,all,2023,29712
+overnight_stays,Tourist guesthouses,all,2024,28657
+overnight_stays,Tourist guesthouses,all,2025,33358
+overnight_stays,Tourist guesthouses,Romanian,2001,2553
+overnight_stays,Tourist guesthouses,Romanian,2002,5430
+overnight_stays,Tourist guesthouses,Romanian,2003,1452
+overnight_stays,Tourist guesthouses,Romanian,2004,1226
+overnight_stays,Tourist guesthouses,Romanian,2005,2077
+overnight_stays,Tourist guesthouses,Romanian,2006,6253
+overnight_stays,Tourist guesthouses,Romanian,2007,4082
+overnight_stays,Tourist guesthouses,Romanian,2008,3808
+overnight_stays,Tourist guesthouses,Romanian,2009,3275
+overnight_stays,Tourist guesthouses,Romanian,2010,6588
+overnight_stays,Tourist guesthouses,Romanian,2011,12737
+overnight_stays,Tourist guesthouses,Romanian,2012,19717
+overnight_stays,Tourist guesthouses,Romanian,2013,20183
+overnight_stays,Tourist guesthouses,Romanian,2014,19702
+overnight_stays,Tourist guesthouses,Romanian,2015,22228
+overnight_stays,Tourist guesthouses,Romanian,2016,26232
+overnight_stays,Tourist guesthouses,Romanian,2017,37035
+overnight_stays,Tourist guesthouses,Romanian,2018,40076
+overnight_stays,Tourist guesthouses,Romanian,2019,44282
+overnight_stays,Tourist guesthouses,Romanian,2020,28395
+overnight_stays,Tourist guesthouses,Romanian,2021,29457
+overnight_stays,Tourist guesthouses,Romanian,2022,24040
+overnight_stays,Tourist guesthouses,Romanian,2023,28965
+overnight_stays,Tourist guesthouses,Romanian,2024,27727
+overnight_stays,Tourist guesthouses,Romanian,2025,31995
+overnight_stays,Tourist guesthouses,foreign,2006,72
+overnight_stays,Tourist guesthouses,foreign,2007,48
+overnight_stays,Tourist guesthouses,foreign,2008,112
+overnight_stays,Tourist guesthouses,foreign,2009,113
+overnight_stays,Tourist guesthouses,foreign,2010,601
+overnight_stays,Tourist guesthouses,foreign,2011,545
+overnight_stays,Tourist guesthouses,foreign,2012,1741
+overnight_stays,Tourist guesthouses,foreign,2013,2222
+overnight_stays,Tourist guesthouses,foreign,2014,1321
+overnight_stays,Tourist guesthouses,foreign,2015,1129
+overnight_stays,Tourist guesthouses,foreign,2016,836
+overnight_stays,Tourist guesthouses,foreign,2017,1396
+overnight_stays,Tourist guesthouses,foreign,2018,1550
+overnight_stays,Tourist guesthouses,foreign,2019,2347
+overnight_stays,Tourist guesthouses,foreign,2020,1258
+overnight_stays,Tourist guesthouses,foreign,2021,483
+overnight_stays,Tourist guesthouses,foreign,2022,473
+overnight_stays,Tourist guesthouses,foreign,2023,747
+overnight_stays,Tourist guesthouses,foreign,2024,930
+overnight_stays,Tourist guesthouses,foreign,2025,1363
+overnight_stays,Agritourism guesthouses,all,2001,138
+overnight_stays,Agritourism guesthouses,all,2002,96
+overnight_stays,Agritourism guesthouses,all,2003,16
+overnight_stays,Agritourism guesthouses,all,2004,1558
+overnight_stays,Agritourism guesthouses,all,2005,5313
+overnight_stays,Agritourism guesthouses,all,2006,7385
+overnight_stays,Agritourism guesthouses,all,2007,10600
+overnight_stays,Agritourism guesthouses,all,2008,12146
+overnight_stays,Agritourism guesthouses,all,2009,18156
+overnight_stays,Agritourism guesthouses,all,2010,15103
+overnight_stays,Agritourism guesthouses,all,2011,18098
+overnight_stays,Agritourism guesthouses,all,2012,15872
+overnight_stays,Agritourism guesthouses,all,2013,16352
+overnight_stays,Agritourism guesthouses,all,2014,20247
+overnight_stays,Agritourism guesthouses,all,2015,19498
+overnight_stays,Agritourism guesthouses,all,2016,25371
+overnight_stays,Agritourism guesthouses,all,2017,40618
+overnight_stays,Agritourism guesthouses,all,2018,53493
+overnight_stays,Agritourism guesthouses,all,2019,50613
+overnight_stays,Agritourism guesthouses,all,2020,44401
+overnight_stays,Agritourism guesthouses,all,2021,58159
+overnight_stays,Agritourism guesthouses,all,2022,56014
+overnight_stays,Agritourism guesthouses,all,2023,69308
+overnight_stays,Agritourism guesthouses,all,2024,66086
+overnight_stays,Agritourism guesthouses,all,2025,58972
+overnight_stays,Agritourism guesthouses,Romanian,2001,138
+overnight_stays,Agritourism guesthouses,Romanian,2002,96
+overnight_stays,Agritourism guesthouses,Romanian,2003,16
+overnight_stays,Agritourism guesthouses,Romanian,2004,1558
+overnight_stays,Agritourism guesthouses,Romanian,2005,5062
+overnight_stays,Agritourism guesthouses,Romanian,2006,7226
+overnight_stays,Agritourism guesthouses,Romanian,2007,10433
+overnight_stays,Agritourism guesthouses,Romanian,2008,12088
+overnight_stays,Agritourism guesthouses,Romanian,2009,17418
+overnight_stays,Agritourism guesthouses,Romanian,2010,14589
+overnight_stays,Agritourism guesthouses,Romanian,2011,17459
+overnight_stays,Agritourism guesthouses,Romanian,2012,15476
+overnight_stays,Agritourism guesthouses,Romanian,2013,15917
+overnight_stays,Agritourism guesthouses,Romanian,2014,19853
+overnight_stays,Agritourism guesthouses,Romanian,2015,19236
+overnight_stays,Agritourism guesthouses,Romanian,2016,24870
+overnight_stays,Agritourism guesthouses,Romanian,2017,39810
+overnight_stays,Agritourism guesthouses,Romanian,2018,51830
+overnight_stays,Agritourism guesthouses,Romanian,2019,48973
+overnight_stays,Agritourism guesthouses,Romanian,2020,44036
+overnight_stays,Agritourism guesthouses,Romanian,2021,56951
+overnight_stays,Agritourism guesthouses,Romanian,2022,55137
+overnight_stays,Agritourism guesthouses,Romanian,2023,67662
+overnight_stays,Agritourism guesthouses,Romanian,2024,64932
+overnight_stays,Agritourism guesthouses,Romanian,2025,58334
+overnight_stays,Agritourism guesthouses,foreign,2006,159
+overnight_stays,Agritourism guesthouses,foreign,2007,167
+overnight_stays,Agritourism guesthouses,foreign,2008,58
+overnight_stays,Agritourism guesthouses,foreign,2009,738
+overnight_stays,Agritourism guesthouses,foreign,2010,514
+overnight_stays,Agritourism guesthouses,foreign,2011,639
+overnight_stays,Agritourism guesthouses,foreign,2012,396
+overnight_stays,Agritourism guesthouses,foreign,2013,435
+overnight_stays,Agritourism guesthouses,foreign,2014,394
+overnight_stays,Agritourism guesthouses,foreign,2015,262
+overnight_stays,Agritourism guesthouses,foreign,2016,501
+overnight_stays,Agritourism guesthouses,foreign,2017,808
+overnight_stays,Agritourism guesthouses,foreign,2018,1663
+overnight_stays,Agritourism guesthouses,foreign,2019,1640
+overnight_stays,Agritourism guesthouses,foreign,2020,365
+overnight_stays,Agritourism guesthouses,foreign,2021,1208
+overnight_stays,Agritourism guesthouses,foreign,2022,877
+overnight_stays,Agritourism guesthouses,foreign,2023,1646
+overnight_stays,Agritourism guesthouses,foreign,2024,1154
+overnight_stays,Agritourism guesthouses,foreign,2025,638

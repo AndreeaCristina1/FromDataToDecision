@@ -1,0 +1,15 @@
+feature,importance
+log_capacity_agro,0.56152
+lag1_log_overnight,0.09577
+hist_mean_stay,0.07953
+trend,0.06030
+log_capacity_county,0.05388
+hist_mean_occupancy,0.05216
+hist_mean_log_overnight,0.02965
+years_of_experience,0.02469
+lag1_log_capacity,0.01908
+log_overnight_county,0.01047
+agro_share_county_capacity,0.00781
+crisis_dummy,0.00330
+has_lag,0.00182
+pandemic_dummy,0.00000

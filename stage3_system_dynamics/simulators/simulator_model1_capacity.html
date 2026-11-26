@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SD Simulator 1 – hotel and agritourism capacity, Gorj</title><style>:root{
+  --bg:#f6f5f1; --surface:#ffffff; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --grid:#e1e0d9; --axis:#c3c2b7; --line:#e1e0d9;
+  --blue:#2a78d6; --orange:#eb6834; --aqua:#1baf7a; --violet:#6250d6; --yellow:#eda100; --red:#e34948; --green:#008300;
+  --chip:#efeee9; --accent:#2a78d6; --radius:12px; color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781; --grid:#2c2c2a; --axis:#383835; --line:#2c2c2a;
+    --blue:#3987e5; --orange:#d95926; --aqua:#199e70; --violet:#9085e9; --yellow:#c98500; --red:#e66767; --green:#2fb52f;
+    --chip:#262624; --accent:#3987e5; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781; --grid:#2c2c2a; --axis:#383835; --line:#2c2c2a;
+  --blue:#3987e5; --orange:#d95926; --aqua:#199e70; --violet:#9085e9; --yellow:#c98500; --red:#e66767; --green:#2fb52f;
+  --chip:#262624; --accent:#3987e5; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header.top{padding:18px 20px 8px;max-width:1500px;margin:0 auto}
+header.top h1{font-size:22px;margin:0 0 4px;font-weight:650;letter-spacing:-.01em}
+header.top p{margin:0;color:var(--ink2);max-width:980px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.badge{background:var(--chip);color:var(--ink2);border-radius:999px;padding:3px 10px;font-size:12.5px}
+.badge b{color:var(--ink)}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
+button.btn{font:inherit;font-size:13.5px;padding:7px 12px;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+button.btn:hover{border-color:var(--accent)}
+button.btn.on{background:var(--accent);border-color:var(--accent);color:#fff}
+button.btn.ghost{background:transparent}
+.layout{display:grid;grid-template-columns:340px 1fr;gap:16px;max-width:1500px;margin:0 auto;padding:8px 20px 40px}
+@media (max-width:980px){.layout{grid-template-columns:1fr;padding:8px 14px 40px}}
+aside.controls{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px;align-self:start;position:sticky;top:10px;max-height:calc(100vh - 20px);overflow:auto}
+@media (max-width:980px){aside.controls{position:static;max-height:none}}
+aside.controls h3{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:14px 0 6px}
+aside.controls h3:first-child{margin-top:0}
+.scen{display:flex;flex-direction:column;gap:6px}
+.scen button{text-align:left}
+.scen small{display:block;color:var(--muted);font-size:12px;margin-top:1px}
+.scen button.on small{color:#e8f0fb}
+.sl{margin:8px 0 10px}
+.sl .row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.sl label{font-size:13.5px;font-weight:550}
+.sl .val{font-variant-numeric:tabular-nums;font-size:13.5px;color:var(--ink)}
+.sl input[type=range]{width:100%;accent-color:var(--accent);margin:2px 0}
+.sl .help{font-size:12px;color:var(--muted);line-height:1.35}
+.tag{display:inline-block;font-size:10.5px;padding:0 6px;border-radius:6px;margin-left:6px;vertical-align:1px;font-weight:600}
+.tag.cal{background:#dbe8f9;color:#144b92}.tag.est{background:#fbe3d6;color:#8a3410}.tag.real{background:#d5f0e4;color:#0c6844}.tag.sc{background:#e4e0fa;color:#3a2d98}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tag.cal{background:#1c3556;color:#9cc4f5}:root:not([data-theme="light"]) .tag.est{background:#4a2515;color:#f2b394}:root:not([data-theme="light"]) .tag.real{background:#123d2c;color:#8ddcb7}:root:not([data-theme="light"]) .tag.sc{background:#2c2760;color:#bdb6f5}}
+main.stage{display:flex;flex-direction:column;gap:14px;min-width:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px;min-width:0}
+.card h2{font-size:15px;margin:0 0 2px;font-weight:650}
+.card .sub{font-size:12.5px;color:var(--muted);margin:0 0 8px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.kpi{background:var(--chip);border-radius:10px;padding:9px 11px}
+.kpi .k{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.kpi .v{font-size:19px;font-weight:650;font-variant-numeric:tabular-nums}
+.kpi .d{font-size:12px;color:var(--ink2)}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:14px}
+@media (max-width:520px){.charts{grid-template-columns:1fr}}
+.chartbox{position:relative}
+canvas{display:block;width:100%;height:260px}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px;color:var(--ink2);margin:4px 0 0}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend i{display:inline-block;width:16px;height:0;border-top:3px solid;border-radius:2px}
+.legend i.dot{border-top-style:dotted}.legend i.dash{border-top-style:dashed}
+.tip{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--axis);border-radius:8px;padding:6px 9px;font-size:12.5px;box-shadow:0 4px 14px rgba(0,0,0,.14);z-index:5;display:none;white-space:nowrap}
+.tip b{display:block;margin-bottom:2px}
+.scrub{display:flex;align-items:center;gap:12px;margin:2px 0 8px}
+.scrub input{flex:1;accent-color:var(--accent)}
+.scrub .yr{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;min-width:56px}
+svg.diagram{width:100%;height:auto;display:block}
+svg.diagram text{font-family:inherit;fill:var(--ink)}
+svg.diagram .t2{fill:var(--ink2)}
+svg.diagram .mut{fill:var(--muted)}
+svg.diagram .num{font-weight:650;font-variant-numeric:tabular-nums}
+details.how{background:var(--chip);border-radius:10px;padding:8px 12px;margin-top:10px;font-size:13.5px;color:var(--ink2)}
+details.how summary{cursor:pointer;font-weight:600;color:var(--ink)}
+details.how ul{margin:6px 0 2px 18px;padding:0}
+.note{font-size:12.5px;color:var(--muted);margin-top:8px}
+table.dt{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+table.dt th,table.dt td{padding:4px 8px;border-bottom:1px solid var(--line);text-align:right}
+table.dt th:first-child,table.dt td:first-child{text-align:left}
+.foot{max-width:1500px;margin:0 auto;padding:0 20px 30px;color:var(--muted);font-size:12.5px}
+</style></head><body>
+<header class="top"><div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start"><h1>Simulator 1: hotel and agritourism accommodation capacity, Gorj County</h1><span id="themebtn"></span></div>
+<p>System dynamics model with three stocks (hotel capacity, agritourism capacity, reputation), a Bass reputation loop (R1), a saturation brake (B1), substitution through the allocation of total demand and a public-policy channel. Change the parameters and compare the simulation with the observed INS data for 2001–2025.</p><div class="badges"><span class="badge"><b>Observed data:</b> INS TEMPO-Online, 2001–2025</span><span class="badge"><b>Step:</b> annual</span><span class="badge"><b>Article:</b> Sections 3.5 and 4.3</span></div></header>
+<div class="layout"><aside class="controls" id="controls"></aside><main class="stage" id="stage"></main></div>
+<div class="foot">Supplementary material of the article (see the repository README). Equations and parameters as in the article. Results are scenarios, not official forecasts.</div>
+<script>const DATA = {"years": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025], "CH": [289547.0, 272658.0, 271817.0, 251146.0, 246567.0, 296018.0, 297398.0, 313100.0, 366348.0, 322359.0, 346718.0, 366956.0, 401858.0, 339433.0, 297272.0, 294722.0, 251807.0, 304408.0, 313742.0, 254996.0, 279225.0, 266676.0, 312087.0, 330651.0, 307205.0], "CA": [4016.0, 1716.0, 486.0, 4967.0, 18806.0, 29897.0, 38012.0, 47825.0, 115726.0, 86009.0, 86212.0, 86766.0, 92694.0, 101933.0, 107385.0, 147303.0, 229343.0, 262135.0, 280522.0, 263447.0, 352133.0, 337431.0, 384689.0, 411603.0, 472302.0], "NH": [78184.0, 74647.0, 62054.0, 67400.0, 62311.0, 68203.0, 78113.0, 89694.0, 83981.0, 70266.0, 86755.0, 115260.0, 110615.0, 102034.0, 75569.0, 70253.0, 56267.0, 71228.0, 74125.0, 51070.0, 61612.0, 68959.0, 88878.0, 84629.0, 66979.0], "NA": [138.0, 96.0, 16.0, 1558.0, 5313.0, 7385.0, 10600.0, 12146.0, 18156.0, 15103.0, 18098.0, 15872.0, 16352.0, 20247.0, 19498.0, 25371.0, 40618.0, 53493.0, 50613.0, 44401.0, 58159.0, 56014.0, 69308.0, 66086.0, 58972.0], "CAlte": [116059.0, 83084.0, 70967.0, 72552.0, 73659.0, 85265.0, 68593.0, 82452.0, 92199.0, 148011.0, 224057.0, 274885.0, 272306.0, 320275.0, 330656.0, 340189.0, 461025.0, 434702.0, 451782.0, 329569.0, 514706.0, 524897.0, 608251.0, 601432.0, 663892.0], "Nt": [103277.0, 104235.0, 83648.0, 90038.0, 84584.0, 98094.0, 105492.0, 119731.0, 115970.0, 105726.0, 136721.0, 173316.0, 171171.0, 168737.0, 147156.0, 149869.0, 185057.0, 203786.0, 204872.0, 143068.0, 191060.0, 189188.0, 242569.0, 233068.0, 214072.0], "Ct": [409622.0, 357458.0, 343270.0, 328665.0, 339032.0, 411180.0, 404003.0, 443377.0, 574273.0, 556379.0, 656987.0, 728607.0, 766858.0, 761641.0, 735313.0, 782214.0, 942175.0, 1001245.0, 1046046.0, 848012.0, 1146064.0, 1129004.0, 1305027.0, 1343686.0, 1443399.0], "SosA": [45.0, 32.0, 10.0, 326.0, 2095.0, 3403.0, 4788.0, 6112.0, 7244.0, 5210.0, 5884.0, 6019.0, 7931.0, 6590.0, 7389.0, 11673.0, 21008.0, 25550.0, 24472.0, 22951.0, 32869.0, 31000.0, 36276.0, 31698.0, 31073.0]};</script>
+<script>/* ===== Shared library of the simulators (no external dependencies) ===== */
+const $ = (s, r = document) => r.querySelector(s);
+function h(tag, attrs, ...kids) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (k === 'class') e.className = v; else if (k === 'html') e.innerHTML = v;
+    else if (k.startsWith('on')) e.addEventListener(k.slice(2), v); else e.setAttribute(k, v);
+  }
+  for (const c of kids.flat()) if (c != null) e.append(c.nodeType ? c : document.createTextNode(c));
+  return e;
+}
+const nf = (v, d = 0) => (v == null || !isFinite(v)) ? '–' : v.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+const pct = (v, d = 1) => nf(v * 100, d) + '%';
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+/* ---------- slider with label, value, help text and provenance tag ---------- */
+const TAGS = { cal: ['calibrated', 'Value calibrated on the historical series'], est: ['estimate', 'Value computed or chosen from a public source'],
+  real: ['real', 'Value from statistics or publications'], sc: ['scenario', 'Scenario or policy variable (assumption)'] };
+function makeSlider(def, state, onChange) {
+  const val = h('span', { class: 'val' });
+  const inp = h('input', { type: 'range', min: def.min, max: def.max, step: def.step, value: state[def.key] });
+  const show = () => { val.textContent = def.fmt ? def.fmt(state[def.key]) : nf(state[def.key], def.dec ?? 2); };
+  inp.addEventListener('input', () => { state[def.key] = parseFloat(inp.value); show(); onChange(def.key); });
+  show();
+  const tg = TAGS[def.tag] || TAGS.cal;
+  const el = h('div', { class: 'sl' },
+    h('div', { class: 'row' }, h('label', {}, def.label, h('span', { class: 'tag ' + (def.tag || 'cal'), title: tg[1] }, tg[0])), val),
+    inp, def.help ? h('div', { class: 'help' }, def.help) : null);
+  el._set = v => { state[def.key] = v; inp.value = v; show(); };
+  el._refresh = () => { inp.value = state[def.key]; show(); };
+  return el;
+}
+
+/* ---------- line chart on canvas ---------- */
+function niceTicks(lo, hi, n = 5) {
+  if (hi === lo) { hi = lo + 1; }
+  const span = hi - lo, step0 = span / n, mag = Math.pow(10, Math.floor(Math.log10(step0)));
+  const m = step0 / mag, step = (m < 1.5 ? 1 : m < 3 ? 2 : m < 7 ? 5 : 10) * mag;
+  const a = Math.ceil(lo / step - 1e-9) * step, out = [];
+  for (let v = a; v <= hi + 1e-9; v += step) out.push(+v.toFixed(10));
+  return out;
+}
+class Chart {
+  constructor(canvas, tip) { this.c = canvas; this.tip = tip; this.hover = null; this.o = {}; this.series = [];
+    canvas.addEventListener('mousemove', e => { const r = canvas.getBoundingClientRect(); this.hover = { x: e.clientX - r.left, y: e.clientY - r.top }; this.draw(); });
+    canvas.addEventListener('mouseleave', () => { this.hover = null; this.draw(); });
+    new ResizeObserver(() => this.draw()).observe(canvas); }
+  set(series, o) { this.series = series; this.o = o || {}; this.draw(); }
+  draw() {
+    const c = this.c, dpr = window.devicePixelRatio || 1, W = c.clientWidth, H = c.clientHeight;
+    if (!W) return;
+    c.width = Math.round(W * dpr); c.height = Math.round(H * dpr);
+    const g = c.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H);
+    const o = this.o, L = o.left || 58, R = 14, T = 12, B = 28, pw = W - L - R, ph = H - T - B;
+    const pts = this.series.flatMap(s => s.data.filter(p => p.y != null && isFinite(p.y)));
+    if (!pts.length) return;
+    let x0 = o.xmin ?? Math.min(...pts.map(p => p.x)), x1 = o.xmax ?? Math.max(...pts.map(p => p.x));
+    let ys = pts.map(p => p.y); (o.hlines || []).forEach(l => ys.push(l.y));
+    let y0 = o.ymin ?? Math.min(0, ...ys), y1 = o.ymax ?? Math.max(...ys);
+    if (o.ymin == null && o.tight) y0 = Math.min(...ys); if (y1 === y0) y1 = y0 + 1;
+    const pad = (y1 - y0) * (o.ymax == null ? 0.06 : 0); y1 += pad; if (o.ymin == null && o.tight) y0 -= pad;
+    const X = x => L + (x - x0) / (x1 - x0) * pw, Y = y => T + (1 - (y - y0) / (y1 - y0)) * ph;
+    const ink2 = css('--ink2'), muted = css('--muted'), grid = css('--grid'), axis = css('--axis');
+    (o.bands || []).forEach(b => { g.fillStyle = css('--chip'); g.globalAlpha = .7; g.fillRect(X(b.x0), T, X(b.x1) - X(b.x0), ph); g.globalAlpha = 1;
+      if (b.label) { g.fillStyle = muted; g.font = '11px system-ui'; g.textAlign = 'center'; g.fillText(b.label, (X(b.x0) + X(b.x1)) / 2, T + 11); } });
+    g.font = '11.5px system-ui'; g.textAlign = 'right'; g.textBaseline = 'middle';
+    niceTicks(y0, y1, 5).forEach(v => { const y = Y(v); g.strokeStyle = grid; g.lineWidth = 1; g.beginPath(); g.moveTo(L, y); g.lineTo(L + pw, y); g.stroke();
+      g.fillStyle = muted; g.fillText(o.yfmt ? o.yfmt(v) : nf(v, v % 1 ? 1 : 0), L - 6, y); });
+    g.textAlign = 'center'; g.textBaseline = 'top';
+    const xt = niceTicks(x0, x1, Math.max(3, Math.floor(pw / 80)));
+    xt.forEach(v => { g.fillStyle = muted; g.fillText(o.xfmt ? o.xfmt(v) : String(v), X(v), T + ph + 7); g.strokeStyle = axis; g.beginPath(); g.moveTo(X(v), T + ph); g.lineTo(X(v), T + ph + 4); g.stroke(); });
+    g.strokeStyle = axis; g.beginPath(); g.moveTo(L, T + ph); g.lineTo(L + pw, T + ph); g.stroke();
+    (o.hlines || []).forEach(l => { g.strokeStyle = css(l.color || '--muted'); g.setLineDash([5, 4]); g.lineWidth = 1.2; g.beginPath(); g.moveTo(L, Y(l.y)); g.lineTo(L + pw, Y(l.y)); g.stroke(); g.setLineDash([]);
+      if (l.label) { g.fillStyle = ink2; g.textAlign = 'right'; g.textBaseline = 'bottom'; g.font = '11px system-ui'; g.fillText(l.label, L + pw - 2, Y(l.y) - 2); } });
+    if (o.vline != null) { g.strokeStyle = css('--ink2'); g.globalAlpha = .55; g.lineWidth = 1; g.beginPath(); g.moveTo(X(o.vline), T); g.lineTo(X(o.vline), T + ph); g.stroke(); g.globalAlpha = 1; }
+    this.series.forEach(s => {
+      const col = css(s.color); g.strokeStyle = col; g.fillStyle = col; g.lineWidth = s.width || 2.2; g.setLineDash(s.dash || []);
+      if (s.dots) { s.data.forEach(p => { if (p.y == null) return; g.beginPath(); g.arc(X(p.x), Y(p.y), s.r || 2.6, 0, 7); g.fill(); }); }
+      else { g.beginPath(); let st = false; s.data.forEach(p => { if (p.y == null || !isFinite(p.y)) { st = false; return; } st ? g.lineTo(X(p.x), Y(p.y)) : g.moveTo(X(p.x), Y(p.y)); st = true; }); g.stroke(); }
+      g.setLineDash([]);
+    });
+    const tip = this.tip;
+    if (this.hover && this.hover.x >= L && this.hover.x <= L + pw) {
+      const xv = x0 + (this.hover.x - L) / pw * (x1 - x0);
+      const xr = Math.round(xv); const rows = [];
+      g.strokeStyle = css('--ink2'); g.globalAlpha = .4; g.beginPath(); g.moveTo(X(xr), T); g.lineTo(X(xr), T + ph); g.stroke(); g.globalAlpha = 1;
+      this.series.forEach(s => { const p = s.data.find(q => q.x === xr); if (p && p.y != null && isFinite(p.y)) { rows.push([s.name, o.tipfmt ? o.tipfmt(p.y) : nf(p.y, o.dec ?? 0), s.color]); g.fillStyle = css(s.color); g.beginPath(); g.arc(X(xr), Y(p.y), 3.6, 0, 7); g.fill(); } });
+      if (tip && rows.length) { tip.style.display = 'block';
+        tip.innerHTML = '<b>' + (o.xlabel ? o.xlabel(xr) : xr) + '</b>' + rows.map(r => `<div><span style="color:${css(r[2])}">●</span> ${r[0]}: <b style="display:inline">${r[1]}</b></div>`).join('');
+        const tw = tip.offsetWidth; let lx = X(xr) + 12; if (lx + tw > W) lx = X(xr) - tw - 12; tip.style.left = Math.max(0, lx) + 'px'; tip.style.top = '14px'; }
+    } else if (tip) tip.style.display = 'none';
+  }
+}
+function chartCard(title, sub, h260) {
+  const canvas = h('canvas', {}); if (h260) canvas.style.height = h260 + 'px';
+  const tip = h('div', { class: 'tip' }), legend = h('div', { class: 'legend' });
+  const card = h('div', { class: 'card' }, h('h2', {}, title), sub ? h('p', { class: 'sub' }, sub) : null, h('div', { class: 'chartbox' }, canvas, tip), legend);
+  const ch = new Chart(canvas, tip);
+  ch.setLegend = items => { legend.innerHTML = ''; items.forEach(s => legend.append(h('span', {}, h('i', { class: s.dots ? 'dot' : s.dash ? 'dash' : '', style: 'border-color:' + css(s.color) }), s.name))); };
+  const orig = ch.set.bind(ch); ch.set = (series, o) => { orig(series, o); ch.setLegend(series.filter(s => !s.hidden)); };
+  return { card, chart: ch };
+}
+
+/* ---------- tornado chart (horizontal bars) ---------- */
+class Tornado {
+  constructor(canvas) { this.c = canvas; this.rows = []; new ResizeObserver(() => this.draw()).observe(canvas); }
+  set(rows, base, fmt) { this.rows = rows; this.base = base; this.fmt = fmt; this.draw(); }
+  draw() {
+    const c = this.c, dpr = window.devicePixelRatio || 1, W = c.clientWidth, H = c.clientHeight; if (!W || !this.rows.length) return;
+    c.width = W * dpr; c.height = H * dpr; const g = c.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H);
+    const L = 150, R = 20, T = 8, B = 24, pw = W - L - R, n = this.rows.length, bh = (H - T - B) / n;
+    const lo = Math.min(...this.rows.map(r => Math.min(r.lo, r.hi)), this.base), hi = Math.max(...this.rows.map(r => Math.max(r.lo, r.hi)), this.base);
+    const m = (hi - lo) * .06, X = v => L + (v - (lo - m)) / ((hi + m) - (lo - m)) * pw;
+    g.font = '12px system-ui'; g.textBaseline = 'middle';
+    niceTicks(lo - m, hi + m, 5).forEach(v => { g.strokeStyle = css('--grid'); g.beginPath(); g.moveTo(X(v), T); g.lineTo(X(v), H - B); g.stroke(); g.fillStyle = css('--muted'); g.textAlign = 'center'; g.fillText(this.fmt(v), X(v), H - 10); });
+    this.rows.forEach((r, i) => { const y = T + i * bh + bh * .2, hh = bh * .6;
+      g.fillStyle = css('--ink2'); g.textAlign = 'right'; g.fillText(r.label, L - 8, y + hh / 2);
+      const a = Math.min(r.lo, r.hi), b = Math.max(r.lo, r.hi);
+      g.fillStyle = css('--blue'); g.globalAlpha = .85; g.fillRect(X(a), y, Math.max(2, X(b) - X(a)), hh); g.globalAlpha = 1;
+      g.fillStyle = css('--ink'); g.textAlign = 'left'; g.font = '11.5px system-ui'; g.fillText(this.fmt(a) + ' – ' + this.fmt(b), Math.min(X(b) + 6, W - 120), y + hh / 2); g.font = '12px system-ui'; });
+    g.strokeStyle = css('--ink'); g.lineWidth = 1.4; g.beginPath(); g.moveTo(X(this.base), T); g.lineTo(X(this.base), H - B); g.stroke();
+  }
+}
+
+function downloadCSV(name, header, rows) {
+  const txt = [header.join(',')].concat(rows.map(r => r.map(v => (v == null ? '' : String(v))).join(','))).join('\n');
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['﻿' + txt], { type: 'text/csv;charset=utf-8' })); a.download = name; a.click();
+}
+function themeToggle() {
+  const b = h('button', { class: 'btn ghost', title: 'Switch light / dark theme', onclick: () => {
+    const cur = document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark'); window.dispatchEvent(new Event('resize')); window.__redraw && window.__redraw(); } }, 'Theme');
+  return b;
+}
+const fmt2 = v => nf(v, 2);
+function r2score(real, sim) { let m = 0; real.forEach(v => m += v); m /= real.length; let a = 0, b = 0; real.forEach((v, i) => { a += (v - sim[i]) ** 2; b += (v - m) ** 2; }); return 1 - a / b; }
+</script><script>/* ===== Core of SD Model 1 (hotels - agritourism), annual step, t = 0 is 2001; same equations as sd1_model.py ===== */
+const SD1_DEFAULT = { A0: 0.31739, M: 1, p: 0.01063, q: 1.0, bH: 1.38773, gamma: 80622.07, delta: 0.40022, dH: 0.32805, dA: 0, KA: 531348.70,
+  shockH2020: 0.15244, shockH2021: 0.344, shockA2020: 0.02654, shockA2021: -0.14985, rep0: 0, polK: 0.4, polMid: 12.5 };
+
+function sd1(P, horizonYear = 2045, demandGrowth = 0, shocks = true) {
+  const n = horizonYear - 2001 + 1;
+  const CH = new Array(n + 1).fill(0), CA = new Array(n + 1).fill(0), REP = new Array(n + 1).fill(0);
+  const o = { year: [], NH: [], NA: [], occH: [], occA: [], cotaH: [], cotaA: [], invA: [], invH: [], depH: [], dREP: [], pol: [], cerere: [], calte: [], att: [], room: [] };
+  CH[0] = DATA.CH[0]; CA[0] = DATA.CA[0]; REP[0] = P.rep0;
+  for (let t = 0; t < n; t++) {
+    const cer = t < 25 ? DATA.Nt[t] : DATA.Nt[24] * Math.pow(1 + demandGrowth, t - 24);
+    const calte = t < 25 ? DATA.CAlte[t] : DATA.CAlte[24];
+    const att = P.A0 * (1 + REP[t] / P.M);
+    const den = CH[t] + CA[t] * att + calte;
+    const cH = CH[t] / den, cA = CA[t] * att / den;
+    const NH = cH * cer, NA = cA * cer, occH = NH / CH[t];
+    const dREP = P.p * (P.M - REP[t]) + P.q * REP[t] * (P.M - REP[t]) / P.M;
+    const pol = 1 / (1 + Math.exp(-P.polK * (t - P.polMid)));
+    const room = Math.max(1 - CA[t] / P.KA, 0);
+    const invA = (P.gamma * dREP + P.delta * pol * CA[t]) * room;
+    const invH = P.bH * occH * CH[t], depH = P.dH * CH[t], depA = P.dA * CA[t];
+    const yr = 2001 + t; let sH = 0, sA = 0;
+    if (shocks) { if (yr === 2020) { sH = P.shockH2020; sA = P.shockA2020; } else if (yr === 2021) { sH = P.shockH2021; sA = P.shockA2021; } }
+    CH[t + 1] = CH[t] + invH - depH + sH * CH[t];
+    CA[t + 1] = CA[t] + invA - depA + sA * CA[t];
+    REP[t + 1] = Math.min(REP[t] + dREP, P.M);
+    o.year.push(yr); o.NH.push(NH); o.NA.push(NA); o.occH.push(occH); o.occA.push(NA / CA[t]); o.cotaH.push(cH); o.cotaA.push(cA);
+    o.invA.push(invA); o.invH.push(invH); o.depH.push(depH); o.dREP.push(dREP); o.pol.push(pol); o.cerere.push(cer); o.calte.push(calte); o.att.push(att); o.room.push(room);
+  }
+  o.CH = CH.slice(0, n); o.CA = CA.slice(0, n); o.REP = REP.slice(0, n);
+  return o;
+}
+/* first year in which CA reaches the fraction f of the carrying capacity */
+function yearReach(o, f, KA) { for (let i = 0; i < o.CA.length; i++) if (o.CA[i] >= f * KA) return o.year[i]; return null; }
+</script><script>/* ===== Simulator 1: hotel and agritourism capacity ===== */
+const DEF = { ...SD1_DEFAULT, horizon: 2045, growth: 0, shocks: true };
+let S = { ...DEF, year: 2025 };
+let REF = null;
+
+const SLIDERS = [
+  { grp: 'Reputation of agritourism (Bass loop, R1)', items: [
+    { key: 'p', label: 'p – innovation', min: 0.0005, max: 0.1, step: 0.0005, dec: 4, tag: 'cal', help: 'Spontaneous growth of reputation, independent of recommendations by others.' },
+    { key: 'q', label: 'q – imitation', min: 0.02, max: 1.5, step: 0.01, dec: 2, tag: 'cal', help: 'Word-of-mouth effect: the higher the reputation, the faster it grows.' },
+    { key: 'A0', label: 'A0 – base attractiveness', min: 0.02, max: 2, step: 0.01, dec: 2, tag: 'cal', help: 'Attractiveness of one agritourism bed-day relative to a hotel bed-day at zero reputation.' } ] },
+  { grp: 'Investment and public policy (agritourism)', items: [
+    { key: 'gamma', label: 'γ – investment from reputation', min: 0, max: 150000, step: 500, fmt: v => nf(v, 0), tag: 'cal', help: 'Bed-days built per unit of reputation growth (reputation is measured from 0 to 1).' },
+    { key: 'delta', label: 'δ – policy sensitivity', min: 0, max: 1, step: 0.01, dec: 2, tag: 'sc', help: 'Share of existing capacity added each year at full public support (rural development funding). 0 = no policy channel.' },
+    { key: 'polMid', label: 'Midpoint of the policy ramp (year)', min: 0, max: 24, step: 0.5, fmt: v => String((2001 + v).toFixed(1)), tag: 'sc', help: 'Year in which the ramp reaches one half. Assumption: mid-2013, the middle of the two European programming periods. The data cannot identify it.' },
+    { key: 'polK', label: 'Slope of the ramp', min: 0.1, max: 1.2, step: 0.05, dec: 2, tag: 'sc', help: '0.4 corresponds to a rise from 10% to 90% in about 11 years.' },
+    { key: 'KA', label: 'K_A – carrying capacity', min: 300000, max: 1500000, step: 5000, fmt: v => nf(v, 0), tag: 'cal', help: 'Structural ceiling of agritourism capacity (bed-days); slows investment (loop B1).' } ] },
+  { grp: 'Hotel sector', items: [
+    { key: 'bH', label: 'β_H – hotel investment', min: 0.02, max: 2.0, step: 0.01, dec: 2, tag: 'cal', help: 'Capacity added each year in proportion to the occupancy rate.' },
+    { key: 'dH', label: 'δ_H – hotel depreciation', min: 0.02, max: 0.35, step: 0.005, dec: 3, tag: 'cal', help: 'Fraction of hotel capacity that goes out of use each year.' } ] },
+  { grp: 'Exogenous shocks (capacity multipliers)', items: [
+    { key: 'shockH2020', label: 'Hotels 2020', min: -0.5, max: 0.5, step: 0.01, dec: 2, tag: 'cal' },
+    { key: 'shockH2021', label: 'Hotels 2021', min: -0.5, max: 0.5, step: 0.01, dec: 2, tag: 'cal' },
+    { key: 'shockA2020', label: 'Agritourism 2020', min: -0.5, max: 0.5, step: 0.01, dec: 2, tag: 'cal' },
+    { key: 'shockA2021', label: 'Agritourism 2021', min: -0.5, max: 0.5, step: 0.01, dec: 2, tag: 'cal' } ] },
+  { grp: 'Horizon and demand', items: [
+    { key: 'horizon', label: 'Final year of the simulation', min: 2025, max: 2060, step: 1, fmt: v => String(v), tag: 'sc', help: 'Until 2025 the model uses observed demand; afterwards demand follows the assumption below.' },
+    { key: 'growth', label: 'Demand growth after 2025', min: -0.03, max: 0.06, step: 0.001, fmt: v => nf(v * 100, 1) + '% per year', tag: 'sc', help: 'Neutral scenario: demand stays at its 2025 level. It affects overnight stays and occupancy, not agritourism capacity.' } ] }
+];
+const SCEN = [
+  { id: 'base', name: 'Calibrated (baseline)', desc: 'Parameters calibrated on 2001–2025, to 2045', patch: {} },
+  { id: 'nopol', name: 'No public-policy channel', desc: 'δ = 0: reputation only (to 2060)', patch: { delta: 0, horizon: 2060 } },
+  { id: 'dubl', name: 'Policy sensitivity doubled', desc: 'δ × 2: the ceiling is reached earlier (to 2060)', patch: { delta: 0.80044, horizon: 2060 } },
+  { id: 'nosoc', name: 'No shocks 2020–2021', desc: 'Counterfactual without shock multipliers', patch: { shocks: false } },
+  { id: 'sat', name: 'Long-run saturation', desc: 'Same calibration, horizon 2060', patch: { horizon: 2060 } }
+];
+const el = {}; let sliderEls = {}, charts = {}, curScen = 'base';
+function build() {
+  const ctr = $('#controls');
+  ctr.append(h('h3', {}, 'Scenarios'));
+  const sc = h('div', { class: 'scen' });
+  SCEN.forEach(s => { const b = h('button', { class: 'btn' + (s.id === curScen ? ' on' : ''), 'data-id': s.id, onclick: () => applyScenario(s.id) }, s.name, h('small', {}, s.desc)); sc.append(b); });
+  ctr.append(sc);
+  ctr.append(h('div', { class: 'toolbar' },
+    h('button', { class: 'btn', onclick: () => { REF = sd1(S, S.horizon, S.growth, S.shocks); update(); }, title: 'Keep the current trajectory as a dashed grey line for comparison' }, 'Pin as reference'),
+    h('button', { class: 'btn ghost', onclick: () => { REF = null; update(); } }, 'Clear reference')));
+  SLIDERS.forEach(g => { ctr.append(h('h3', {}, g.grp)); g.items.forEach(d => { const e = makeSlider(d, S, () => { curScen = ''; markScen(); update(); }); sliderEls[d.key] = e; ctr.append(e); }); });
+  ctr.append(h('div', { class: 'note' }, 'Tags: ', h('span', { class: 'tag cal' }, 'calibrated'), ' value estimated from the INS series 2001–2025; ', h('span', { class: 'tag sc' }, 'scenario'), ' assumed or varied value.'));
+}
+function markScen() { document.querySelectorAll('.scen button').forEach(b => b.classList.toggle('on', b.dataset.id === curScen)); }
+function applyScenario(id) {
+  const sc = SCEN.find(s => s.id === id); curScen = id; const yr = S.year;
+  Object.keys(S).forEach(k => delete S[k]); Object.assign(S, DEF, { year: yr }, sc.patch);
+  Object.keys(sliderEls).forEach(k => sliderEls[k]._set(S[k])); markScen(); update();
+}
+
+function buildStage() {
+  const st = $('#stage');
+  el.kpis = h('div', { class: 'kpis' });
+  st.append(h('div', { class: 'card' }, h('h2', {}, 'Key results'), h('p', { class: 'sub' }, 'Fit to the observed INS series (2001–2025) and milestones of the simulated trajectory.'), el.kpis));
+  // diagrama
+  el.yr = h('span', { class: 'yr' }, '2025');
+  el.scrub = h('input', { type: 'range', min: 2001, max: S.horizon, step: 1, value: S.year });
+  el.scrub.addEventListener('input', () => { S.year = +el.scrub.value; drawDiagram(); update(true); });
+  el.diag = h('div', {});
+  st.append(h('div', { class: 'card' }, h('h2', {}, 'Model structure with the values of the selected year'),
+    h('p', { class: 'sub' }, 'Rectangles are stocks, arrows are flows and influences, ellipses are exogenous variables. Move the slider to see how the values change over time.'),
+    h('div', { class: 'scrub' }, el.yr, el.scrub), el.diag,
+    h('details', { class: 'how' }, h('summary', {}, 'How to read and use the simulator'), h('ul', {},
+      h('li', {}, 'Choose a scenario on the left or change any parameter; the charts update immediately.'),
+      h('li', {}, 'Points in the charts are observed INS data; lines are model results.'),
+      h('li', {}, 'Loop R1 (reputation): reputation grows by imitation and attracts investment. Loop B1: as CA approaches K_A, investment is slowed.'),
+      h('li', {}, 'Substitution: total demand is shared among sectors in proportion to capacity times attractiveness; the capacity of other structures is the observed one.'),
+      h('li', {}, 'Public policy is a channel separate from occupancy: agritourism investment does not depend on current occupancy.')))));
+  // charts
+  const grid = h('div', { class: 'charts' });
+  const mk = (id, title, sub) => { const c = chartCard(title, sub); charts[id] = c.chart; grid.append(c.card); };
+  mk('ca', 'Agritourism capacity (bed-days)', 'Simulated and observed; the dashed line is the carrying capacity K_A');
+  mk('ch', 'Hotel capacity (bed-days)', 'Poor fit; the projection after 2025 is not validated');
+  mk('n', 'Overnight stays', 'Allocation of total demand among sectors');
+  mk('occ', 'Occupancy rate (%)', 'Overnight stays / capacity, by sector');
+  mk('rep', 'Reputation, policy ramp and saturation brake', 'REP/M (R1), policy ramp and (1 − CA/K_A) (B1)');
+  mk('share', 'Agritourism share of overnight stays (%)', 'Demand allocation: capacity × attractiveness');
+  st.append(grid);
+  el.table = h('div', {});
+  st.append(h('div', { class: 'card' }, h('h2', {}, 'Annual values'), h('p', { class: 'sub' }, 'Selected years of the current trajectory.'),
+    h('div', { class: 'toolbar' }, h('button', { class: 'btn', onclick: exportCSV }, 'Download CSV')), el.table));
+}
+let SIM = null;
+function pts(arr, years) { return years.map((y, i) => ({ x: y, y: arr[i] })); }
+function realPts(arr) { return DATA.years.map((y, i) => ({ x: y, y: arr[i] })); }
+function update(keepScrub) {
+  SIM = sd1(S, S.horizon, S.growth, S.shocks);
+  const Y = SIM.year, last = Y.length - 1;
+  el.scrub.max = S.horizon; if (S.year > S.horizon) S.year = S.horizon; el.scrub.value = S.year; el.yr.textContent = S.year;
+  const n25 = 25, r2 = (k, real) => r2score(real, SIM[k].slice(0, n25));
+  const sh = (SIM.year[0] === 2001);
+  const kp = [
+    ['R² agritourism capacity', nf(r2('CA', DATA.CA), 3), 'Observed vs. simulated, 2001–2025'], ['R² agritourism nights', nf(r2('NA', DATA.NA), 3), '2001–2025'],
+    ['R² hotel capacity', nf(r2('CH', DATA.CH), 3), 'Poor fit, as reported in the article'], ['R² hotel nights', nf(r2('NH', DATA.NH), 3), '2001–2025'],
+    ['CA in 2025', nf(SIM.CA[24], 0), 'Observed: ' + nf(DATA.CA[24], 0)],
+    ['CA in ' + S.horizon, nf(SIM.CA[last], 0), pct(SIM.CA[last] / S.KA, 0) + ' of K_A'],
+    ['90% / 95% / 99% of K_A', [0.9, 0.95, 0.99].map(f => yearReach(SIM, f, S.KA) ?? '–').join(' / '), 'First year in which CA reaches the level'],
+    ['Reputation REP/M in 2025', pct(SIM.REP[24] / S.M, 2), 'Loop R1 almost exhausted']
+  ];
+  el.kpis.innerHTML = ''; kp.forEach(k => el.kpis.append(h('div', { class: 'kpi' }, h('div', { class: 'k' }, k[0]), h('div', { class: 'v' }, k[1]), h('div', { class: 'd' }, k[2]))));
+  const bands = [{ x0: 2019.5, x1: 2021.5, label: 'Pandemic' }, { x0: 2008.5, x1: 2010.5, label: 'Crisis' }];
+  const base = { bands, vline: S.year, xmin: 2001, xmax: S.horizon, xlabel: y => 'Year ' + y };
+  const ref = k => REF ? [{ name: 'Pinned reference', color: '--muted', dash: [6, 4], width: 1.8, data: pts(REF[k], REF.year) }] : [];
+  const thousands = v => nf(v / 1000, 0) + 'k';
+  charts.ca.set([{ name: 'Simulated', color: '--orange', data: pts(SIM.CA, Y) }, ...ref('CA'), { name: 'Observed (INS)', color: '--ink2', dots: true, data: realPts(DATA.CA) }],
+    { ...base, hlines: [{ y: S.KA, label: 'K_A', color: '--red' }], yfmt: thousands, tipfmt: v => nf(v, 0) });
+  charts.ch.set([{ name: 'Simulated', color: '--blue', data: pts(SIM.CH, Y) }, ...ref('CH'), { name: 'Observed (INS)', color: '--ink2', dots: true, data: realPts(DATA.CH) }],
+    { ...base, yfmt: thousands, tipfmt: v => nf(v, 0) });
+  charts.n.set([{ name: 'Hotels, simulated', color: '--blue', data: pts(SIM.NH, Y) }, { name: 'Agritourism, simulated', color: '--orange', data: pts(SIM.NA, Y) },
+    { name: 'Hotels, observed', color: '--blue', dots: true, r: 2.2, data: realPts(DATA.NH) }, { name: 'Agritourism, observed', color: '--orange', dots: true, r: 2.2, data: realPts(DATA.NA) }],
+    { ...base, yfmt: thousands, tipfmt: v => nf(v, 0) });
+  const occReal = (N, C) => N.map((v, i) => 100 * v / C[i]);
+  charts.occ.set([{ name: 'Hotels, simulated', color: '--blue', data: pts(SIM.occH.map(v => 100 * v), Y) }, { name: 'Agritourism, simulated', color: '--orange', data: pts(SIM.occA.map(v => 100 * v), Y) },
+    { name: 'Hotels, observed', color: '--blue', dots: true, r: 2.2, data: realPts(occReal(DATA.NH, DATA.CH)) }, { name: 'Agritourism, observed', color: '--orange', dots: true, r: 2.2, data: realPts(occReal(DATA.NA, DATA.CA)) }],
+    { ...base, ymin: 0, yfmt: v => nf(v, 0) + '%', tipfmt: v => nf(v, 1) + '%' });
+  charts.rep.set([{ name: 'REP / M (reputation)', color: '--aqua', data: pts(SIM.REP.map(v => v / S.M), Y) }, { name: 'Public-policy ramp', color: '--violet', data: pts(SIM.pol, Y) },
+    { name: '1 − CA/K_A (remaining room)', color: '--red', data: pts(SIM.room, Y) }], { ...base, ymin: 0, ymax: 1.05, yfmt: v => nf(v, 1), tipfmt: v => nf(v, 3) });
+  charts.share.set([{ name: 'Agritourism, simulated', color: '--orange', data: pts(SIM.cotaA.map(v => 100 * v), Y) },
+    { name: 'Agritourism, observed', color: '--orange', dots: true, data: realPts(DATA.NA.map((v, i) => 100 * v / DATA.Nt[i])) }],
+    { ...base, ymin: 0, yfmt: v => nf(v, 0) + '%', tipfmt: v => nf(v, 1) + '%' });
+  REF && (REF.year = REF.year);
+  drawDiagram(); drawTable();
+}
+window.__redraw = () => { if (SIM) update(); };
+
+function drawDiagram() {
+  if (!SIM) return; const i = Math.min(S.year - 2001, SIM.year.length - 1);
+  const f0 = v => nf(v, 0), f1 = v => nf(v, 1);
+  const col = n => css(n);
+  const box = (x, y, w, hh, title, lines, c) => `<rect x="${x}" y="${y}" width="${w}" height="${hh}" rx="10" fill="${c}" fill-opacity=".14" stroke="${c}" stroke-width="2"/>
+    <text x="${x + w / 2}" y="${y + 20}" text-anchor="middle" font-size="13.5" font-weight="650">${title}</text>` +
+    lines.map((l, k) => `<text x="${x + w / 2}" y="${y + 40 + k * 18}" text-anchor="middle" font-size="13.5" class="${k ? 't2' : 'num'}">${l}</text>`).join('');
+  const ell = (cx, cy, rx, ry, title, val) => `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="none" stroke="${col('--muted')}" stroke-width="1.6" stroke-dasharray="4 3"/>
+    <text x="${cx}" y="${cy - 3}" text-anchor="middle" font-size="12.5" class="t2">${title}</text><text x="${cx}" y="${cy + 14}" text-anchor="middle" font-size="13" class="num">${val}</text>`;
+  const arr = (d, c, dash, label, lx, ly, bold) => `<path d="${d}" fill="none" stroke="${c}" stroke-width="${bold ? 2.6 : 1.9}" ${dash ? 'stroke-dasharray="6 4"' : ''} marker-end="url(#ar${c.replace(/[^a-z0-9]/gi, '')})"/>` + (label ? `<text x="${lx}" y="${ly}" font-size="12" class="t2">${label}</text>` : '');
+  const cB = col('--blue'), cO = col('--orange'), cA = col('--aqua'), cV = col('--violet'), cR = col('--red'), cM = col('--muted');
+  const mark = [cB, cO, cA, cV, cR, cM].map(c => `<marker id="ar${c.replace(/[^a-z0-9]/gi, '')}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${c}"/></marker>`).join('');
+  const nhS = SIM.NH[i], naS = SIM.NA[i];
+  const svg = `<svg class="diagram" viewBox="0 0 960 496" role="img" aria-label="Stock-and-flow diagram of the model">
+    <defs>${mark}</defs>
+    ${ell(100, 52, 92, 30, 'Public policy (ramp)', nf(SIM.pol[i], 2))}
+    ${box(30, 150, 210, 78, 'REP – agritourism reputation', [nf(SIM.REP[i], 2) + ' of M = ' + nf(S.M, 2), 'ΔREP = ' + nf(SIM.dREP[i], 3) + ' / year'], cA)}
+    <path d="M110,150 C110,108 190,108 190,150" fill="none" stroke="${cA}" stroke-width="2.2" marker-end="url(#ar${cA.replace(/[^a-z0-9]/gi, '')})"/><text x="150" y="100" text-anchor="middle" font-size="12.5" font-weight="700" fill="${cA}">R1 (Bass)</text>
+    ${box(330, 36, 200, 70, 'Agritourism investment', [f0(SIM.invA[i]) + ' bed-days/year', '(γ·ΔREP + δ·Pol·CA)·(1−CA/K_A)'], cV)}
+    ${box(640, 28, 290, 92, 'CA – agritourism capacity', [f0(SIM.CA[i]) + ' bed-days', 'Remaining room (1−CA/K_A) = ' + nf(SIM.room[i], 3)], cO)}
+    ${arr('M185,62 L330,62', cV, false, '', 0, 0, true)}
+    ${arr('M240,172 C290,172 300,110 330,98', cA, false, 'γ·ΔREP', 262, 150)}
+    ${arr('M530,70 L640,70', cO, false, '', 0, 0, true)}
+    ${arr('M785,120 C785,150 480,150 460,108', cR, true, 'B1: saturation brake', 540, 158)}
+    ${ell(290, 300, 108, 32, 'Attractiveness', nf(SIM.att[i], 3))}
+    ${arr('M135,228 C135,262 190,290 182,292', cA, false, '', 0, 0)}
+    ${arr('M395,300 L430,300', cM, false, '', 0, 0)}
+    ${box(430, 258, 200, 86, 'Demand shares', ['Hotels ' + nf(SIM.cotaH[i] * 100, 1) + '%', 'Agritourism ' + nf(SIM.cotaA[i] * 100, 1) + '%'], cM)}
+    ${ell(110, 410, 100, 34, 'Total demand (exogenous)', f0(SIM.cerere[i]) + ' nights')}
+    ${arr('M200,396 C300,380 380,350 430,332', cM, true, '', 0, 0)}
+    ${arr('M640,330 L690,290', cM, false, '', 0, 0)}
+    ${arr('M740,92 C860,160 880,210 790,252', cO, true, '', 0, 0)}
+    ${box(690, 240, 240, 96, 'Simulated overnight stays', ['Hotels ' + f0(nhS) + ' (occupancy ' + nf(SIM.occH[i] * 100, 1) + '%)', 'Agro ' + f0(naS) + ' (occupancy ' + nf(SIM.occA[i] * 100, 1) + '%)'], cM)}
+    ${box(640, 372, 290, 92, 'CH – hotel capacity', [f0(SIM.CH[i]) + ' bed-days', '+ inv. ' + f0(SIM.invH[i]) + ' − depr. ' + f0(SIM.depH[i])], cB)}
+    ${arr('M810,336 C810,352 810,360 810,372', cB, false, 'β_H · occupancy', 822, 358)}
+    ${box(330, 402, 210, 60, 'Other structures (observed)', [f0(SIM.calte[i]) + ' bed-days'], cM)}
+    ${arr('M470,402 L500,346', cM, true, '', 0, 0)}
+    <text x="30" y="486" font-size="12" class="mut">No link from agritourism occupancy to agritourism investment: investment is driven by reputation and policy.</text>
+  </svg>`;
+  el.diag.innerHTML = svg; el.yr.textContent = S.year;
+}
+function drawTable() {
+  const yrs = [2001, 2005, 2010, 2015, 2020, 2025, 2030, 2035, 2040, 2045, 2050, 2060].filter(y => y <= S.horizon);
+  const rows = yrs.map(y => { const i = y - 2001; return `<tr><td>${y}</td><td>${nf(SIM.CA[i])}</td><td>${nf(SIM.CH[i])}</td><td>${nf(SIM.NA[i])}</td><td>${nf(SIM.NH[i])}</td><td>${nf(SIM.occA[i] * 100, 1)}%</td><td>${nf(SIM.occH[i] * 100, 1)}%</td><td>${nf(SIM.cotaA[i] * 100, 1)}%</td></tr>`; }).join('');
+  el.table.innerHTML = `<table class="dt"><thead><tr><th>Year</th><th>CA</th><th>CH</th><th>Agro nights</th><th>Hotel nights</th><th>Agro occupancy</th><th>Hotel occupancy</th><th>Agro share</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+function exportCSV() {
+  downloadCSV('simulator_sd1.csv', ['year', 'CA', 'CH', 'REP', 'nights_agro', 'nights_hotels', 'occupancy_agro', 'occupancy_hotels', 'share_agro', 'invest_agro', 'invest_hotels'],
+    SIM.year.map((y, i) => [y, SIM.CA[i].toFixed(0), SIM.CH[i].toFixed(0), SIM.REP[i].toFixed(4), SIM.NA[i].toFixed(0), SIM.NH[i].toFixed(0), (SIM.occA[i] * 100).toFixed(2), (SIM.occH[i] * 100).toFixed(2), (SIM.cotaA[i] * 100).toFixed(2), SIM.invA[i].toFixed(0), SIM.invH[i].toFixed(0)]));
+}
+document.addEventListener('DOMContentLoaded', () => { $('#themebtn').append(themeToggle()); build(); buildStage(); applyScenario('base'); });
+</script></body></html>

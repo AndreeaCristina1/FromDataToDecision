@@ -1,0 +1,7 @@
+window,years,type,capacity_change_pct,overnight_change_pct,occupancy_start_pct,occupancy_end_pct
+economic crisis,2008-2010,Hotels,2.96,-21.66,28.65,21.8
+economic crisis,2008-2010,Agritourism guesthouses,79.84,24.35,25.4,17.56
+economic crisis,2008-2010,County total,25.49,-11.7,27.0,19.0
+pandemic,2019-2020,Hotels,-18.72,-31.1,23.63,20.03
+pandemic,2019-2020,Agritourism guesthouses,-6.09,-12.27,18.04,16.85
+pandemic,2019-2020,County total,-18.93,-30.17,19.59,16.87

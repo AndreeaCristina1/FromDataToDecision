@@ -1,0 +1,40 @@
+{
+ "skewness_nights": 3.4613218312665897,
+ "skewness_log": -0.2229741562953158,
+ "n_observations": 292,
+ "n_localities": 29,
+ "n_localities_training": 23,
+ "n_localities_test": 28,
+ "n_localities_without_training_data": 6,
+ "test_mean_nights": 2714.923076923077,
+ "underestimation_pct_of_observed": 16.971383696047305,
+ "share_observed_BaiaDeFier_Runcu_pct": 59.68039893466312,
+ "training_obs_above_14000": 4,
+ "test_obs_above_14000": 8,
+ "max_training_capacity": 114455.0,
+ "test_obs_above_14000_and_above_training_capacity": 4,
+ "max_prediction_test": 13229.97786811023,
+ "spearman_locality_means": 0.8155446086480569,
+ "median_rel_error_localities_without_training_pct": 58.16086483493585,
+ "median_rel_error_other_localities_pct": 30.079404588338527,
+ "large_small_threshold_median_capacity": 6570.0,
+ "groups": {
+  "large": {
+   "n": 71,
+   "r2_log": 0.6595665451310806,
+   "median_abs_relative_error_pct": 39.313305998980034
+  },
+  "small": {
+   "n": 59,
+   "r2_log": -0.21105707222931525,
+   "median_abs_relative_error_pct": 62.59284957612332
+  }
+ },
+ "elasticity_full_panel": 1.2569045049580156,
+ "elasticity_regression_14": 1.2480205150259085,
+ "elasticity_capacity_regression": 1.2822158224800415,
+ "naive_capacity_fitted_elasticity": 1.2201290134935967,
+ "naive_capacity_fitted_test_rmse_log": 1.1117652028944063,
+ "county_mean_observed_2020_2025": 58823.333333333336,
+ "gbm_years_with_county_underestimate": 6
+}

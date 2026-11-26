@@ -1,0 +1,7 @@
+configuration,trees,validation_rmse,validation_r2
+"chosen (lr 0.05, depth 3)",70,0.8600,0.7275
+"lr 0.10, depth 3",29,0.8271,0.7479
+"lr 0.02, depth 3",130,0.8643,0.7247
+"lr 0.05, depth 2",97,0.8301,0.7461
+"lr 0.05, depth 5",85,0.8425,0.7384
+"lr 0.05, no subsampling",76,0.8740,0.7185

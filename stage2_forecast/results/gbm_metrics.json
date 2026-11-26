@@ -1,0 +1,85 @@
+{
+ "n_trees": 70,
+ "hyperparameters": {
+  "learning_rate": 0.05,
+  "max_depth": 3,
+  "min_samples_leaf": 6,
+  "subsample": 0.8,
+  "random_state": 42
+ },
+ "early_stopping_validation": {
+  "rmse_val": 0.8600207489153028,
+  "r2_val": 0.7274578365111323,
+  "n_val": 49
+ },
+ "n_training": 162,
+ "n_test": 130,
+ "training": {
+  "rmse_log": 0.5292723201609526,
+  "mae_log": 0.38699063024051433,
+  "r2_log": 0.9125696052630877,
+  "rmse_nights": 1409.5854488917646,
+  "mae_nights": 499.1903651101241
+ },
+ "test": {
+  "rmse_log": 1.0383464507086615,
+  "mae_log": 0.720377253298181,
+  "r2_log": 0.6856145425733069,
+  "rmse_nights": 2546.9663507206874,
+  "mae_nights": 1113.6826310958054
+ },
+ "feature_importance": {
+  "log_capacity_agro": 0.561523197378381,
+  "lag1_log_overnight": 0.09577454645681331,
+  "hist_mean_stay": 0.07952711565239882,
+  "trend": 0.06030333416200664,
+  "log_capacity_county": 0.053875065590155785,
+  "hist_mean_occupancy": 0.05216480409131666,
+  "hist_mean_log_overnight": 0.029649320934008135,
+  "years_of_experience": 0.02469347184182724,
+  "lag1_log_capacity": 0.019080087037238135,
+  "log_overnight_county": 0.010474478545637617,
+  "agro_share_county_capacity": 0.007811217632289859,
+  "crisis_dummy": 0.003304950949122901,
+  "has_lag": 0.0018184097288039677,
+  "pandemic_dummy": 0.0
+ },
+ "sensitivity": [
+  {
+   "configuration": "chosen (lr 0.05, depth 3)",
+   "n_trees": 70,
+   "rmse_val": 0.8600207489153028,
+   "r2_val": 0.7274578365111323
+  },
+  {
+   "configuration": "lr 0.10, depth 3",
+   "n_trees": 29,
+   "rmse_val": 0.827074170612965,
+   "r2_val": 0.7479395211793805
+  },
+  {
+   "configuration": "lr 0.02, depth 3",
+   "n_trees": 130,
+   "rmse_val": 0.8643306209082671,
+   "r2_val": 0.7247193791793316
+  },
+  {
+   "configuration": "lr 0.05, depth 2",
+   "n_trees": 97,
+   "rmse_val": 0.8300721739449091,
+   "r2_val": 0.7461088564464977
+  },
+  {
+   "configuration": "lr 0.05, depth 5",
+   "n_trees": 85,
+   "rmse_val": 0.8425314224057123,
+   "r2_val": 0.7384299263598305
+  },
+  {
+   "configuration": "lr 0.05, no subsampling",
+   "n_trees": 76,
+   "rmse_val": 0.8739631660719396,
+   "r2_val": 0.7185494515127593
+  }
+ ]
+}

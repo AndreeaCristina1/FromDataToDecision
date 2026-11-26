@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this material, please cite the accompanying article and this repository."
+title: "From Data to Decision: data, code and tools on digital technologies in agritourism (Gorj County, Romania)"
+type: software
+license: MIT
+repository-code: "https://github.com/AndreeaCristina1/DigitalTechnologiesInAgritourism"
+authors:
+  - family-names: "Stancioiu"
+    given-names: "Loredana Elena"
+  - family-names: "Ionica"
+    given-names: "Andreea Cristina"
+  - family-names: "Leba"
+    given-names: "Monica"
+abstract: "Data, Python code, results, figures and interactive tools accompanying the article 'From Data to Decision: A Forecasting, System Dynamics and QFD Framework for Digital Technologies in a Rural Agritourism Destination (Gorj County, Romania)', submitted to the Special Issue 'Rural Tourism, Nature-Based Tourism and Sustainable Tourism Practices' of the journal Sustainability."
+keywords:
+  - agritourism
+  - rural tourism
+  - digital technologies
+  - tourism demand forecasting
+  - system dynamics
+  - quality function deployment

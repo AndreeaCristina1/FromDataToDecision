@@ -1,0 +1,242 @@
+{
+ "model1_fit": {
+  "CH": {
+   "r2": 0.03905741584532685,
+   "rmse": 37964.483282741676
+  },
+  "CA": {
+   "r2": 0.9599795090136444,
+   "rmse": 28640.112295934236
+  },
+  "NH": {
+   "r2": 0.22549573758499164,
+   "rmse": 13609.804215869543
+  },
+  "NA": {
+   "r2": 0.8795770427152918,
+   "rmse": 7822.533954975594
+  }
+ },
+ "model1_parameters": {
+  "A0": 0.31739,
+  "M": 1.0,
+  "p": 0.01063,
+  "q": 1.0,
+  "bH": 1.38773,
+  "gamma": 80622.07,
+  "delta": 0.40022,
+  "dH": 0.32805,
+  "dA": 0.0,
+  "KA": 531348.7,
+  "shockH2020": 0.15244,
+  "shockH2021": 0.344,
+  "shockA2020": 0.02654,
+  "shockA2021": -0.14985,
+  "rep0": 0.0,
+  "pol_k": 0.4,
+  "pol_mid": 12.5,
+  "bA": 0.0
+ },
+ "model1_scenarios": {
+  "calibrated": {
+   "CA_2025": 480501.62264008773,
+   "CA_2045": 531346.4774780727,
+   "CA_2060": 531348.698960722,
+   "CA_max": 531348.698960722,
+   "CA_max_year": 2060,
+   "year_90pct_KA": 2025,
+   "year_95pct_KA": 2027,
+   "year_99pct_KA": 2030
+  },
+  "policy sensitivity doubled": {
+   "CA_2025": 530081.7537964713,
+   "CA_2045": 531348.7,
+   "CA_2060": 531348.7,
+   "CA_max": 542565.4077693282,
+   "CA_max_year": 2021,
+   "year_90pct_KA": 2019,
+   "year_95pct_KA": 2020,
+   "year_99pct_KA": 2021
+  },
+  "no public-policy channel": {
+   "CA_2025": 69109.62282530335,
+   "CA_2045": 69109.62282530335,
+   "CA_2060": 69109.62282530335,
+   "CA_max": 81291.09313098082,
+   "CA_max_year": 2021,
+   "year_90pct_KA": null,
+   "year_95pct_KA": null,
+   "year_99pct_KA": null
+  }
+ },
+ "observed_CA_2025": 472302.0,
+ "observed_share_of_KA_pct": 88.88739165071827,
+ "reputation_year_90pct": 2009,
+ "reputation_year_99pct": 2010,
+ "model1_sensitivity_CA_2025": [
+  {
+   "parameter": "p",
+   "change": "x0.5",
+   "CA_2025": 479282.683153444,
+   "difference_pct": -0.2536806181728024
+  },
+  {
+   "parameter": "p",
+   "change": "x1.5",
+   "CA_2025": 481032.2987353569,
+   "difference_pct": 0.11044210264128385
+  },
+  {
+   "parameter": "q",
+   "change": "x0.5",
+   "CA_2025": 473220.66081469733,
+   "difference_pct": -1.5152835042232748
+  },
+  {
+   "parameter": "q",
+   "change": "x1.5",
+   "CA_2025": 482957.2959311307,
+   "difference_pct": 0.5110645157763383
+  },
+  {
+   "parameter": "A0",
+   "change": "x0.5",
+   "CA_2025": 480501.62264008773,
+   "difference_pct": 0.0
+  },
+  {
+   "parameter": "A0",
+   "change": "x1.5",
+   "CA_2025": 480501.62264008773,
+   "difference_pct": 0.0
+  },
+  {
+   "parameter": "bH",
+   "change": "x0.5",
+   "CA_2025": 480501.62264008773,
+   "difference_pct": 0.0
+  },
+  {
+   "parameter": "bH",
+   "change": "x1.5",
+   "CA_2025": 480501.62264008773,
+   "difference_pct": 0.0
+  },
+  {
+   "parameter": "gamma",
+   "change": "x0.5",
+   "CA_2025": 440612.7358985551,
+   "difference_pct": -8.301509269077078
+  },
+  {
+   "parameter": "gamma",
+   "change": "x1.5",
+   "CA_2025": 493604.4133593189,
+   "difference_pct": 2.7268983291333537
+  },
+  {
+   "parameter": "delta",
+   "change": "x0.5",
+   "CA_2025": 288132.6315759937,
+   "difference_pct": -40.03503463882889
+  },
+  {
+   "parameter": "delta",
+   "change": "x1.5",
+   "CA_2025": 522682.6519203185,
+   "difference_pct": 8.778540444560745
+  },
+  {
+   "parameter": "dH",
+   "change": "x0.5",
+   "CA_2025": 480501.62264008773,
+   "difference_pct": 0.0
+  },
+  {
+   "parameter": "dH",
+   "change": "x1.5",
+   "CA_2025": 480501.62264008773,
+   "difference_pct": 0.0
+  },
+  {
+   "parameter": "KA",
+   "change": "x0.5",
+   "CA_2025": 250055.01445608874,
+   "difference_pct": -47.959590004675476
+  },
+  {
+   "parameter": "KA",
+   "change": "x1.5",
+   "CA_2025": 687887.839219669,
+   "difference_pct": 43.16035717842324
+  },
+  {
+   "parameter": "pol_mid",
+   "change": "-5 years",
+   "CA_2025": 508093.8899219118,
+   "difference_pct": 5.742387950787764
+  },
+  {
+   "parameter": "pol_mid",
+   "change": "+5 years",
+   "CA_2025": 329184.9831285366,
+   "difference_pct": -31.491389910433764
+  }
+ ],
+ "model2_acceptance_threshold": 0.6717880836976129,
+ "model2_parameters": {
+  "p_r": 0.01,
+  "q_r": 0.15,
+  "r_r": 0.08,
+  "gamma_eff": 0.01,
+  "lam0": 0.01,
+  "g_budget": 0.0,
+  "tax": 0.02,
+  "eff": 1.0,
+  "budget25": 1500000000.0,
+  "spend": 500.0,
+  "acc0": 0.3184,
+  "qol0": 6.5,
+  "start": 2025,
+  "horizon": 20,
+  "acc_frozen": false
+ },
+ "model2_scenarios": {
+  "baseline": {
+   "QOL_min": 6.330375333058243,
+   "QOL_min_year": 2035,
+   "QOL_2045": 6.4487050356079285,
+   "ACC_2045": 0.88400491093065
+  },
+  "rapid diffusion": {
+   "QOL_min": 6.4249010525436425,
+   "QOL_min_year": 2029,
+   "QOL_2045": 6.840272189929405,
+   "ACC_2045": 0.9792926709437316
+  },
+  "information campaign": {
+   "QOL_min": 6.3876198170037055,
+   "QOL_min_year": 2031,
+   "QOL_2045": 6.656797471357193,
+   "ACC_2045": 0.9564641646968013
+  },
+  "high resistance": {
+   "QOL_min": 6.308235983469183,
+   "QOL_min_year": 2037,
+   "QOL_2045": 6.354625536660267,
+   "ACC_2045": 0.785164979785702
+  },
+  "investment efficiency 70%": {
+   "QOL_min": 6.073045966302479,
+   "QOL_min_year": 2044,
+   "QOL_2045": 6.073077921348664,
+   "ACC_2045": 0.88400491093065
+  },
+  "no diffusion of acceptance": {
+   "QOL_min": 5.851160117589624,
+   "QOL_min_year": 2045,
+   "QOL_2045": 5.851160117589624,
+   "ACC_2045": 0.3184
+  }
+ }
+}

@@ -1,0 +1,469 @@
+{
+ "completeness": {
+  "locality_type_series": 84,
+  "cells": 2100,
+  "filled": 817,
+  "filled_pct": 38.904761904761905
+ },
+ "additivity": {
+  "C": {
+   "checks": 1225,
+   "discrepancies": 0,
+   "types": 12,
+   "localities": 36
+  },
+  "S": {
+   "checks": 1225,
+   "discrepancies": 0,
+   "types": 12,
+   "localities": 36
+  },
+  "N": {
+   "checks": 1225,
+   "discrepancies": 0,
+   "types": 12,
+   "localities": 36
+  }
+ },
+ "table2": {
+  "2001": {
+   "year": 2001,
+   "capacity": 409622.0,
+   "arrivals": 46410.0,
+   "overnight": 103277.0,
+   "occupancy_pct": 25.212757127302734,
+   "mean_stay": 2.2253178194354666,
+   "agro_share_overnight_pct": 0.13362123222014582,
+   "agro_share_capacity_pct": 0.980416090932616,
+   "agro_occupancy_pct": 3.4362549800796813
+  },
+  "2002": {
+   "year": 2002,
+   "capacity": 357458.0,
+   "arrivals": 37902.0,
+   "overnight": 104235.0,
+   "occupancy_pct": 29.16006915497765,
+   "mean_stay": 2.750118727243945,
+   "agro_share_overnight_pct": 0.09209958267376601,
+   "agro_share_capacity_pct": 0.48005639823419816,
+   "agro_occupancy_pct": 5.594405594405594
+  },
+  "2003": {
+   "year": 2003,
+   "capacity": 343270.0,
+   "arrivals": 36370.0,
+   "overnight": 83648.0,
+   "occupancy_pct": 24.36799021178664,
+   "mean_stay": 2.299917514434974,
+   "agro_share_overnight_pct": 0.019127773527161437,
+   "agro_share_capacity_pct": 0.14157951466775426,
+   "agro_occupancy_pct": 3.292181069958848
+  },
+  "2004": {
+   "year": 2004,
+   "capacity": 328665.0,
+   "arrivals": 38578.0,
+   "overnight": 90038.0,
+   "occupancy_pct": 27.39506792630794,
+   "mean_stay": 2.333920887552491,
+   "agro_share_overnight_pct": 1.7303805060085742,
+   "agro_share_capacity_pct": 1.5112652701078606,
+   "agro_occupancy_pct": 31.367022347493457
+  },
+  "2005": {
+   "year": 2005,
+   "capacity": 339032.0,
+   "arrivals": 37625.0,
+   "overnight": 84584.0,
+   "occupancy_pct": 24.948677410981855,
+   "mean_stay": 2.248079734219269,
+   "agro_share_overnight_pct": 6.281329802326681,
+   "agro_share_capacity_pct": 5.546969017673848,
+   "agro_occupancy_pct": 28.251621822822504
+  },
+  "2006": {
+   "year": 2006,
+   "capacity": 411180.0,
+   "arrivals": 51564.0,
+   "overnight": 98094.0,
+   "occupancy_pct": 23.85670509266015,
+   "mean_stay": 1.902373749127298,
+   "agro_share_overnight_pct": 7.528493078067975,
+   "agro_share_capacity_pct": 7.2710248552945185,
+   "agro_occupancy_pct": 24.701475064387733
+  },
+  "2007": {
+   "year": 2007,
+   "capacity": 404003.0,
+   "arrivals": 58058.0,
+   "overnight": 105492.0,
+   "occupancy_pct": 26.11168728945082,
+   "mean_stay": 1.8170105756312653,
+   "agro_share_overnight_pct": 10.048155310355288,
+   "agro_share_capacity_pct": 9.408841023457747,
+   "agro_occupancy_pct": 27.885930758707776
+  },
+  "2008": {
+   "year": 2008,
+   "capacity": 443377.0,
+   "arrivals": 63190.0,
+   "overnight": 119731.0,
+   "occupancy_pct": 27.004332655956443,
+   "mean_stay": 1.8947776546921982,
+   "agro_share_overnight_pct": 10.144407045794322,
+   "agro_share_capacity_pct": 10.78653155215539,
+   "agro_occupancy_pct": 25.396759017250393
+  },
+  "2009": {
+   "year": 2009,
+   "capacity": 574273.0,
+   "arrivals": 59062.0,
+   "overnight": 115970.0,
+   "occupancy_pct": 20.19422818067365,
+   "mean_stay": 1.963529849988148,
+   "agro_share_overnight_pct": 15.655773044752953,
+   "agro_share_capacity_pct": 20.15173967781874,
+   "agro_occupancy_pct": 15.688782123291222
+  },
+  "2010": {
+   "year": 2010,
+   "capacity": 556379.0,
+   "arrivals": 54967.0,
+   "overnight": 105726.0,
+   "occupancy_pct": 19.00251447304805,
+   "mean_stay": 1.923444976076555,
+   "agro_share_overnight_pct": 14.285038684902483,
+   "agro_share_capacity_pct": 15.458707104329962,
+   "agro_occupancy_pct": 17.55979025450825
+  },
+  "2011": {
+   "year": 2011,
+   "capacity": 656987.0,
+   "arrivals": 63832.0,
+   "overnight": 136721.0,
+   "occupancy_pct": 20.810305226739647,
+   "mean_stay": 2.1418880812131844,
+   "agro_share_overnight_pct": 13.237176439610593,
+   "agro_share_capacity_pct": 13.12232966557938,
+   "agro_occupancy_pct": 20.992437247714935
+  },
+  "2012": {
+   "year": 2012,
+   "capacity": 728607.0,
+   "arrivals": 74622.0,
+   "overnight": 173316.0,
+   "occupancy_pct": 23.787309207844558,
+   "mean_stay": 2.3225858325962854,
+   "agro_share_overnight_pct": 9.157838860809157,
+   "agro_share_capacity_pct": 11.908477409632352,
+   "agro_occupancy_pct": 18.292879699421434
+  },
+  "2013": {
+   "year": 2013,
+   "capacity": 766858.0,
+   "arrivals": 75125.0,
+   "overnight": 171171.0,
+   "occupancy_pct": 22.321081608329052,
+   "mean_stay": 2.2784825291181363,
+   "agro_share_overnight_pct": 9.55302007933587,
+   "agro_share_capacity_pct": 12.08750511828787,
+   "agro_occupancy_pct": 17.64083975230328
+  },
+  "2014": {
+   "year": 2014,
+   "capacity": 761641.0,
+   "arrivals": 77831.0,
+   "overnight": 168737.0,
+   "occupancy_pct": 22.15440082663617,
+   "mean_stay": 2.167992188202644,
+   "agro_share_overnight_pct": 11.99914660092333,
+   "agro_share_capacity_pct": 13.38333939480674,
+   "agro_occupancy_pct": 19.863047295772713
+  },
+  "2015": {
+   "year": 2015,
+   "capacity": 735313.0,
+   "arrivals": 78418.0,
+   "overnight": 147156.0,
+   "occupancy_pct": 20.012702073810743,
+   "mean_stay": 1.8765589533015379,
+   "agro_share_overnight_pct": 13.249884476338035,
+   "agro_share_capacity_pct": 14.603984969665978,
+   "agro_occupancy_pct": 18.157098291195233
+  },
+  "2016": {
+   "year": 2016,
+   "capacity": 782214.0,
+   "arrivals": 84273.0,
+   "overnight": 149869.0,
+   "occupancy_pct": 19.159590597969352,
+   "mean_stay": 1.7783750430149632,
+   "agro_share_overnight_pct": 16.928784471772016,
+   "agro_share_capacity_pct": 18.8315473770605,
+   "agro_occupancy_pct": 17.22368179874137
+  },
+  "2017": {
+   "year": 2017,
+   "capacity": 942175.0,
+   "arrivals": 111308.0,
+   "overnight": 185057.0,
+   "occupancy_pct": 19.641467880170882,
+   "mean_stay": 1.6625669313975635,
+   "agro_share_overnight_pct": 21.94891303760463,
+   "agro_share_capacity_pct": 24.34186854883647,
+   "agro_occupancy_pct": 17.710590687311146
+  },
+  "2018": {
+   "year": 2018,
+   "capacity": 1001245.0,
+   "arrivals": 112950.0,
+   "overnight": 203786.0,
+   "occupancy_pct": 20.353260191062127,
+   "mean_stay": 1.8042142540947321,
+   "agro_share_overnight_pct": 26.249595163553924,
+   "agro_share_capacity_pct": 26.18090477355692,
+   "agro_occupancy_pct": 20.406660690102427
+  },
+  "2019": {
+   "year": 2019,
+   "capacity": 1046046.0,
+   "arrivals": 112308.0,
+   "overnight": 204872.0,
+   "occupancy_pct": 19.585371962609674,
+   "mean_stay": 1.8241977419239948,
+   "agro_share_overnight_pct": 24.70469366238432,
+   "agro_share_capacity_pct": 26.817367496266893,
+   "agro_occupancy_pct": 18.04243517442482
+  },
+  "2020": {
+   "year": 2020,
+   "capacity": 848012.0,
+   "arrivals": 80727.0,
+   "overnight": 143068.0,
+   "occupancy_pct": 16.870987674702718,
+   "mean_stay": 1.7722447260520025,
+   "agro_share_overnight_pct": 31.03489249867196,
+   "agro_share_capacity_pct": 31.066423588345447,
+   "agro_occupancy_pct": 16.85386434463099
+  },
+  "2021": {
+   "year": 2021,
+   "capacity": 1146064.0,
+   "arrivals": 120582.0,
+   "overnight": 191060.0,
+   "occupancy_pct": 16.670971254659424,
+   "mean_stay": 1.5844819293095156,
+   "agro_share_overnight_pct": 30.440175860986077,
+   "agro_share_capacity_pct": 30.725421965963505,
+   "agro_occupancy_pct": 16.516202684781035
+  },
+  "2022": {
+   "year": 2022,
+   "capacity": 1129004.0,
+   "arrivals": 123599.0,
+   "overnight": 189188.0,
+   "occupancy_pct": 16.757070834115734,
+   "mean_stay": 1.5306596331685531,
+   "agro_share_overnight_pct": 29.607586104826943,
+   "agro_share_capacity_pct": 29.887493755557998,
+   "agro_occupancy_pct": 16.600134546025707
+  },
+  "2023": {
+   "year": 2023,
+   "capacity": 1305027.0,
+   "arrivals": 151109.0,
+   "overnight": 242569.0,
+   "occupancy_pct": 18.587278270871025,
+   "mean_stay": 1.605258455816662,
+   "agro_share_overnight_pct": 28.572488652713247,
+   "agro_share_capacity_pct": 29.477474412406792,
+   "agro_occupancy_pct": 18.016631616708562
+  },
+  "2024": {
+   "year": 2024,
+   "capacity": 1343686.0,
+   "arrivals": 140128.0,
+   "overnight": 233068.0,
+   "occupancy_pct": 17.345421474957693,
+   "mean_stay": 1.6632507421785796,
+   "agro_share_overnight_pct": 28.354814903804897,
+   "agro_share_capacity_pct": 30.632379886372263,
+   "agro_occupancy_pct": 16.055762470147204
+  },
+  "2025": {
+   "year": 2025,
+   "capacity": 1443399.0,
+   "arrivals": 132223.0,
+   "overnight": 214072.0,
+   "occupancy_pct": 14.831103527160543,
+   "mean_stay": 1.6190224091118792,
+   "agro_share_overnight_pct": 27.547740946971114,
+   "agro_share_capacity_pct": 32.72151359395427,
+   "agro_occupancy_pct": 12.486078822448349
+  }
+ },
+ "growth": {
+  "capacity": 3.5237340767829854,
+  "arrivals": 2.8490196078431373,
+  "overnight": 2.0727945234660186,
+  "occupancy_ratio_2025_2001": 0.5882380674305563,
+  "arrivals_peak": 151109.0,
+  "arrivals_peak_year": 2023,
+  "overnight_peak": 242569.0,
+  "overnight_peak_year": 2023,
+  "occupancy_min_year": 2025,
+  "occupancy_max_since_2014": 22.15440082663617
+ },
+ "foreign": {
+  "max_share_overnight_pct": 8.925795320972206,
+  "share_overnight_2025_pct": 2.930789640868493,
+  "share_arrivals_county_2025_pct": 3.5961973332929973,
+  "share_arrivals_agro_2025_pct": 1.4514208476812667
+ },
+ "agro": {
+  "capacity_2001": 4016.0,
+  "capacity_2025": 472302.0,
+  "growth": 117.6050796812749,
+  "overnight_2001": 138.0,
+  "share_capacity_2001_pct": 0.980416090932616,
+  "share_capacity_2025_pct": 32.72151359395427,
+  "largest_type_by_capacity_since": 2020,
+  "share_overnight_2025_pct": 27.547740946971114,
+  "share_arrivals_2025_pct": 23.500449997352955,
+  "arrivals_2025": 31073.0,
+  "overnight_2025": 58972.0,
+  "hotels_share_overnight_2025_pct": 31.28807130311297,
+  "hotels_share_arrivals_2025_pct": 33.389047291318455,
+  "stay_2025": 1.8978534418948927,
+  "stay_hotels_2025": 1.5171468696203678,
+  "stay_county_2025": 1.6190224091118792,
+  "stay_2015": 2.6387873866558396,
+  "occupancy_2015_pct": 18.157098291195233,
+  "occupancy_2025_pct": 12.486078822448349,
+  "occupancy_hotels_2025_pct": 21.80270503409775,
+  "occupancy_county_2025_pct": 14.831103527160543,
+  "relative_occupancy_2014_2024_min": 0.8965734370884646,
+  "relative_occupancy_2014_2024_max": 1.0026236828173478,
+  "relative_occupancy_2025": 0.8418846783438807,
+  "capacity_ratio_2009_2008": 2.4197804495556716,
+  "capacity_change_2025_vs_2023_pct": 22.7750208610072,
+  "overnight_change_2025_vs_2023_pct": -14.91314134010504
+ },
+ "structure": {
+  "hotel_share_capacity_2001_pct": 70.68638891465791,
+  "hotel_share_capacity_2025_pct": 21.283442762534822,
+  "hotel_capacity_change_pct": 6.098491781990489,
+  "hotel_overnight_change_pct": -14.33157679320577,
+  "agro_share_of_capacity_growth_pct": 45.29855084800687,
+  "agro_share_of_overnight_growth_pct": 53.10167426327903,
+  "correlation_yoy_hotels_agro_2005_2025": -0.013468338617314531
+ },
+ "localities": {
+  "with_any_activity": 36,
+  "with_agro_any_year": 29,
+  "agro_locality_year_observations": 293,
+  "with_agro_2025": 24,
+  "with_agro_2016": 9,
+  "with_agro_2019": 20,
+  "targu_jiu_share_hotel_capacity_pct": 77.67288943864845,
+  "communes_with_accommodation_2025": 23,
+  "communes_where_agro_is_main_type": 20,
+  "communes_where_agro_is_only_type": 14,
+  "pilot_area_share_capacity_pct": 65.54789096806704,
+  "pilot_area_share_overnight_pct": 71.97653123516245,
+  "baia_de_fier_share_capacity_pct": 28.873051564465108,
+  "baia_de_fier_share_overnight_pct": 36.22057925795293,
+  "lowest_agro_occupancy_2025": [
+   {
+    "locality": "Sacelu",
+    "occupancy_pct": 0.0
+   },
+   {
+    "locality": "Negomir",
+    "occupancy_pct": 0.3482587064676617
+   },
+   {
+    "locality": "Targu Jiu",
+    "occupancy_pct": 0.9510869565217391
+   },
+   {
+    "locality": "Hurezani",
+    "occupancy_pct": 1.4184397163120568
+   },
+   {
+    "locality": "Bengesti-Ciocadia",
+    "occupancy_pct": 2.73972602739726
+   },
+   {
+    "locality": "Schela",
+    "occupancy_pct": 3.119072708113804
+   }
+  ]
+ },
+ "table3": [
+  {
+   "window": "economic crisis",
+   "years": "2008-2010",
+   "type": "Hotels",
+   "capacity_change_pct": 2.9572021718300867,
+   "overnight_change_pct": -21.660311726536897,
+   "occupancy_start_pct": 28.647077610986905,
+   "occupancy_end_pct": 21.79743701897574
+  },
+  {
+   "window": "economic crisis",
+   "years": "2008-2010",
+   "type": "Agritourism guesthouses",
+   "capacity_change_pct": 79.84108729743858,
+   "overnight_change_pct": 24.34546352708711,
+   "occupancy_start_pct": 25.396759017250393,
+   "occupancy_end_pct": 17.55979025450825
+  },
+  {
+   "window": "economic crisis",
+   "years": "2008-2010",
+   "type": "County total",
+   "capacity_change_pct": 25.486662591880037,
+   "overnight_change_pct": -11.697054229898685,
+   "occupancy_start_pct": 27.004332655956443,
+   "occupancy_end_pct": 19.00251447304805
+  },
+  {
+   "window": "pandemic",
+   "years": "2019-2020",
+   "type": "Hotels",
+   "capacity_change_pct": -18.724302133600222,
+   "overnight_change_pct": -31.10286677908938,
+   "occupancy_start_pct": 23.626100426465058,
+   "occupancy_end_pct": 20.027765141413983
+  },
+  {
+   "window": "pandemic",
+   "years": "2019-2020",
+   "type": "Agritourism guesthouses",
+   "capacity_change_pct": -6.086866627216403,
+   "overnight_change_pct": -12.273526564321424,
+   "occupancy_start_pct": 18.04243517442482,
+   "occupancy_end_pct": 16.85386434463099
+  },
+  {
+   "window": "pandemic",
+   "years": "2019-2020",
+   "type": "County total",
+   "capacity_change_pct": -18.93167222091572,
+   "overnight_change_pct": -30.16712874380101,
+   "occupancy_start_pct": 19.585371962609674,
+   "occupancy_end_pct": 16.870987674702718
+  }
+ ],
+ "recovery": {
+  "agro_overnight_2021_vs_2019_pct": 14.909213048031145,
+  "hotels_overnight_2021_vs_2019_pct": -16.880944350758853,
+  "hotels_first_year_above_2019": 2023
+ },
+ "ins_net_utilisation_2025": {
+  "county": 14.8,
+  "hotels": 21.8,
+  "agro": 12.5
+ }
+}

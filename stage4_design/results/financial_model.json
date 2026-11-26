@@ -1,0 +1,247 @@
+{
+ "parameters": {
+  "arrivals_agro": {
+   "value": 31073,
+   "status": "observed",
+   "note": "INS, arrivals in agritourism guesthouses, 2025"
+  },
+  "mean_stay": {
+   "value": 1.9,
+   "status": "observed",
+   "note": "INS, nights per tourist in agritourism guesthouses, 2025 (rounded)"
+  },
+  "nights_agro": {
+   "value": 58870,
+   "status": "derived",
+   "note": "27.5% (rounded share) of 214,072 county overnight stays, 2025; the exact series value is 58,972"
+  },
+  "occupancy_agro": {
+   "value": 12.5,
+   "status": "observed",
+   "note": "occupancy of agritourism guesthouses, 2025 (%)"
+  },
+  "occupancy_county": {
+   "value": 14.8,
+   "status": "observed",
+   "note": "county occupancy, 2025 (%)"
+  },
+  "price": {
+   "value": 150.0,
+   "status": "estimate",
+   "note": "price per person-night, RON"
+  },
+  "commission": {
+   "value": 0.07,
+   "status": "estimate",
+   "note": "commission on direct bookings; large intermediaries charge about 15%"
+  },
+  "guesthouses": {
+   "value": 150,
+   "status": "estimate",
+   "note": "472,302 bed-days / (about 12 beds x about 260 operating days)"
+  },
+  "subscribers": {
+   "value": 0.4,
+   "status": "estimate",
+   "note": "share of hosts with a paid subscription in year 3"
+  },
+  "monthly_fee": {
+   "value": 99.0,
+   "status": "estimate",
+   "note": "subscription fee, RON per month"
+  },
+  "promotion": {
+   "value": 15000.0,
+   "status": "estimate",
+   "note": "promotion revenue per year, RON (year 3)"
+  },
+  "reports": {
+   "value": 30000.0,
+   "status": "estimate",
+   "note": "aggregated reports for public authorities, RON per year (from year 2)"
+  },
+  "investment": {
+   "value": 220000.0,
+   "status": "estimate",
+   "note": "initial investment, RON"
+  },
+  "payment_pct": {
+   "value": 0.015,
+   "status": "online source",
+   "note": "payment processing, share of the transaction value"
+  },
+  "payment_fix": {
+   "value": 1.0,
+   "status": "online source",
+   "note": "payment processing, RON per transaction"
+  },
+  "staff": {
+   "value": 132000.0,
+   "status": "estimate",
+   "note": "platform coordinator and part-time developer, RON per year"
+  },
+  "cloud": {
+   "value": 24000.0,
+   "status": "estimate",
+   "note": "hosting and licences, RON per year"
+  },
+  "marketing": {
+   "value": 36000.0,
+   "status": "estimate",
+   "note": "campaigns and multilingual content, RON per year"
+  },
+  "legal": {
+   "value": 12000.0,
+   "status": "estimate",
+   "note": "accounting, data protection, terms, RON per year"
+  }
+ },
+ "fixed_costs": 204000.0,
+ "trajectory": [
+  {
+   "year": 1,
+   "share": 0.05,
+   "arrivals": 1553.65,
+   "booking_value": 442790.25,
+   "rev_commission": 30995.317500000005,
+   "rev_subscription": 26730.0,
+   "rev_promotion": 5624.999999999999,
+   "rev_reports": 0.0,
+   "revenue": 63350.317500000005,
+   "payment_costs": 8195.50375,
+   "fixed_costs": 204000.0,
+   "costs": 212195.50375,
+   "result": -148845.18625,
+   "cumulative_balance": -368845.18625
+  },
+  {
+   "year": 2,
+   "share": 0.12,
+   "arrivals": 3728.7599999999998,
+   "booking_value": 1062696.5999999999,
+   "rev_commission": 74388.762,
+   "rev_subscription": 53460.0,
+   "rev_promotion": 11249.999999999998,
+   "rev_reports": 30000.0,
+   "revenue": 169098.762,
+   "payment_costs": 19669.208999999995,
+   "fixed_costs": 204000.0,
+   "costs": 223669.209,
+   "result": -54570.447000000015,
+   "cumulative_balance": -423415.6332500001
+  },
+  {
+   "year": 3,
+   "share": 0.2,
+   "arrivals": 6214.6,
+   "booking_value": 1771161.0,
+   "rev_commission": 123981.27000000002,
+   "rev_subscription": 71280.0,
+   "rev_promotion": 15000.0,
+   "rev_reports": 30000.0,
+   "revenue": 240261.27000000002,
+   "payment_costs": 32782.015,
+   "fixed_costs": 204000.0,
+   "costs": 236782.015,
+   "result": 3479.2550000000047,
+   "cumulative_balance": -419936.37825000007
+  },
+  {
+   "year": 4,
+   "share": 0.25,
+   "arrivals": 7768.25,
+   "booking_value": 2213951.25,
+   "rev_commission": 154976.58750000002,
+   "rev_subscription": 80190.0,
+   "rev_promotion": 15000.0,
+   "rev_reports": 30000.0,
+   "revenue": 280166.5875,
+   "payment_costs": 40977.518749999996,
+   "fixed_costs": 204000.0,
+   "costs": 244977.51875,
+   "result": 35189.068750000035,
+   "cumulative_balance": -384747.30950000003
+  },
+  {
+   "year": 5,
+   "share": 0.3,
+   "arrivals": 9321.9,
+   "booking_value": 2656741.4999999995,
+   "rev_commission": 185971.905,
+   "rev_subscription": 89100.0,
+   "rev_promotion": 15000.0,
+   "rev_reports": 30000.0,
+   "revenue": 320071.905,
+   "payment_costs": 49173.02249999999,
+   "fixed_costs": 204000.0,
+   "costs": 253173.0225,
+   "result": 66898.88250000004,
+   "cumulative_balance": -317848.427
+  }
+ ],
+ "break_even_share": 0.19236999249610096,
+ "break_even_arrivals": 5977.512776831345,
+ "break_even_share_without_reports": 0.2581600036096786,
+ "max_financing_need": 423415.6332500001,
+ "sensitivity": {
+  "price": [
+   100,
+   125,
+   150,
+   175,
+   200
+  ],
+  "commission": [
+   0.05,
+   0.06,
+   0.07,
+   0.08,
+   0.1
+  ],
+  "break_even_share": [
+   [
+    0.49965126369562496,
+    0.3739112105801698,
+    0.2987332952254265,
+    0.24872507840354907,
+    0.1863385900911077
+   ],
+   [
+    0.3860553353682437,
+    0.2914095112134485,
+    0.23403354527504924,
+    0.19553452051118833,
+    0.14712858058007983
+   ],
+   [
+    0.3145436924657696,
+    0.23873400760086952,
+    0.19236999249610096,
+    0.16108585676920292,
+    0.12155133002713804
+   ],
+   [
+    0.2653846900004965,
+    0.20218654538086175,
+    0.16329889457008137,
+    0.13695716870250005,
+    0.10354991801486592
+   ],
+   [
+    0.22951460486831557,
+    0.17534345589318517,
+    0.14186078592363222,
+    0.11911517467849289,
+    0.09019264025176618
+   ]
+  ],
+  "combinations_below_15pct": 7
+ },
+ "occupancy_gap": {
+  "extra_nights": 10832.080000000009,
+  "extra_arrivals": 5701.09473684211,
+  "extra_host_revenue": 1624812.0000000014,
+  "extra_commission": 113736.84000000011,
+  "host_gain_over_commission": 14.285714285714285
+ }
+}

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SD Simulator 2 – community quality of life, Gorj</title><style>:root{
+  --bg:#f6f5f1; --surface:#ffffff; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781; --grid:#e1e0d9; --axis:#c3c2b7; --line:#e1e0d9;
+  --blue:#2a78d6; --orange:#eb6834; --aqua:#1baf7a; --violet:#6250d6; --yellow:#eda100; --red:#e34948; --green:#008300;
+  --chip:#efeee9; --accent:#2a78d6; --radius:12px; color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781; --grid:#2c2c2a; --axis:#383835; --line:#2c2c2a;
+    --blue:#3987e5; --orange:#d95926; --aqua:#199e70; --violet:#9085e9; --yellow:#c98500; --red:#e66767; --green:#2fb52f;
+    --chip:#262624; --accent:#3987e5; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781; --grid:#2c2c2a; --axis:#383835; --line:#2c2c2a;
+  --blue:#3987e5; --orange:#d95926; --aqua:#199e70; --violet:#9085e9; --yellow:#c98500; --red:#e66767; --green:#2fb52f;
+  --chip:#262624; --accent:#3987e5; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header.top{padding:18px 20px 8px;max-width:1500px;margin:0 auto}
+header.top h1{font-size:22px;margin:0 0 4px;font-weight:650;letter-spacing:-.01em}
+header.top p{margin:0;color:var(--ink2);max-width:980px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.badge{background:var(--chip);color:var(--ink2);border-radius:999px;padding:3px 10px;font-size:12.5px}
+.badge b{color:var(--ink)}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
+button.btn{font:inherit;font-size:13.5px;padding:7px 12px;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+button.btn:hover{border-color:var(--accent)}
+button.btn.on{background:var(--accent);border-color:var(--accent);color:#fff}
+button.btn.ghost{background:transparent}
+.layout{display:grid;grid-template-columns:340px 1fr;gap:16px;max-width:1500px;margin:0 auto;padding:8px 20px 40px}
+@media (max-width:980px){.layout{grid-template-columns:1fr;padding:8px 14px 40px}}
+aside.controls{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px;align-self:start;position:sticky;top:10px;max-height:calc(100vh - 20px);overflow:auto}
+@media (max-width:980px){aside.controls{position:static;max-height:none}}
+aside.controls h3{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:14px 0 6px}
+aside.controls h3:first-child{margin-top:0}
+.scen{display:flex;flex-direction:column;gap:6px}
+.scen button{text-align:left}
+.scen small{display:block;color:var(--muted);font-size:12px;margin-top:1px}
+.scen button.on small{color:#e8f0fb}
+.sl{margin:8px 0 10px}
+.sl .row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.sl label{font-size:13.5px;font-weight:550}
+.sl .val{font-variant-numeric:tabular-nums;font-size:13.5px;color:var(--ink)}
+.sl input[type=range]{width:100%;accent-color:var(--accent);margin:2px 0}
+.sl .help{font-size:12px;color:var(--muted);line-height:1.35}
+.tag{display:inline-block;font-size:10.5px;padding:0 6px;border-radius:6px;margin-left:6px;vertical-align:1px;font-weight:600}
+.tag.cal{background:#dbe8f9;color:#144b92}.tag.est{background:#fbe3d6;color:#8a3410}.tag.real{background:#d5f0e4;color:#0c6844}.tag.sc{background:#e4e0fa;color:#3a2d98}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tag.cal{background:#1c3556;color:#9cc4f5}:root:not([data-theme="light"]) .tag.est{background:#4a2515;color:#f2b394}:root:not([data-theme="light"]) .tag.real{background:#123d2c;color:#8ddcb7}:root:not([data-theme="light"]) .tag.sc{background:#2c2760;color:#bdb6f5}}
+main.stage{display:flex;flex-direction:column;gap:14px;min-width:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px;min-width:0}
+.card h2{font-size:15px;margin:0 0 2px;font-weight:650}
+.card .sub{font-size:12.5px;color:var(--muted);margin:0 0 8px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.kpi{background:var(--chip);border-radius:10px;padding:9px 11px}
+.kpi .k{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.kpi .v{font-size:19px;font-weight:650;font-variant-numeric:tabular-nums}
+.kpi .d{font-size:12px;color:var(--ink2)}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:14px}
+@media (max-width:520px){.charts{grid-template-columns:1fr}}
+.chartbox{position:relative}
+canvas{display:block;width:100%;height:260px}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px;color:var(--ink2);margin:4px 0 0}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend i{display:inline-block;width:16px;height:0;border-top:3px solid;border-radius:2px}
+.legend i.dot{border-top-style:dotted}.legend i.dash{border-top-style:dashed}
+.tip{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--axis);border-radius:8px;padding:6px 9px;font-size:12.5px;box-shadow:0 4px 14px rgba(0,0,0,.14);z-index:5;display:none;white-space:nowrap}
+.tip b{display:block;margin-bottom:2px}
+.scrub{display:flex;align-items:center;gap:12px;margin:2px 0 8px}
+.scrub input{flex:1;accent-color:var(--accent)}
+.scrub .yr{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;min-width:56px}
+svg.diagram{width:100%;height:auto;display:block}
+svg.diagram text{font-family:inherit;fill:var(--ink)}
+svg.diagram .t2{fill:var(--ink2)}
+svg.diagram .mut{fill:var(--muted)}
+svg.diagram .num{font-weight:650;font-variant-numeric:tabular-nums}
+details.how{background:var(--chip);border-radius:10px;padding:8px 12px;margin-top:10px;font-size:13.5px;color:var(--ink2)}
+details.how summary{cursor:pointer;font-weight:600;color:var(--ink)}
+details.how ul{margin:6px 0 2px 18px;padding:0}
+.note{font-size:12.5px;color:var(--muted);margin-top:8px}
+table.dt{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+table.dt th,table.dt td{padding:4px 8px;border-bottom:1px solid var(--line);text-align:right}
+table.dt th:first-child,table.dt td:first-child{text-align:left}
+.foot{max-width:1500px;margin:0 auto;padding:0 20px 30px;color:var(--muted);font-size:12.5px}
+</style></head><body>
+<header class="top"><div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start"><h1>Simulator 2: community quality of life and acceptance of digital technologies</h1><span id="themebtn"></span></div>
+<p>Exploratory scenario model with two stocks: acceptance of digital technologies by residents (Bass diffusion, slowed by tourism pressure) and quality of life (life satisfaction, 1–10), coupled with the agritourism capacity of Model 1.</p><div class="badges"><span class="badge"><b>Public benchmarks:</b> Eurofound life satisfaction 2003–2016; digital skills</span><span class="badge"><b>Coupling:</b> capacity from Model 1</span><span class="badge"><b>Article:</b> Section 5.3</span></div></header>
+<div class="layout"><aside class="controls" id="controls"></aside><main class="stage" id="stage"></main></div>
+<div class="foot">Supplementary material of the article. Parameters tagged “scenario” are assumptions; the numerical results are illustrative and are not forecasts.</div>
+<script>const DATA = {"years": [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025], "CH": [289547.0, 272658.0, 271817.0, 251146.0, 246567.0, 296018.0, 297398.0, 313100.0, 366348.0, 322359.0, 346718.0, 366956.0, 401858.0, 339433.0, 297272.0, 294722.0, 251807.0, 304408.0, 313742.0, 254996.0, 279225.0, 266676.0, 312087.0, 330651.0, 307205.0], "CA": [4016.0, 1716.0, 486.0, 4967.0, 18806.0, 29897.0, 38012.0, 47825.0, 115726.0, 86009.0, 86212.0, 86766.0, 92694.0, 101933.0, 107385.0, 147303.0, 229343.0, 262135.0, 280522.0, 263447.0, 352133.0, 337431.0, 384689.0, 411603.0, 472302.0], "NH": [78184.0, 74647.0, 62054.0, 67400.0, 62311.0, 68203.0, 78113.0, 89694.0, 83981.0, 70266.0, 86755.0, 115260.0, 110615.0, 102034.0, 75569.0, 70253.0, 56267.0, 71228.0, 74125.0, 51070.0, 61612.0, 68959.0, 88878.0, 84629.0, 66979.0], "NA": [138.0, 96.0, 16.0, 1558.0, 5313.0, 7385.0, 10600.0, 12146.0, 18156.0, 15103.0, 18098.0, 15872.0, 16352.0, 20247.0, 19498.0, 25371.0, 40618.0, 53493.0, 50613.0, 44401.0, 58159.0, 56014.0, 69308.0, 66086.0, 58972.0], "CAlte": [116059.0, 83084.0, 70967.0, 72552.0, 73659.0, 85265.0, 68593.0, 82452.0, 92199.0, 148011.0, 224057.0, 274885.0, 272306.0, 320275.0, 330656.0, 340189.0, 461025.0, 434702.0, 451782.0, 329569.0, 514706.0, 524897.0, 608251.0, 601432.0, 663892.0], "Nt": [103277.0, 104235.0, 83648.0, 90038.0, 84584.0, 98094.0, 105492.0, 119731.0, 115970.0, 105726.0, 136721.0, 173316.0, 171171.0, 168737.0, 147156.0, 149869.0, 185057.0, 203786.0, 204872.0, 143068.0, 191060.0, 189188.0, 242569.0, 233068.0, 214072.0], "Ct": [409622.0, 357458.0, 343270.0, 328665.0, 339032.0, 411180.0, 404003.0, 443377.0, 574273.0, 556379.0, 656987.0, 728607.0, 766858.0, 761641.0, 735313.0, 782214.0, 942175.0, 1001245.0, 1046046.0, 848012.0, 1146064.0, 1129004.0, 1305027.0, 1343686.0, 1443399.0], "SosA": [45.0, 32.0, 10.0, 326.0, 2095.0, 3403.0, 4788.0, 6112.0, 7244.0, 5210.0, 5884.0, 6019.0, 7931.0, 6590.0, 7389.0, 11673.0, 21008.0, 25550.0, 24472.0, 22951.0, 32869.0, 31000.0, 36276.0, 31698.0, 31073.0]};</script>
+<script>/* ===== Shared library of the simulators (no external dependencies) ===== */
+const $ = (s, r = document) => r.querySelector(s);
+function h(tag, attrs, ...kids) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (k === 'class') e.className = v; else if (k === 'html') e.innerHTML = v;
+    else if (k.startsWith('on')) e.addEventListener(k.slice(2), v); else e.setAttribute(k, v);
+  }
+  for (const c of kids.flat()) if (c != null) e.append(c.nodeType ? c : document.createTextNode(c));
+  return e;
+}
+const nf = (v, d = 0) => (v == null || !isFinite(v)) ? '–' : v.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+const pct = (v, d = 1) => nf(v * 100, d) + '%';
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+/* ---------- slider with label, value, help text and provenance tag ---------- */
+const TAGS = { cal: ['calibrated', 'Value calibrated on the historical series'], est: ['estimate', 'Value computed or chosen from a public source'],
+  real: ['real', 'Value from statistics or publications'], sc: ['scenario', 'Scenario or policy variable (assumption)'] };
+function makeSlider(def, state, onChange) {
+  const val = h('span', { class: 'val' });
+  const inp = h('input', { type: 'range', min: def.min, max: def.max, step: def.step, value: state[def.key] });
+  const show = () => { val.textContent = def.fmt ? def.fmt(state[def.key]) : nf(state[def.key], def.dec ?? 2); };
+  inp.addEventListener('input', () => { state[def.key] = parseFloat(inp.value); show(); onChange(def.key); });
+  show();
+  const tg = TAGS[def.tag] || TAGS.cal;
+  const el = h('div', { class: 'sl' },
+    h('div', { class: 'row' }, h('label', {}, def.label, h('span', { class: 'tag ' + (def.tag || 'cal'), title: tg[1] }, tg[0])), val),
+    inp, def.help ? h('div', { class: 'help' }, def.help) : null);
+  el._set = v => { state[def.key] = v; inp.value = v; show(); };
+  el._refresh = () => { inp.value = state[def.key]; show(); };
+  return el;
+}
+
+/* ---------- line chart on canvas ---------- */
+function niceTicks(lo, hi, n = 5) {
+  if (hi === lo) { hi = lo + 1; }
+  const span = hi - lo, step0 = span / n, mag = Math.pow(10, Math.floor(Math.log10(step0)));
+  const m = step0 / mag, step = (m < 1.5 ? 1 : m < 3 ? 2 : m < 7 ? 5 : 10) * mag;
+  const a = Math.ceil(lo / step - 1e-9) * step, out = [];
+  for (let v = a; v <= hi + 1e-9; v += step) out.push(+v.toFixed(10));
+  return out;
+}
+class Chart {
+  constructor(canvas, tip) { this.c = canvas; this.tip = tip; this.hover = null; this.o = {}; this.series = [];
+    canvas.addEventListener('mousemove', e => { const r = canvas.getBoundingClientRect(); this.hover = { x: e.clientX - r.left, y: e.clientY - r.top }; this.draw(); });
+    canvas.addEventListener('mouseleave', () => { this.hover = null; this.draw(); });
+    new ResizeObserver(() => this.draw()).observe(canvas); }
+  set(series, o) { this.series = series; this.o = o || {}; this.draw(); }
+  draw() {
+    const c = this.c, dpr = window.devicePixelRatio || 1, W = c.clientWidth, H = c.clientHeight;
+    if (!W) return;
+    c.width = Math.round(W * dpr); c.height = Math.round(H * dpr);
+    const g = c.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H);
+    const o = this.o, L = o.left || 58, R = 14, T = 12, B = 28, pw = W - L - R, ph = H - T - B;
+    const pts = this.series.flatMap(s => s.data.filter(p => p.y != null && isFinite(p.y)));
+    if (!pts.length) return;
+    let x0 = o.xmin ?? Math.min(...pts.map(p => p.x)), x1 = o.xmax ?? Math.max(...pts.map(p => p.x));
+    let ys = pts.map(p => p.y); (o.hlines || []).forEach(l => ys.push(l.y));
+    let y0 = o.ymin ?? Math.min(0, ...ys), y1 = o.ymax ?? Math.max(...ys);
+    if (o.ymin == null && o.tight) y0 = Math.min(...ys); if (y1 === y0) y1 = y0 + 1;
+    const pad = (y1 - y0) * (o.ymax == null ? 0.06 : 0); y1 += pad; if (o.ymin == null && o.tight) y0 -= pad;
+    const X = x => L + (x - x0) / (x1 - x0) * pw, Y = y => T + (1 - (y - y0) / (y1 - y0)) * ph;
+    const ink2 = css('--ink2'), muted = css('--muted'), grid = css('--grid'), axis = css('--axis');
+    (o.bands || []).forEach(b => { g.fillStyle = css('--chip'); g.globalAlpha = .7; g.fillRect(X(b.x0), T, X(b.x1) - X(b.x0), ph); g.globalAlpha = 1;
+      if (b.label) { g.fillStyle = muted; g.font = '11px system-ui'; g.textAlign = 'center'; g.fillText(b.label, (X(b.x0) + X(b.x1)) / 2, T + 11); } });
+    g.font = '11.5px system-ui'; g.textAlign = 'right'; g.textBaseline = 'middle';
+    niceTicks(y0, y1, 5).forEach(v => { const y = Y(v); g.strokeStyle = grid; g.lineWidth = 1; g.beginPath(); g.moveTo(L, y); g.lineTo(L + pw, y); g.stroke();
+      g.fillStyle = muted; g.fillText(o.yfmt ? o.yfmt(v) : nf(v, v % 1 ? 1 : 0), L - 6, y); });
+    g.textAlign = 'center'; g.textBaseline = 'top';
+    const xt = niceTicks(x0, x1, Math.max(3, Math.floor(pw / 80)));
+    xt.forEach(v => { g.fillStyle = muted; g.fillText(o.xfmt ? o.xfmt(v) : String(v), X(v), T + ph + 7); g.strokeStyle = axis; g.beginPath(); g.moveTo(X(v), T + ph); g.lineTo(X(v), T + ph + 4); g.stroke(); });
+    g.strokeStyle = axis; g.beginPath(); g.moveTo(L, T + ph); g.lineTo(L + pw, T + ph); g.stroke();
+    (o.hlines || []).forEach(l => { g.strokeStyle = css(l.color || '--muted'); g.setLineDash([5, 4]); g.lineWidth = 1.2; g.beginPath(); g.moveTo(L, Y(l.y)); g.lineTo(L + pw, Y(l.y)); g.stroke(); g.setLineDash([]);
+      if (l.label) { g.fillStyle = ink2; g.textAlign = 'right'; g.textBaseline = 'bottom'; g.font = '11px system-ui'; g.fillText(l.label, L + pw - 2, Y(l.y) - 2); } });
+    if (o.vline != null) { g.strokeStyle = css('--ink2'); g.globalAlpha = .55; g.lineWidth = 1; g.beginPath(); g.moveTo(X(o.vline), T); g.lineTo(X(o.vline), T + ph); g.stroke(); g.globalAlpha = 1; }
+    this.series.forEach(s => {
+      const col = css(s.color); g.strokeStyle = col; g.fillStyle = col; g.lineWidth = s.width || 2.2; g.setLineDash(s.dash || []);
+      if (s.dots) { s.data.forEach(p => { if (p.y == null) return; g.beginPath(); g.arc(X(p.x), Y(p.y), s.r || 2.6, 0, 7); g.fill(); }); }
+      else { g.beginPath(); let st = false; s.data.forEach(p => { if (p.y == null || !isFinite(p.y)) { st = false; return; } st ? g.lineTo(X(p.x), Y(p.y)) : g.moveTo(X(p.x), Y(p.y)); st = true; }); g.stroke(); }
+      g.setLineDash([]);
+    });
+    const tip = this.tip;
+    if (this.hover && this.hover.x >= L && this.hover.x <= L + pw) {
+      const xv = x0 + (this.hover.x - L) / pw * (x1 - x0);
+      const xr = Math.round(xv); const rows = [];
+      g.strokeStyle = css('--ink2'); g.globalAlpha = .4; g.beginPath(); g.moveTo(X(xr), T); g.lineTo(X(xr), T + ph); g.stroke(); g.globalAlpha = 1;
+      this.series.forEach(s => { const p = s.data.find(q => q.x === xr); if (p && p.y != null && isFinite(p.y)) { rows.push([s.name, o.tipfmt ? o.tipfmt(p.y) : nf(p.y, o.dec ?? 0), s.color]); g.fillStyle = css(s.color); g.beginPath(); g.arc(X(xr), Y(p.y), 3.6, 0, 7); g.fill(); } });
+      if (tip && rows.length) { tip.style.display = 'block';
+        tip.innerHTML = '<b>' + (o.xlabel ? o.xlabel(xr) : xr) + '</b>' + rows.map(r => `<div><span style="color:${css(r[2])}">●</span> ${r[0]}: <b style="display:inline">${r[1]}</b></div>`).join('');
+        const tw = tip.offsetWidth; let lx = X(xr) + 12; if (lx + tw > W) lx = X(xr) - tw - 12; tip.style.left = Math.max(0, lx) + 'px'; tip.style.top = '14px'; }
+    } else if (tip) tip.style.display = 'none';
+  }
+}
+function chartCard(title, sub, h260) {
+  const canvas = h('canvas', {}); if (h260) canvas.style.height = h260 + 'px';
+  const tip = h('div', { class: 'tip' }), legend = h('div', { class: 'legend' });
+  const card = h('div', { class: 'card' }, h('h2', {}, title), sub ? h('p', { class: 'sub' }, sub) : null, h('div', { class: 'chartbox' }, canvas, tip), legend);
+  const ch = new Chart(canvas, tip);
+  ch.setLegend = items => { legend.innerHTML = ''; items.forEach(s => legend.append(h('span', {}, h('i', { class: s.dots ? 'dot' : s.dash ? 'dash' : '', style: 'border-color:' + css(s.color) }), s.name))); };
+  const orig = ch.set.bind(ch); ch.set = (series, o) => { orig(series, o); ch.setLegend(series.filter(s => !s.hidden)); };
+  return { card, chart: ch };
+}
+
+/* ---------- tornado chart (horizontal bars) ---------- */
+class Tornado {
+  constructor(canvas) { this.c = canvas; this.rows = []; new ResizeObserver(() => this.draw()).observe(canvas); }
+  set(rows, base, fmt) { this.rows = rows; this.base = base; this.fmt = fmt; this.draw(); }
+  draw() {
+    const c = this.c, dpr = window.devicePixelRatio || 1, W = c.clientWidth, H = c.clientHeight; if (!W || !this.rows.length) return;
+    c.width = W * dpr; c.height = H * dpr; const g = c.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H);
+    const L = 150, R = 20, T = 8, B = 24, pw = W - L - R, n = this.rows.length, bh = (H - T - B) / n;
+    const lo = Math.min(...this.rows.map(r => Math.min(r.lo, r.hi)), this.base), hi = Math.max(...this.rows.map(r => Math.max(r.lo, r.hi)), this.base);
+    const m = (hi - lo) * .06, X = v => L + (v - (lo - m)) / ((hi + m) - (lo - m)) * pw;
+    g.font = '12px system-ui'; g.textBaseline = 'middle';
+    niceTicks(lo - m, hi + m, 5).forEach(v => { g.strokeStyle = css('--grid'); g.beginPath(); g.moveTo(X(v), T); g.lineTo(X(v), H - B); g.stroke(); g.fillStyle = css('--muted'); g.textAlign = 'center'; g.fillText(this.fmt(v), X(v), H - 10); });
+    this.rows.forEach((r, i) => { const y = T + i * bh + bh * .2, hh = bh * .6;
+      g.fillStyle = css('--ink2'); g.textAlign = 'right'; g.fillText(r.label, L - 8, y + hh / 2);
+      const a = Math.min(r.lo, r.hi), b = Math.max(r.lo, r.hi);
+      g.fillStyle = css('--blue'); g.globalAlpha = .85; g.fillRect(X(a), y, Math.max(2, X(b) - X(a)), hh); g.globalAlpha = 1;
+      g.fillStyle = css('--ink'); g.textAlign = 'left'; g.font = '11.5px system-ui'; g.fillText(this.fmt(a) + ' – ' + this.fmt(b), Math.min(X(b) + 6, W - 120), y + hh / 2); g.font = '12px system-ui'; });
+    g.strokeStyle = css('--ink'); g.lineWidth = 1.4; g.beginPath(); g.moveTo(X(this.base), T); g.lineTo(X(this.base), H - B); g.stroke();
+  }
+}
+
+function downloadCSV(name, header, rows) {
+  const txt = [header.join(',')].concat(rows.map(r => r.map(v => (v == null ? '' : String(v))).join(','))).join('\n');
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['﻿' + txt], { type: 'text/csv;charset=utf-8' })); a.download = name; a.click();
+}
+function themeToggle() {
+  const b = h('button', { class: 'btn ghost', title: 'Switch light / dark theme', onclick: () => {
+    const cur = document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark'); window.dispatchEvent(new Event('resize')); window.__redraw && window.__redraw(); } }, 'Theme');
+  return b;
+}
+const fmt2 = v => nf(v, 2);
+function r2score(real, sim) { let m = 0; real.forEach(v => m += v); m /= real.length; let a = 0, b = 0; real.forEach((v, i) => { a += (v - sim[i]) ** 2; b += (v - m) ** 2; }); return 1 - a / b; }
+</script><script>/* ===== Core of SD Model 1 (hotels - agritourism), annual step, t = 0 is 2001; same equations as sd1_model.py ===== */
+const SD1_DEFAULT = { A0: 0.31739, M: 1, p: 0.01063, q: 1.0, bH: 1.38773, gamma: 80622.07, delta: 0.40022, dH: 0.32805, dA: 0, KA: 531348.70,
+  shockH2020: 0.15244, shockH2021: 0.344, shockA2020: 0.02654, shockA2021: -0.14985, rep0: 0, polK: 0.4, polMid: 12.5 };
+
+function sd1(P, horizonYear = 2045, demandGrowth = 0, shocks = true) {
+  const n = horizonYear - 2001 + 1;
+  const CH = new Array(n + 1).fill(0), CA = new Array(n + 1).fill(0), REP = new Array(n + 1).fill(0);
+  const o = { year: [], NH: [], NA: [], occH: [], occA: [], cotaH: [], cotaA: [], invA: [], invH: [], depH: [], dREP: [], pol: [], cerere: [], calte: [], att: [], room: [] };
+  CH[0] = DATA.CH[0]; CA[0] = DATA.CA[0]; REP[0] = P.rep0;
+  for (let t = 0; t < n; t++) {
+    const cer = t < 25 ? DATA.Nt[t] : DATA.Nt[24] * Math.pow(1 + demandGrowth, t - 24);
+    const calte = t < 25 ? DATA.CAlte[t] : DATA.CAlte[24];
+    const att = P.A0 * (1 + REP[t] / P.M);
+    const den = CH[t] + CA[t] * att + calte;
+    const cH = CH[t] / den, cA = CA[t] * att / den;
+    const NH = cH * cer, NA = cA * cer, occH = NH / CH[t];
+    const dREP = P.p * (P.M - REP[t]) + P.q * REP[t] * (P.M - REP[t]) / P.M;
+    const pol = 1 / (1 + Math.exp(-P.polK * (t - P.polMid)));
+    const room = Math.max(1 - CA[t] / P.KA, 0);
+    const invA = (P.gamma * dREP + P.delta * pol * CA[t]) * room;
+    const invH = P.bH * occH * CH[t], depH = P.dH * CH[t], depA = P.dA * CA[t];
+    const yr = 2001 + t; let sH = 0, sA = 0;
+    if (shocks) { if (yr === 2020) { sH = P.shockH2020; sA = P.shockA2020; } else if (yr === 2021) { sH = P.shockH2021; sA = P.shockA2021; } }
+    CH[t + 1] = CH[t] + invH - depH + sH * CH[t];
+    CA[t + 1] = CA[t] + invA - depA + sA * CA[t];
+    REP[t + 1] = Math.min(REP[t] + dREP, P.M);
+    o.year.push(yr); o.NH.push(NH); o.NA.push(NA); o.occH.push(occH); o.occA.push(NA / CA[t]); o.cotaH.push(cH); o.cotaA.push(cA);
+    o.invA.push(invA); o.invH.push(invH); o.depH.push(depH); o.dREP.push(dREP); o.pol.push(pol); o.cerere.push(cer); o.calte.push(calte); o.att.push(att); o.room.push(room);
+  }
+  o.CH = CH.slice(0, n); o.CA = CA.slice(0, n); o.REP = REP.slice(0, n);
+  return o;
+}
+/* first year in which CA reaches the fraction f of the carrying capacity */
+function yearReach(o, f, KA) { for (let i = 0; i < o.CA.length; i++) if (o.CA[i] >= f * KA) return o.year[i]; return null; }
+
+
+/* ===== Core of SD Model 2 (technology acceptance and quality of life); requires sd1core.js ===== */
+const KAPPA = Math.log(6.5 / 6.1) / 13;   // annual growth of life satisfaction in Romania, 2003-2016 (6.1 -> 6.5)
+const SD2_DEFAULT = { p_r: 0.01, q_r: 0.15, r_r: 0.08, gamma: 0.01, lam0: 0.01, gBudget: 0.0, tax: 0.02, eff: 1.0, budget0: 1.5e9, perTrip: 500,
+  acc0: 0.3184, qol0: 6.5, horizon: 2045, frozen: false, path: 'calibrated' };
+const START = 2025;
+const lam = (acc, l0) => l0 - (l0 + KAPPA) * acc;
+const accNeutral = l0 => l0 / (l0 + KAPPA);
+
+/* agritourism capacity and arrivals: simulated capacity of Model 1; observed arrivals until 2025, then proportional to capacity */
+function agroPath(kind, hy = 2060) {
+  const P = { ...SD1_DEFAULT };
+  if (kind === 'nopolicy') P.delta = 0; if (kind === 'doubled') P.delta = SD1_DEFAULT.delta * 2;
+  const o = sd1(P, hy, 0, true), n = o.CA.length, CA = [], Sos = [];
+  const ratio = DATA.SosA[24] / DATA.CA[24];
+  for (let t = 0; t < n; t++) {
+    let ca = o.CA[t];                      // continuous simulated trajectory (calibrated on 2001-2025)
+    if (kind === 'const' && t >= 25) ca = o.CA[24];
+    CA.push(ca); Sos.push(t < 25 ? DATA.SosA[t] : ca * ratio);
+  }
+  return { CA, Sos };
+}
+const PATHS = {}; function getPath(kind) { return PATHS[kind] || (PATHS[kind] = agroPath(kind, 2060)); }
+
+function sd2(P) {
+  const A = getPath(P.path), i0 = START - 2001, n = P.horizon - START + 1, ref = A.CA[i0];
+  const acc = [P.acc0], qol = [P.qol0];
+  const o = { year: [], budget: [], venit: [], bef: [], raport: [], presiune: [], resist: [], dacc: [], lam: [], lamEff: [], ca: [], taxRev: [] };
+  for (let k = 0; k < n; k++) {
+    const yr = START + k, ca = A.CA[i0 + k], sos = A.Sos[i0 + k];
+    const bud = P.budget0 * Math.pow(1 + P.gBudget, yr - START), ven = sos * P.perTrip, bef = bud + ven * P.tax;
+    const raport = P.eff * bef / P.budget0, pres = ca / ref;
+    const res = P.r_r * Math.max(pres - 1, 0) * acc[k];
+    const dacc = P.frozen ? 0 : P.p_r * (1 - acc[k]) + P.q_r * acc[k] * (1 - acc[k]) - res;
+    const l = lam(acc[k], P.lam0), le = l + P.gamma * (1 - raport);
+    acc.push(Math.min(Math.max(acc[k] + dacc, 0), 1)); qol.push(qol[k] * Math.exp(-le));
+    o.year.push(yr); o.budget.push(bud); o.venit.push(ven); o.bef.push(bef); o.raport.push(raport);
+    o.presiune.push(pres); o.resist.push(res); o.dacc.push(dacc); o.lam.push(l); o.lamEff.push(le); o.ca.push(ca); o.taxRev.push(ven * P.tax);
+  }
+  o.acc = acc.slice(0, n); o.qol = qol.slice(0, n); return o;
+}
+</script><script>/* ===== Simulator 2: community quality of life (exploratory scenario model) ===== */
+const DEF2 = { ...SD2_DEFAULT };
+const S = { ...DEF2, year: 2045 };
+let REF = null, SIM = null, curScen = 'base';
+const SLIDERS = [
+  { grp: 'Acceptance of technologies by residents (Bass loop R2)', items: [
+    { key: 'acc0', label: 'Initial acceptance (2025)', min: 0.05, max: 0.9, step: 0.01, fmt: v => pct(v, 1), tag: 'est', help: '31.84%: share of persons with at least basic digital skills in Romania (an imperfect proxy).' },
+    { key: 'p_r', label: 'p_r – spontaneous adoption', min: 0, max: 0.06, step: 0.0005, dec: 4, tag: 'sc', help: 'Assumption: 0.01, below the meta-analysis mean of 0.03 (Sultan et al., 1990).' },
+    { key: 'q_r', label: 'q_r – social imitation', min: 0, max: 0.5, step: 0.005, dec: 3, tag: 'sc', help: 'Assumption: 0.15 (meta-analysis mean: 0.38). The most influential assumed parameter.' },
+    { key: 'r_r', label: 'r_r – resistance to tourism pressure', min: 0, max: 0.4, step: 0.005, dec: 3, tag: 'sc', help: 'Assumption: at the maximum pressure of the baseline, resistance stays below one percentage point per year (loop B1).' } ] },
+  { grp: 'Quality of life', items: [
+    { key: 'lam0', label: 'λ0 – annual decline at zero acceptance', min: 0, max: 0.03, step: 0.0005, fmt: v => nf(v * 100, 2) + '% per year', tag: 'sc', help: 'Assumption: 1% per year. At full acceptance the score grows by 0.49% per year (Romania, 6.1 in 2003 and 6.5 in 2016).' },
+    { key: 'qol0', label: 'Initial score (2025)', min: 5.5, max: 7.5, step: 0.05, dec: 2, tag: 'est', help: '6.5: life satisfaction in Romania in 2016, scale 1–10 (Eurofound).' } ] },
+  { grp: 'Budget and investment (constant 2025 RON)', items: [
+    { key: 'eff', label: 'Investment efficiency η', min: 0.3, max: 1.3, step: 0.01, fmt: v => pct(v, 0), tag: 'sc', help: '100% = the whole investment capacity is used; 70% is an example of a 30% loss.' },
+    { key: 'gamma', label: 'γ_eff – sensitivity to investment', min: 0, max: 0.04, step: 0.0005, dec: 4, tag: 'sc', help: 'Assumption: 0.01. No effect while the investment ratio is close to 1.' },
+    { key: 'gBudget', label: 'Real growth of the budget', min: -0.03, max: 0.04, step: 0.0025, fmt: v => nf(v * 100, 2) + '% per year', tag: 'sc', help: 'Neutral assumption: 0% in real terms.' },
+    { key: 'tax', label: 'Effective tourism tax share', min: 0, max: 0.08, step: 0.0025, fmt: v => nf(v * 100, 2) + '%', tag: 'sc', help: 'Assumption: 2%. Almost no effect on the result.' },
+    { key: 'perTrip', label: 'Mean spending per stay (RON)', min: 100, max: 5000, step: 50, fmt: v => nf(v, 0), tag: 'sc', help: 'Assumption: RON 500; no local measurement; negligible effect.' },
+    { key: 'budget0', label: 'Reference budget 2025 (billion RON)', min: 0.8, max: 3, step: 0.1, fmt: v => nf(v / 1e9, 1), tag: 'sc', help: 'Assumed order of magnitude: RON 1.5 billion; enters only the tax term.' } ] },
+  { grp: 'Horizon', items: [
+    { key: 'horizon', label: 'Final year', min: 2035, max: 2060, step: 1, fmt: v => String(v), tag: 'sc' } ] }
+];
+const SCEN = [
+  { id: 'base', name: 'Baseline', desc: 'Diffusion from 31.84%, p_r = 0.01; q_r = 0.15; r_r = 0.08', patch: {} },
+  { id: 'fast', name: 'Rapid diffusion', desc: 'Meta-analysis means: p_r = 0.03, q_r = 0.38', patch: { p_r: 0.03, q_r: 0.38 } },
+  { id: 'edu', name: 'Information campaign', desc: 'p_r doubled (0.02) and q_r × 1.5 (0.225)', patch: { p_r: 0.02, q_r: 0.225 } },
+  { id: 'res', name: 'High resistance', desc: 'r_r = 0.24: strong reaction to crowding', patch: { r_r: 0.24 } },
+  { id: 'eff', name: 'Less efficient investment', desc: 'η = 0.7', patch: { eff: 0.7 } },
+  { id: 'fro', name: 'No diffusion of acceptance', desc: 'Acceptance stays at its initial value', patch: { frozen: true } }
+];
+const PATHS_UI = [['calibrated', 'Calibrated (Model 1)'], ['doubled', 'Policy sensitivity doubled'], ['nopolicy', 'No public policy'], ['const', 'Constant at 2025 level']];
+const sliderEls = {}, charts = {}, el = {};
+
+function build() {
+  const ctr = $('#controls');
+  ctr.append(h('h3', {}, 'Scenarios'));
+  const sc = h('div', { class: 'scen' });
+  SCEN.forEach(s => sc.append(h('button', { class: 'btn', 'data-id': s.id, onclick: () => applyScenario(s.id) }, s.name, h('small', {}, s.desc))));
+  ctr.append(sc);
+  ctr.append(h('h3', {}, 'Agritourism capacity trajectory'));
+  const pb = h('div', { class: 'toolbar' });
+  PATHS_UI.forEach(p => pb.append(h('button', { class: 'btn' + (p[0] === S.path ? ' on' : ''), 'data-path': p[0], onclick: () => { S.path = p[0]; document.querySelectorAll('[data-path]').forEach(b => b.classList.toggle('on', b.dataset.path === S.path)); update(); } }, p[1])));
+  ctr.append(pb, h('div', { class: 'note' }, 'Capacity comes from Model 1. Tourism pressure is measured relative to the 2025 capacity of the chosen trajectory.'));
+  ctr.append(h('div', { class: 'toolbar' },
+    h('button', { class: 'btn', onclick: () => { REF = sd2(S); update(); }, title: 'Keep the current trajectory as a dashed grey line' }, 'Pin as reference'),
+    h('button', { class: 'btn ghost', onclick: () => { REF = null; update(); } }, 'Clear reference')));
+  SLIDERS.forEach(g => { ctr.append(h('h3', {}, g.grp)); g.items.forEach(d => { const e = makeSlider(d, S, () => { curScen = ''; mark(); update(); }); sliderEls[d.key] = e; ctr.append(e); }); });
+  ctr.append(h('div', { class: 'note' }, 'Tags: ', h('span', { class: 'tag est' }, 'estimate'), ' value computed or chosen from a public source; ', h('span', { class: 'tag sc' }, 'scenario'), ' assumed value.'));
+}
+function mark() { document.querySelectorAll('.scen button').forEach(b => b.classList.toggle('on', b.dataset.id === curScen)); }
+function applyScenario(id) {
+  const sc = SCEN.find(s => s.id === id); curScen = id; const yr = S.year, path = S.path;
+  Object.keys(S).forEach(k => delete S[k]); Object.assign(S, DEF2, { year: yr, path }, sc.patch);
+  Object.keys(sliderEls).forEach(k => sliderEls[k]._set(S[k])); mark(); update();
+}
+function buildStage() {
+  const st = $('#stage');
+  el.kpis = h('div', { class: 'kpis' });
+  st.append(h('div', { class: 'card' }, h('h2', {}, 'Key results'), h('p', { class: 'sub' }, 'Life satisfaction (score 1–10) and acceptance of technologies by residents from 2025 to the final year. A scenario model, not a forecast.'), el.kpis));
+  el.yr = h('span', { class: 'yr' }, '2045');
+  el.scrub = h('input', { type: 'range', min: 2025, max: 2045, step: 1, value: 2045 });
+  el.scrub.addEventListener('input', () => { S.year = +el.scrub.value; drawDiagram(); update(true); });
+  el.diag = h('div', {});
+  st.append(h('div', { class: 'card' }, h('h2', {}, 'Model structure with the values of the selected year'),
+    h('p', { class: 'sub' }, 'Acceptance (ACC) and quality of life (QOL) are stocks. Move the slider to follow the chain: tourism → budget → investment ratio → rate of decline → QOL.'),
+    h('div', { class: 'scrub' }, el.yr, el.scrub), el.diag,
+    h('details', { class: 'how' }, h('summary', {}, 'How to read and use the simulator'), h('ul', {},
+      h('li', {}, 'Choose a scenario or change the parameters; note the “J-curve”: quality of life first falls, then rises once acceptance passes a threshold (about 67% with baseline values).'),
+      h('li', {}, 'The rate of decline λ is linear in acceptance: λ0 at ACC = 0, growth of 0.49% per year at ACC = 100%, zero at ACC* = λ0 / (λ0 + κ).'),
+      h('li', {}, 'If tourism pressure exceeds the reference level, community resistance slows acceptance (loop B1).'),
+      h('li', {}, 'The sensitivity chart is recalculated live and shows which assumptions matter most.')))));
+  const grid = h('div', { class: 'charts' });
+  const mk = (id, t, s) => { const c = chartCard(t, s); charts[id] = c.chart; grid.append(c.card); };
+  mk('qol', 'Quality of life (score 1–10)', 'Simulated trajectory; dashed line = initial level');
+  mk('acc', 'Acceptance of technologies by residents', 'Stock ACC (share of residents)');
+  mk('flux', 'Dynamics of acceptance: social growth and resistance', 'Annual change of ACC, percentage points');
+  mk('pres', 'Perceived tourism pressure', 'Agritourism capacity relative to 2025');
+  mk('inv', 'Tourist spending and tourism taxes (million RON)', 'Spending of agritourism arrivals and taxes collected from it');
+  mk('lam', 'Effective annual rate of decline λ', 'Negative values mean that quality of life grows');
+  st.append(grid);
+  const tcv = h('canvas', {}); tcv.style.height = '250px'; el.tor = new Tornado(tcv);
+  st.append(h('div', { class: 'card' }, h('h2', {}, 'Sensitivity: which assumptions matter most?'), h('p', { class: 'sub' }, 'QoL in the final year when each assumed parameter varies by ±50% (initial acceptance: 21%–40%; budget growth: −1% to +1%); the others keep their current values. Black line = current scenario.'), tcv));
+  const rc = chartCard('Acceptance and the rate of decline λ', 'Measured point: at ACC = 100%, growth of 0.49% per year (Romania, 2003–2016); assumed point: λ0 at ACC = 0', 250); charts.rep = rc.chart;
+  st.append(rc.card);
+  el.table = h('div', {});
+  st.append(h('div', { class: 'card' }, h('h2', {}, 'Annual values'), h('div', { class: 'toolbar' }, h('button', { class: 'btn', onclick: exportCSV }, 'Download CSV')), el.table));
+}
+const P2 = (arr, years) => years.map((y, i) => ({ x: y, y: arr[i] }));
+function update() {
+  SIM = sd2(S); const Y = SIM.year, last = Y.length - 1;
+  el.scrub.min = 2025; el.scrub.max = S.horizon; if (S.year > S.horizon) S.year = S.horizon; el.scrub.value = S.year; el.yr.textContent = S.year;
+  let imin = 0; SIM.qol.forEach((v, i) => { if (v < SIM.qol[imin]) imin = i; });
+  const cross = (() => { for (let i = imin; i <= last; i++) if (SIM.qol[i] > S.qol0) return Y[i]; return null; })();
+  const kp = [['QoL in 2025', nf(SIM.qol[0], 2), 'Starting point'], ['Minimum QoL', nf(SIM.qol[imin], 2), 'in ' + Y[imin]], ['QoL in ' + S.horizon, nf(SIM.qol[last], 2), (SIM.qol[last] >= S.qol0 ? '+' : '') + nf(SIM.qol[last] - S.qol0, 2) + ' vs. 2025'],
+    ['Back above the initial level', cross ?? 'not by ' + S.horizon, 'First year with QoL > ' + nf(S.qol0, 2)], ['Acceptance in ' + S.horizon, pct(SIM.acc[last], 1), 'Starting from ' + pct(S.acc0, 0)], ['Maximum pressure', nf(Math.max(...SIM.presiune), 2) + '×', 'relative to 2025 capacity']];
+  el.kpis.innerHTML = ''; kp.forEach(k => el.kpis.append(h('div', { class: 'kpi' }, h('div', { class: 'k' }, k[0]), h('div', { class: 'v' }, k[1]), h('div', { class: 'd' }, k[2]))));
+  const base = { vline: S.year, xmin: 2025, xmax: S.horizon, xlabel: y => 'Year ' + y };
+  const ref = (k, f) => REF ? [{ name: 'Pinned reference', color: '--muted', dash: [6, 4], width: 1.8, data: P2(f ? REF[k].map(f) : REF[k], REF.year) }] : [];
+  const lo = Math.min(...SIM.qol, ...(REF ? REF.qol : []), S.qol0);
+  charts.qol.set([{ name: 'Simulated QoL', color: '--blue', data: P2(SIM.qol, Y) }, ...ref('qol')], { ...base, tight: true, ymin: Math.floor((lo - 0.15) * 10) / 10, hlines: [{ y: S.qol0, label: 'initial level', color: '--muted' }], yfmt: v => nf(v, 1), tipfmt: v => nf(v, 2), dec: 2 });
+  charts.acc.set([{ name: 'Simulated acceptance', color: '--aqua', data: P2(SIM.acc.map(v => 100 * v), Y) }, ...ref('acc', v => 100 * v)], { ...base, ymin: 0, ymax: 100, yfmt: v => nf(v, 0) + '%', tipfmt: v => nf(v, 1) + '%' });
+  const bass = SIM.acc.map(a => 100 * (S.p_r * (1 - a) + S.q_r * a * (1 - a)));
+  charts.flux.set([{ name: 'Social growth (Bass)', color: '--aqua', data: P2(S.frozen ? bass.map(() => 0) : bass, Y) }, { name: 'Resistance (tourism pressure)', color: '--red', data: P2(SIM.resist.map(v => 100 * v), Y) }],
+    { ...base, ymin: 0, yfmt: v => nf(v, 1), tipfmt: v => nf(v, 2) + ' pp/year' });
+  charts.pres.set([{ name: 'CA / CA₂₀₂₅', color: '--orange', data: P2(SIM.presiune, Y) }], { ...base, ymin: 0.9, tight: true, hlines: [{ y: 1, label: 'reference level', color: '--muted' }], yfmt: v => nf(v, 2), tipfmt: v => nf(v, 3) });
+  charts.inv.set([{ name: 'Spending of agritourism tourists', color: '--blue', data: P2(SIM.venit.map(v => v / 1e6), Y) }, { name: 'Tourism taxes', color: '--orange', data: P2(SIM.taxRev.map(v => v / 1e6), Y) }],
+    { ...base, ymin: 0, yfmt: v => nf(v, 0), tipfmt: v => nf(v, 2) + ' million RON' });
+  charts.lam.set([{ name: 'effective λ', color: '--violet', data: P2(SIM.lamEff.map(v => 100 * v), Y) }, { name: 'λ(ACC) without the investment adjustment', color: '--muted', dash: [5, 4], data: P2(SIM.lam.map(v => 100 * v), Y) }],
+    { ...base, hlines: [{ y: 0, color: '--ink2' }], yfmt: v => nf(v, 1) + '%', tipfmt: v => nf(v, 2) + '% / an' });
+  // relation lambda(ACC)
+  const xs = [...Array(51).keys()].map(i => i * 2), lc = xs.map(x => ({ x, y: 100 * lam(x / 100, S.lam0) }));
+  charts.rep.set([{ name: 'λ(ACC), % per year', color: '--blue', data: lc },
+    { name: 'Initial acceptance', color: '--ink', dots: true, r: 5, data: [{ x: S.acc0 * 100, y: 100 * lam(S.acc0, S.lam0) }] },
+    { name: 'Threshold λ = 0: ' + pct(accNeutral(S.lam0), 0), color: '--red', dots: true, r: 5, data: [{ x: accNeutral(S.lam0) * 100, y: 0 }] },
+    { name: 'Measured point (ACC = 100%)', color: '--aqua', dots: true, r: 5, data: [{ x: 100, y: -KAPPA * 100 }] }],
+    { xmin: 0, xmax: 100, tight: true, ymin: -0.8, ymax: Math.max(1.2, S.lam0 * 100 + 0.2), yfmt: v => nf(v, 1) + '%', tipfmt: v => nf(v, 2) + '% / an', dec: 2, xlabel: x => 'ACC ' + nf(x, 0) + '%' });
+  // tornado
+  const mul = (k) => [S[k] * 0.5, S[k] * 1.5];
+  const lst = [['q_r', 'q_r (imitation)', ...mul('q_r')], ['lam0', 'λ0 (decline)', ...mul('lam0')], ['acc0', 'Initial acceptance', 0.21, 0.40], ['gBudget', 'Budget growth', -0.01, 0.01],
+    ['r_r', 'r_r (resistance)', ...mul('r_r')], ['p_r', 'p_r (adoption)', ...mul('p_r')], ['gamma', 'γ_eff (investment)', ...mul('gamma')], ['tax', 'Tax share', ...mul('tax')]];
+  const bq = SIM.qol[last], rows = lst.map(([k, lab, v0, v1]) => { const a = sd2({ ...S, [k]: v0 }).qol, b = sd2({ ...S, [k]: v1 }).qol; return { label: lab, lo: a[a.length - 1], hi: b[b.length - 1] }; });
+  rows.sort((a, b) => Math.abs(b.hi - b.lo) - Math.abs(a.hi - a.lo)); el.tor.set(rows, bq, v => nf(v, 2));
+  REF && (REF.year = REF.year); drawDiagram(); drawTable();
+}
+window.__redraw = () => { if (SIM) update(); };
+function drawDiagram() {
+  if (!SIM) return; const i = Math.min(S.year - 2025, SIM.year.length - 1), f0 = v => nf(v, 0), m = v => nf(v / 1e6, 1) + ' M';
+  const col = n => css(n), cB = col('--blue'), cO = col('--orange'), cA = col('--aqua'), cV = col('--violet'), cR = col('--red'), cM = col('--muted');
+  const id = c => 'b' + c.replace(/[^a-z0-9]/gi, '');
+  const mark = [cB, cO, cA, cV, cR, cM].map(c => `<marker id="${id(c)}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="${c}"/></marker>`).join('');
+  const box = (x, y, w, hh, title, lines, c) => `<rect x="${x}" y="${y}" width="${w}" height="${hh}" rx="10" fill="${c}" fill-opacity=".14" stroke="${c}" stroke-width="2"/><text x="${x + w / 2}" y="${y + 20}" text-anchor="middle" font-size="13.5" font-weight="650">${title}</text>` + lines.map((l, k) => `<text x="${x + w / 2}" y="${y + 40 + k * 18}" text-anchor="middle" font-size="13.5" class="${k ? 't2' : 'num'}">${l}</text>`).join('');
+  const ell = (cx, cy, rx, ry, t, v) => `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="none" stroke="${cM}" stroke-width="1.6" stroke-dasharray="4 3"/><text x="${cx}" y="${cy - 3}" text-anchor="middle" font-size="12.5" class="t2">${t}</text><text x="${cx}" y="${cy + 14}" text-anchor="middle" font-size="13" class="num">${v}</text>`;
+  const arr = (d, c, dash, label, lx, ly, bold) => `<path d="${d}" fill="none" stroke="${c}" stroke-width="${bold ? 2.6 : 1.9}" ${dash ? 'stroke-dasharray="6 4"' : ''} marker-end="url(#${id(c)})"/>` + (label ? `<text x="${lx}" y="${ly}" font-size="12" class="t2">${label}</text>` : '');
+  el.diag.innerHTML = `<svg class="diagram" viewBox="0 0 960 480" role="img" aria-label="Diagram of the quality of life model"><defs>${mark}</defs>
+    ${ell(110, 52, 100, 30, 'Agro capacity CA (Model 1)', f0(SIM.ca[i]))}
+    ${ell(110, 140, 100, 28, 'Agritourism arrivals', f0(SIM.venit[i] / S.perTrip))}
+    ${arr('M110,82 L110,112', cO, false, '', 0, 0)}
+    ${box(30, 330, 220, 86, 'ACC – resident acceptance', [pct(SIM.acc[i], 1), 'ΔACC = ' + nf(SIM.dacc[i] * 100, 2) + ' pp/year'], cA)}
+    <path d="M80,330 C80,290 200,290 200,330" fill="none" stroke="${cA}" stroke-width="2.2" marker-end="url(#${id(cA)})"/><text x="140" y="284" text-anchor="middle" font-size="12.5" font-weight="700" fill="${cA}">R2 (Bass: p_r, q_r)</text>
+    ${ell(400, 232, 112, 30, 'Tourism pressure CA/CA₂₀₂₅', nf(SIM.presiune[i], 3))}
+    ${arr('M185,72 C240,130 235,190 300,214', cO, false, '', 0, 0)}
+    ${arr('M310,256 C280,290 225,300 190,330', cR, false, 'B1: resistance −r_r·max(P−1,0)·ACC', 250, 312)}
+    ${box(310, 20, 220, 62, 'Tourism spending', [m(SIM.venit[i]) + ' RON', '× tax share ' + pct(S.tax, 1)], cO)}
+    ${arr('M205,138 L250,100 L310,70', cO, false, '', 0, 0)}
+    ${box(600, 20, 330, 70, 'Effective budget', [m(SIM.bef[i]) + ' RON', 'budget + tourism taxes'], cB)}
+    ${arr('M530,50 L600,50', cB, false, '', 0, 0)}
+    ${box(600, 140, 330, 70, 'Investment ratio', [nf(SIM.raport[i], 4), 'η · effective budget / 2025 budget'], cB)}
+    ${arr('M765,90 L765,140', cB, false, '', 0, 0)}
+    ${box(600, 250, 330, 70, 'Effective rate of decline', ['λ = ' + nf(SIM.lamEff[i] * 100, 2) + '% / year', 'λ(ACC) + γ·(1 − ratio)'], cV)}
+    ${arr('M765,210 L765,250', cB, false, '', 0, 0)}
+    ${box(600, 360, 330, 84, 'QOL – quality of life (1–10)', [nf(SIM.qol[i], 3), 'QOL(t+1) = QOL(t)·exp(−λ)'], cV)}
+    ${arr('M765,320 L765,360', cV, false, '', 0, 0, true)}
+    ${arr('M250,380 L600,300', cA, false, 'λ(ACC), linear in acceptance', 330, 372, true)}
+    <text x="30" y="466" font-size="12" class="mut">Above ACC* = ${pct(accNeutral(S.lam0), 0)} the rate of decline becomes negative and quality of life increases (“J-curve”).</text></svg>`;
+  el.yr.textContent = S.year;
+}
+function drawTable() {
+  const yrs = [2025, 2030, 2035, 2040, 2045, 2050, 2055, 2060].filter(y => y <= S.horizon);
+  el.table.innerHTML = `<table class="dt"><thead><tr><th>Year</th><th>QoL</th><th>Acceptance</th><th>Pressure</th><th>Tourism spending (M RON)</th><th>Investment ratio</th></tr></thead><tbody>${yrs.map(y => { const i = y - 2025; return `<tr><td>${y}</td><td>${nf(SIM.qol[i], 2)}</td><td>${pct(SIM.acc[i], 1)}</td><td>${nf(SIM.presiune[i], 2)}</td><td>${nf(SIM.venit[i] / 1e6, 1)}</td><td>${nf(SIM.raport[i], 3)}</td></tr>`; }).join('')}</tbody></table>`;
+}
+function exportCSV() { downloadCSV('simulator_sd2.csv', ['year', 'QOL', 'ACC', 'pressure', 'tourism_spending', 'investment_ratio', 'lambda_effective'],
+  SIM.year.map((y, i) => [y, SIM.qol[i].toFixed(4), SIM.acc[i].toFixed(4), SIM.presiune[i].toFixed(4), SIM.venit[i].toFixed(0), SIM.raport[i].toFixed(4), SIM.lamEff[i].toFixed(5)])); }
+document.addEventListener('DOMContentLoaded', () => { $('#themebtn').append(themeToggle()); build(); buildStage(); applyScenario('base'); });
+</script></body></html>
