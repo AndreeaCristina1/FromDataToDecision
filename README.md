@@ -63,24 +63,8 @@ stage2_forecast/           CART and gradient boosting (NumPy only), baselines, d
 stage3_system_dynamics/    Model 1, Model 2, calibration, simulators
 stage4_design/             QFD, financial model, Business Model Canvas
 figures/                   Figures 1-5 and the script that draws them
-verification/              comparison of the article's numbers with the repository results
 run_all.py
 ```
-
-## Reproducibility
-
-[`verification/article_check.md`](verification/article_check.md) compares 325 values quoted in the article with the values computed by this code: **297 match and 28 differ**. All the results of stages 1, 3 and 4 that are checked there match.
-
-### Differences between the article and this implementation
-
-All 28 differences concern the forecasting stage (Section 3.4 and 4.2):
-
-* The gradient boosting model here is an independent implementation of the specification in the article. It selects **70 trees** (article: 74) and gives a test R² of **0.686** on the log scale (article: 0.689), a test RMSE of **2,547** overnight stays (article: 2,358) and a county RMSE of **11,368** (article: 10,429). Training R², variable importance (capacity: 56.2% against 52.2%), validation range and the subgroup errors differ for the same reason. For the small localities the log-scale R² is negative here (article: 0.52).
-* The 14-variable linear regression differs (test RMSE of the log 1.076, article 1.115), as does its elasticity (1.25, article 1.20).
-* The skewness values of the target differ (3.46 and −0.22 here; 3.49 and −0.32 in the article).
-* The naive, naive-plus-capacity, capacity-only regression and ARI(3,1) baselines reproduce the article exactly. The ranking conclusion also holds: gradient boosting is better than both regressions on the log scale and does not beat the naive model.
-* The crisis dummy variable used in the forecasting features covers 2008–2010, whereas the shock window of the descriptive analysis is 2009–2010. Using 2009–2010 for the dummy changes the test R² by about 0.001.
-* "Large" and "small" localities are the test observations above and below the median agritourism capacity of the panel.
 
 ### Other remarks
 
